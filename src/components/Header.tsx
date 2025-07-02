@@ -62,29 +62,29 @@ export const Header = () => {
       <div className="flex items-center justify-end gap-6 w-full">
         {/* Left: Text with red dot */}
         <div className="flex items-center gap-2">
-          <span className="text-lg font-medium text-foreground">Gmail</span>
-          <span className="h-2 w-2 rounded-full bg-red-500 inline-block ml-1"></span>
+          <span className="text-xl font-medium text-foreground">Gmail</span>
+          <span className="h-3 w-3 rounded-full bg-red-500 inline-block ml-1"></span>
         </div>
         {/* Center: 9-dot icon as popover trigger */}
         <Popover>
           <PopoverTrigger asChild>
-            <Button variant="ghost" size="sm" className="p-4 h-16 w-16 bg-card/30 backdrop-blur-md rounded-2xl border border-border/20 hover:bg-card/50 transition-smooth hover:scale-110 flex items-center justify-center">
-              <NineDotIcon className="w-12 h-12 text-foreground" />
+            <Button variant="ghost" size="sm" className="p-6 h-20 w-20 bg-card/30 backdrop-blur-md rounded-2xl border border-border/20 hover:bg-card/50 transition-smooth hover:scale-110 flex items-center justify-center">
+              <NineDotIcon className="w-16 h-16 text-foreground" />
             </Button>
           </PopoverTrigger>
-          <PopoverContent className="w-56 p-3 bg-card/95 backdrop-blur-md border-border/30">
-            <div className="grid grid-cols-3 gap-3">
+          <PopoverContent className="w-80 p-4 bg-card/95 backdrop-blur-md border-border/30">
+            <div className="grid grid-cols-3 gap-4">
               {socialLinks.map((social, index) => (
-                <Button 
+                <div 
                   key={index} 
-                  variant="ghost" 
-                  size="sm" 
-                  className={`p-3 h-14 w-14 transition-smooth hover:scale-110 hover:bg-card/50 ${social.color}`}
+                  className="flex flex-col items-center gap-2 p-3 rounded-lg hover:bg-card/50 transition-smooth cursor-pointer"
                   onClick={(e) => handleSocialClick(social, e)}
-                  aria-label={social.label}
                 >
-                  <social.icon size={24} />
-                </Button>
+                  <div className="w-12 h-12 rounded-lg bg-background/80 flex items-center justify-center">
+                    <social.icon size={28} className={social.color.replace('hover:', '')} />
+                  </div>
+                  <span className="text-xs text-muted-foreground font-medium">{social.label}</span>
+                </div>
               ))}
             </div>
           </PopoverContent>
@@ -92,7 +92,7 @@ export const Header = () => {
         {/* Right: Circular image */}
         <Button
           variant="ghost"
-          className="w-14 h-14 rounded-full bg-muted-foreground/20 border-2 border-border flex items-center justify-center overflow-hidden p-0 hover:border-primary/50 transition-smooth hover:scale-110"
+          className="w-16 h-16 rounded-full bg-muted-foreground/20 border-2 border-border flex items-center justify-center overflow-hidden p-0 hover:border-primary/50 transition-smooth hover:scale-110"
           onClick={() => setIsProfileOpen(true)}
         >
           <img src="/profile.jpg" alt="User" className="w-full h-full object-cover rounded-full" />
