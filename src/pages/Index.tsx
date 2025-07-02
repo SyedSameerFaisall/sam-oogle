@@ -3,10 +3,8 @@ import { Logo } from "@/components/Logo";
 import { SearchBar } from "@/components/SearchBar";
 import { QuickLinks } from "@/components/QuickLinks";
 import { FloatingElements } from "@/components/FloatingElements";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen relative overflow-hidden">
+  return <div className="min-h-screen relative overflow-hidden">
       <FloatingElements />
       <Header />
       
@@ -19,10 +17,7 @@ const Index = () => {
       </main>
       
       <footer className="fixed bottom-4 left-4 text-sm text-muted-foreground z-10">
-        Made with ❤️ by Sam
-      </footer>
-    </div>
-  );
+    </footer>
+    </div>;
 };
-
 export default Index;
