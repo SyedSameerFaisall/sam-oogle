@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 
 const quickLinks = [
-  { title: "About Sameer", description: "Learn more about my background / experience" },
+  { title: "About Sameer", description: "Learn more about my background" },
   { title: "My Projects", description: "Explore my latest work and creations" },
-  { title: "Skills & Tech", description: "Technologies I work with" },
-  { title: "Contact Me", description: "Let's connect and collaborate" },
+  { title: "Skills & Tech", description: "Skillset & Technologies I work with" },
+  { title: "Work Experience", description: "My internship experiences" },
 ];
 
 export const QuickLinks = () => {
