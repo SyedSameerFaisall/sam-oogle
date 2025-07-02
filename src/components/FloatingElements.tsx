@@ -10,7 +10,7 @@ export const FloatingElements = () => {
       <div className="absolute bottom-1/3 left-1/3 w-24 h-24 bg-accent/15 rounded-full blur-lg animate-bounce" style={{ animationDuration: '8s', animationDelay: '1s' }}></div>
       
       {/* Small particles */}
-      <div className="absolute top-20 right-20 w-4 h-4 bg-primary rounded-full opacity-60 animate-ping" style={{ animationDuration: '3s' }}></div>
+      {/* <div className="absolute top-20 right-20 w-4 h-4 bg-primary rounded-full opacity-60 animate-ping" style={{ animationDuration: '3s' }}></div> */}
       <div className="absolute bottom-32 left-16 w-3 h-3 bg-accent rounded-full opacity-40 animate-ping" style={{ animationDuration: '4s', animationDelay: '2s' }}></div>
       <div className="absolute top-2/3 left-1/5 w-2 h-2 bg-primary-glow rounded-full opacity-80 animate-ping" style={{ animationDuration: '5s', animationDelay: '1s' }}></div>
       

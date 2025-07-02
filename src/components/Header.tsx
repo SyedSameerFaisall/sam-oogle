@@ -28,7 +28,7 @@ const socialLinks = [
     icon: Mail,
     href: "mailto:syedsameerfaisal1@gmail.com",
     label: "Gmail",
-    color: "hover:text-green-400"
+    color: "text-white"
   },
   {
     icon: Facebook,
@@ -63,13 +63,12 @@ export const Header = () => {
         {/* Left: Text with red dot */}
         <div className="flex items-center gap-2">
           <span className="text-xl font-medium text-foreground">Gmail</span>
-          <span className="h-3 w-3 rounded-full bg-red-500 inline-block ml-1"></span>
         </div>
         {/* Center: 9-dot icon as popover trigger */}
         <Popover>
           <PopoverTrigger asChild>
-            <Button variant="ghost" size="sm" className="p-6 h-20 w-20 bg-card/30 backdrop-blur-md rounded-2xl border border-border/20 hover:bg-card/50 transition-smooth hover:scale-110 flex items-center justify-center">
-              <NineDotIcon className="w-16 h-16 text-foreground" />
+            <Button variant="ghost" size="sm" className="p-0 h-48 w-48 rounded-2xl transition-smooth hover:scale-110 flex items-center justify-center">
+              <NineDotIcon className="w-40 h-40 text-foreground" />
             </Button>
           </PopoverTrigger>
           <PopoverContent className="w-80 p-4 bg-card/95 backdrop-blur-md border-border/30">

@@ -10,7 +10,7 @@ const Index = () => {
       <Header />
       
       <main className="flex flex-col items-center justify-center min-h-screen px-6 relative z-10">
-        <div className="w-full max-w-2xl">
+        <div className="w-full max-w-4xl scale-110 -mt-10">
           <Logo />
           <SearchBar />
           <QuickLinks />
