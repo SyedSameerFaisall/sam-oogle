@@ -98,25 +98,6 @@ export const SearchBar = () => {
           </Command>
         </PopoverContent>
       </Popover>
-      
-      <div className="flex justify-center gap-3 mt-8">
-        <Button 
-          type="submit"
-          variant="secondary"
-          className="px-6 py-3 bg-card/50 hover:bg-card/70 border border-border/30 transition-smooth"
-        >
-          Sam Search
-        </Button>
-        
-        <Button 
-          type="button"
-          variant="secondary"
-          className="px-6 py-3 bg-card/50 hover:bg-card/70 border border-border/30 transition-smooth"
-          onClick={() => setSearchValue("I'm feeling curious")}
-        >
-          I'm Feeling Lucky
-        </Button>
-      </div>
     </form>
   );
 };

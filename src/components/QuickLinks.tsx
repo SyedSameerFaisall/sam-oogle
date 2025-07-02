@@ -9,12 +9,12 @@ const quickLinks = [
 
 export const QuickLinks = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto mt-16 animate-fade-in">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 max-w-4xl mx-auto mt-16 animate-fade-in">
       {quickLinks.map((link, index) => (
         <Button
           key={index}
           variant="ghost"
-          className="group p-6 h-auto bg-card/20 hover:bg-card/40 border border-border/20 hover:border-primary/30 transition-smooth hover:scale-105 text-left"
+          className="group p-6 h-auto bg-card/20 hover:bg-card/40 border border-border/20 hover:border-primary/30 transition-smooth hover:scale-105 text-center"
           style={{ animationDelay: `${index * 100}ms` }}
         >
           <div>
