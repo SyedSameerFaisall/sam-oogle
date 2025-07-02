@@ -1,6 +1,7 @@
 import { Linkedin, Instagram, Github, Mail, Facebook, Calendar, MoreHorizontal, Dot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import NineDotIcon from "@/components/ui/NineDotIcon";
 const socialLinks = [
   {
     icon: Linkedin,
@@ -51,22 +52,8 @@ export const Header = () => {
         {/* Center: 9-dot icon as popover trigger */}
         <Popover>
           <PopoverTrigger asChild>
-            <Button variant="ghost" size="sm" className="p-3 h-12 w-12 bg-card/30 backdrop-blur-md rounded-2xl border border-border/20 hover:bg-card/50 transition-smooth hover:scale-110 flex flex-col items-center justify-center">
-              <span className="flex gap-1">
-                <Dot size={12} strokeWidth={3} className="font-bold" />
-                <Dot size={12} strokeWidth={3} className="font-bold" />
-                <Dot size={12} strokeWidth={3} className="font-bold" />
-              </span>
-              <span className="flex gap-1 mt-0.5">
-                <Dot size={12} strokeWidth={3} className="font-bold" />
-                <Dot size={12} strokeWidth={3} className="font-bold" />
-                <Dot size={12} strokeWidth={3} className="font-bold" />
-              </span>
-              <span className="flex gap-1 mt-0.5">
-                <Dot size={12} strokeWidth={3} className="font-bold" />
-                <Dot size={12} strokeWidth={3} className="font-bold" />
-                <Dot size={12} strokeWidth={3} className="font-bold" />
-              </span>
+            <Button variant="ghost" size="sm" className="p-3 h-12 w-12 bg-card/30 backdrop-blur-md rounded-2xl border border-border/20 hover:bg-card/50 transition-smooth hover:scale-110 flex items-center justify-center">
+              <NineDotIcon className="w-9 h-9 text-foreground" />
             </Button>
           </PopoverTrigger>
           <PopoverContent className="w-48 p-2 bg-card/95 backdrop-blur-md border-border/30">
@@ -83,8 +70,7 @@ export const Header = () => {
         </Popover>
         {/* Right: Circular image */}
         <div className="w-10 h-10 rounded-full bg-muted-foreground/20 border-2 border-border flex items-center justify-center overflow-hidden">
-          {/* Replace with your image */}
-          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" className="w-full h-full object-cover rounded-full" />
+          <img src="/profile.jpg" alt="User" className="w-full h-full object-cover rounded-full" />
         </div>
       </div>
     </header>

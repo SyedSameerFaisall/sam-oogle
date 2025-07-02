@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 
 const quickLinks = [
-  { title: "About Sam", description: "Learn more about my background and experience" },
+  { title: "About Sameer", description: "Learn more about my background / experience" },
   { title: "My Projects", description: "Explore my latest work and creations" },
   { title: "Skills & Tech", description: "Technologies I work with" },
   { title: "Contact Me", description: "Let's connect and collaborate" },
