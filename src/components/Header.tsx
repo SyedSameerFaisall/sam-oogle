@@ -59,12 +59,12 @@ export const Header = () => {
   return (
     <>
       <header className="w-full pt-6 pr-12 z-50">
-      <div className="flex items-center justify-end w-full mt-6 gap-24 pl-24">
-        <span className="text-2xl font-bold text-foreground">Gmail</span>
+      <div className="flex items-center justify-end w-full mt-6 gap-12 pl-24">
+        <span className="text-xl font-bold text-foreground">Gmail</span>
         <Popover>
           <PopoverTrigger asChild>
-            <Button variant="ghost" size="sm" className="p-0 h-12 w-12 rounded-2xl transition-smooth hover:scale-110 flex items-center justify-center">
-              <NineDotIcon className="w-12 h-12 text-foreground" />
+            <Button variant="ghost" size="sm" className="p-0 h-10 w-10 rounded-2xl transition-smooth hover:scale-110 flex items-center justify-center">
+              <NineDotIcon className="w-8 h-8 text-foreground" />
             </Button>
           </PopoverTrigger>
           <PopoverContent className="w-96 p-6 bg-card/95 backdrop-blur-md border-border/30">
@@ -86,7 +86,7 @@ export const Header = () => {
         </Popover>
         <Button
           variant="ghost"
-          className="w-16 h-16 rounded-full bg-muted-foreground/20 border-2 border-border flex items-center justify-center overflow-hidden p-0 hover:border-primary/50 transition-smooth hover:scale-110"
+          className="w-12 h-12 rounded-full bg-muted-foreground/20 border-2 border-border flex items-center justify-center overflow-hidden p-0 hover:border-primary/50 transition-smooth hover:scale-110"
           onClick={() => setIsProfileOpen(true)}
         >
           <img src="/profile.jpg" alt="User" className="w-full h-full object-cover rounded-full" />
