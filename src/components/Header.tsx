@@ -1,5 +1,6 @@
-import { Linkedin, Instagram, Github, Mail, Facebook, Calendar } from "lucide-react";
+import { Linkedin, Instagram, Github, Mail, Facebook, Calendar, MoreHorizontal } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 
 const socialLinks = [
   { icon: Linkedin, href: "#", label: "LinkedIn", color: "hover:text-blue-400" },
@@ -14,26 +15,39 @@ export const Header = () => {
   return (
     <header className="fixed top-0 right-0 p-6 z-50">
       <div className="flex items-center gap-2">
-        <div className="grid grid-cols-3 gap-2 p-3 bg-card/30 backdrop-blur-md rounded-2xl border border-border/20">
-          {socialLinks.map((social, index) => (
+        <Popover>
+          <PopoverTrigger asChild>
             <Button
-              key={index}
               variant="ghost"
               size="sm"
-              className={`p-2 h-10 w-10 transition-smooth hover:scale-110 hover:bg-card/50 ${social.color}`}
-              asChild
+              className="p-3 h-12 w-12 bg-card/30 backdrop-blur-md rounded-2xl border border-border/20 hover:bg-card/50 transition-smooth hover:scale-110"
             >
-              <a
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={social.label}
-              >
-                <social.icon size={18} />
-              </a>
+              <MoreHorizontal size={20} className="rotate-90" />
             </Button>
-          ))}
-        </div>
+          </PopoverTrigger>
+          <PopoverContent className="w-48 p-2 bg-card/95 backdrop-blur-md border-border/30">
+            <div className="grid grid-cols-3 gap-2">
+              {socialLinks.map((social, index) => (
+                <Button
+                  key={index}
+                  variant="ghost"
+                  size="sm"
+                  className={`p-2 h-10 w-10 transition-smooth hover:scale-110 hover:bg-card/50 ${social.color}`}
+                  asChild
+                >
+                  <a
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                  >
+                    <social.icon size={18} />
+                  </a>
+                </Button>
+              ))}
+            </div>
+          </PopoverContent>
+        </Popover>
       </div>
     </header>
   );
