@@ -28,7 +28,7 @@ export const SearchBar = () => {
   };
 
   return (
-    <form onSubmit={handleSearch} className="w-full max-w-2xl mx-auto">
+    <form onSubmit={handleSearch} className="w-full max-w-4xl mx-auto">
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <div 
@@ -36,8 +36,8 @@ export const SearchBar = () => {
               ${isFocused || open ? 'border-primary shadow-glow scale-105' : 'border-border/30 hover:border-border/50'}`}
             onClick={() => setOpen(true)}
           >
-            <div className="flex items-center p-3">
-              <Search className="text-muted-foreground ml-3 mr-4" size={20} />
+            <div className="flex items-center p-6">
+              <Search className="text-muted-foreground ml-4 mr-6" size={28} />
               
               <Input
                 value={searchValue}
@@ -48,7 +48,7 @@ export const SearchBar = () => {
                 }}
                 onBlur={() => setIsFocused(false)}
                 placeholder="Search Sameer's portfolio..."
-                className="flex-1 bg-transparent border-none focus:ring-0 focus:outline-none text-foreground placeholder:text-muted-foreground"
+                className="flex-1 bg-transparent border-none focus:ring-0 focus:outline-none text-foreground placeholder:text-muted-foreground text-lg"
               />
               
               <div className="flex items-center gap-2 mr-2">
