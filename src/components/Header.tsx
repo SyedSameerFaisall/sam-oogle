@@ -58,37 +58,32 @@ export const Header = () => {
 
   return (
     <>
-      <header className="w-full p-6 z-50">
-      <div className="flex items-center justify-end gap-6 w-full">
-        {/* Left: Text with red dot */}
-        <div className="flex items-center gap-2">
-          <span className="text-xl font-medium text-foreground">Gmail</span>
-        </div>
-        {/* Center: 9-dot icon as popover trigger */}
+      <header className="w-full pt-6 pr-12 z-50">
+      <div className="flex items-center justify-end w-full mt-6 gap-24 pl-24">
+        <span className="text-2xl font-bold text-foreground">Gmail</span>
         <Popover>
           <PopoverTrigger asChild>
-            <Button variant="ghost" size="sm" className="p-0 h-48 w-48 rounded-2xl transition-smooth hover:scale-110 flex items-center justify-center">
-              <NineDotIcon className="w-40 h-40 text-foreground" />
+            <Button variant="ghost" size="sm" className="p-0 h-12 w-12 rounded-2xl transition-smooth hover:scale-110 flex items-center justify-center">
+              <NineDotIcon className="w-12 h-12 text-foreground" />
             </Button>
           </PopoverTrigger>
-          <PopoverContent className="w-80 p-4 bg-card/95 backdrop-blur-md border-border/30">
-            <div className="grid grid-cols-3 gap-4">
+          <PopoverContent className="w-96 p-6 bg-card/95 backdrop-blur-md border-border/30">
+            <div className="grid grid-cols-3 gap-6">
               {socialLinks.map((social, index) => (
                 <div 
                   key={index} 
-                  className="flex flex-col items-center gap-2 p-3 rounded-lg hover:bg-card/50 transition-smooth cursor-pointer"
+                  className="flex flex-col items-center gap-3 p-4 rounded-lg hover:bg-card/50 transition-smooth cursor-pointer"
                   onClick={(e) => handleSocialClick(social, e)}
                 >
-                  <div className="w-12 h-12 rounded-lg bg-background/80 flex items-center justify-center">
-                    <social.icon size={28} className={social.color.replace('hover:', '')} />
+                  <div className="w-20 h-20 rounded-lg bg-background/80 flex items-center justify-center">
+                    <social.icon size={40} className={social.color.replace('hover:', '')} />
                   </div>
-                  <span className="text-xs text-muted-foreground font-medium">{social.label}</span>
+                  <span className="text-base text-muted-foreground font-medium">{social.label}</span>
                 </div>
               ))}
             </div>
           </PopoverContent>
         </Popover>
-        {/* Right: Circular image */}
         <Button
           variant="ghost"
           className="w-16 h-16 rounded-full bg-muted-foreground/20 border-2 border-border flex items-center justify-center overflow-hidden p-0 hover:border-primary/50 transition-smooth hover:scale-110"
