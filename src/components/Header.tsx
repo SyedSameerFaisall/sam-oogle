@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { Linkedin, Instagram, Github, Mail, Facebook, Calendar, MoreHorizontal, Dot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import NineDotIcon from "@/components/ui/NineDotIcon";
+import { ProfilePane } from "./ProfilePane";
+import { EmailPane } from "./EmailPane";
 const socialLinks = [
   {
     icon: Linkedin,
@@ -41,8 +44,21 @@ const socialLinks = [
   }
 ];
 export const Header = () => {
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [isEmailOpen, setIsEmailOpen] = useState(false);
+
+  const handleSocialClick = (social: typeof socialLinks[0], e: React.MouseEvent) => {
+    e.preventDefault();
+    if (social.label === "Gmail") {
+      setIsEmailOpen(true);
+    } else {
+      window.open(social.href, "_blank");
+    }
+  };
+
   return (
-    <header className="w-full p-6 z-50">
+    <>
+      <header className="w-full p-6 z-50">
       <div className="flex items-center justify-end gap-6 w-full">
         {/* Left: Text with red dot */}
         <div className="flex items-center gap-2">
@@ -52,27 +68,40 @@ export const Header = () => {
         {/* Center: 9-dot icon as popover trigger */}
         <Popover>
           <PopoverTrigger asChild>
-            <Button variant="ghost" size="sm" className="p-3 h-12 w-12 bg-card/30 backdrop-blur-md rounded-2xl border border-border/20 hover:bg-card/50 transition-smooth hover:scale-110 flex items-center justify-center">
-              <NineDotIcon className="w-9 h-9 text-foreground" />
+            <Button variant="ghost" size="sm" className="p-4 h-16 w-16 bg-card/30 backdrop-blur-md rounded-2xl border border-border/20 hover:bg-card/50 transition-smooth hover:scale-110 flex items-center justify-center">
+              <NineDotIcon className="w-12 h-12 text-foreground" />
             </Button>
           </PopoverTrigger>
-          <PopoverContent className="w-48 p-2 bg-card/95 backdrop-blur-md border-border/30">
-            <div className="grid grid-cols-3 gap-2">
+          <PopoverContent className="w-56 p-3 bg-card/95 backdrop-blur-md border-border/30">
+            <div className="grid grid-cols-3 gap-3">
               {socialLinks.map((social, index) => (
-                <Button key={index} variant="ghost" size="sm" className={`p-2 h-10 w-10 transition-smooth hover:scale-110 hover:bg-card/50 ${social.color}`} asChild>
-                  <a href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>
-                    <social.icon size={18} />
-                  </a>
+                <Button 
+                  key={index} 
+                  variant="ghost" 
+                  size="sm" 
+                  className={`p-3 h-14 w-14 transition-smooth hover:scale-110 hover:bg-card/50 ${social.color}`}
+                  onClick={(e) => handleSocialClick(social, e)}
+                  aria-label={social.label}
+                >
+                  <social.icon size={24} />
                 </Button>
               ))}
             </div>
           </PopoverContent>
         </Popover>
         {/* Right: Circular image */}
-        <div className="w-10 h-10 rounded-full bg-muted-foreground/20 border-2 border-border flex items-center justify-center overflow-hidden">
+        <Button
+          variant="ghost"
+          className="w-14 h-14 rounded-full bg-muted-foreground/20 border-2 border-border flex items-center justify-center overflow-hidden p-0 hover:border-primary/50 transition-smooth hover:scale-110"
+          onClick={() => setIsProfileOpen(true)}
+        >
           <img src="/profile.jpg" alt="User" className="w-full h-full object-cover rounded-full" />
-        </div>
+        </Button>
       </div>
     </header>
+    
+    <ProfilePane isOpen={isProfileOpen} onClose={() => setIsProfileOpen(false)} />
+    <EmailPane isOpen={isEmailOpen} onClose={() => setIsEmailOpen(false)} />
+    </>
   );
 };

@@ -3,6 +3,7 @@ import { Logo } from "@/components/Logo";
 import { SearchBar } from "@/components/SearchBar";
 import { QuickLinks } from "@/components/QuickLinks";
 import { FloatingElements } from "@/components/FloatingElements";
+import { Chatbot } from "@/components/Chatbot";
 const Index = () => {
   return <div className="min-h-screen relative overflow-hidden">
       <FloatingElements />
@@ -18,6 +19,8 @@ const Index = () => {
       
       <footer className="fixed bottom-4 left-4 text-sm text-muted-foreground z-10">
     </footer>
+    
+    <Chatbot />
     </div>;
 };
 export default Index;
