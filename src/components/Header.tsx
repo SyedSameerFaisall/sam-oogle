@@ -5,42 +5,37 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import NineDotIcon from "@/components/ui/NineDotIcon";
 import { ProfilePane } from "./ProfilePane";
 import { EmailPane } from "./EmailPane";
+import React from "react";
 const socialLinks = [
   {
-    icon: Linkedin,
-    href: "https://www.linkedin.com/in/syedsameerfaisal/",
-    label: "LinkedIn",
-    color: "hover:text-blue-400"
-  },
-  {
-    icon: Github,
+    icon: <img src="/github.svg" className="h-10 w-10" alt="GitHub" />,
     href: "https://github.com/SyedSameerFaisall",
-    label: "GitHub",
-    color: "hover:text-gray-300"
+    label: "Github"
   },
   {
-    icon: Instagram,
-    href: "https://www.instagram.com/sameer__faisal/",
-    label: "Instagram",
-    color: "hover:text-pink-400"
+    icon: <img src="/linkedin.svg" className="h-10 w-10" alt="LinkedIn" />,
+    href: "https://www.linkedin.com/in/syedsameerfaisal/",
+    label: "Linkedin"
   },
   {
-    icon: Mail,
+    icon: <img src="/gmail.svg" className="h-10 w-10" alt="Gmail" />,
     href: "mailto:syedsameerfaisal1@gmail.com",
-    label: "Gmail",
-    color: "text-white"
+    label: "Gmail"
   },
   {
-    icon: Facebook,
+    icon: <img src="/instagram.svg" className="h-10 w-10" alt="Instagram" />,
+    href: "https://www.instagram.com/sameer__faisal/",
+    label: "Instagram"
+  },
+  {
+    icon: <img src="/facebook.svg" className="h-10 w-10" alt="Facebook" />,
     href: "https://www.facebook.com/sameer.faisal.524596",
-    label: "Facebook",
-    color: "hover:text-blue-600"
+    label: "Facebook"
   },
   {
-    icon: Calendar,
+    icon: <img src="/calendly.svg" className="h-10 w-10" alt="Calendly" />,
     href: "https://calendly.com/syedsameerfaisal1",
-    label: "Calendly",
-    color: "hover:text-orange-400"
+    label: "Calendly"
   }
 ];
 export const Header = ({ setIsEmailOpen }: { setIsEmailOpen: (open: boolean) => void }) => {
@@ -75,17 +70,18 @@ export const Header = ({ setIsEmailOpen }: { setIsEmailOpen: (open: boolean) => 
           <PopoverContent style={{ transform: 'scale(0.6) translate(-60px, 40px)', transformOrigin: 'top right' }} className="w-64 p-4 sm:w-96 sm:p-8 rounded-2xl bg-card/95 backdrop-blur-md border border-border/30 shadow-lg">
             <div className="grid grid-cols-3 gap-6">
               {socialLinks.map((social, index) => (
-                <div 
-                  key={index} 
+                <a
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex flex-col items-center gap-2 p-2 sm:gap-3 sm:p-4 rounded-lg hover:bg-card/50 transition-smooth cursor-pointer"
-                  onClick={(e) => handleSocialClick(social, e)}
                 >
-                  <div className="w-8 h-8 sm:w-16 sm:h-16 rounded-lg bg-background/80 flex items-center justify-center">
-                    <social.icon size={20} className={"sm:hidden " + social.color.replace('hover:', '')} />
-                    <social.icon size={32} className={"hidden sm:inline " + social.color.replace('hover:', '')} />
+                  <div className="w-10 h-10 sm:w-16 sm:h-16 rounded-lg bg-background/80 flex items-center justify-center overflow-hidden">
+                    {React.cloneElement(social.icon, { className: 'w-full h-full', style: { objectFit: 'contain' } })}
                   </div>
                   <span className="text-xs sm:text-base text-muted-foreground font-medium">{social.label}</span>
-                </div>
+                </a>
               ))}
             </div>
           </PopoverContent>
