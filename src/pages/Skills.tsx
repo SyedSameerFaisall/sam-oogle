@@ -1,4 +1,6 @@
-import { ArrowLeft, Award, Code, Database, Globe, Smartphone, Wrench, BarChart, Brain } from "lucide-react";
+import {
+  ArrowLeft, Award, Code, Database, Globe, Smartphone, Wrench, BarChart, Brain, Layers, Flame, Terminal, GitBranch, FileSpreadsheet, Feather, BookOpen, Sparkles
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -44,10 +46,10 @@ const skillCategories = [
     icon: <Wrench className="h-6 w-6" />,
     skills: [
       { name: "Git / GitHub", level: 95 },
-      { name: "VS Code", level: 90 },
+      { name: "Cursor", level: 90 },
       { name: "Streamlit / Gradio", level: 85 },
       { name: "Docker", level: 75 },
-      { name: "Linux / Bash", level: 85 }
+      { name: "Figma", level: 85 }
     ]
   }
 ];
@@ -90,6 +92,111 @@ const certifications = [
     credentialId: "https://www.freecodecamp.org/certification/fccab862b8b-4aba-4f19-a453-74de60a2cb5c/responsive-web-design"
   }
 ];
+
+// Skill icon mapping
+const skillIconMap: Record<string, { icon: JSX.Element; color: string }> = {
+  "React": {
+    icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="h-5 w-5" alt="React" />, color: ""
+  },
+  "React / Next.js": {
+    icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="h-5 w-5" alt="React / Next.js" />, color: ""
+  },
+  "Tailwind CSS": {
+    icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" className="h-5 w-5" alt="Tailwind CSS" />, color: ""
+  },
+  "Python": {
+    icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" className="h-5 w-5" alt="Python" />, color: ""
+  },
+  "R": {
+    icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" className="h-5 w-5" alt="R" />, color: ""
+  },
+  "Docker": {
+    icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" className="h-5 w-5" alt="Docker" />, color: ""
+  },
+  "Pandas": { icon: <FileSpreadsheet className="h-5 w-5 text-yellow-700" />, color: "text-yellow-700" },
+  "NumPy": { icon: <Feather className="h-5 w-5 text-blue-500" />, color: "text-blue-500" },
+  "Matplotlib": { icon: <BarChart className="h-5 w-5 text-purple-500" />, color: "text-purple-500" },
+  "Seaborn": { icon: <Flame className="h-5 w-5 text-pink-500" />, color: "text-pink-500" },
+  "Scikit-learn": {
+    icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" className="h-5 w-5" alt="Scikit-learn" />, color: ""
+  },
+  "PyTorch": { icon: <Flame className="h-5 w-5 text-orange-600" />, color: "text-orange-600" },
+  "TensorFlow": { icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" className="h-5 w-5" alt="TensorFlow" />, color: "" },
+  "Keras": { icon: <Flame className="h-5 w-5 text-red-400" />, color: "text-red-400" },
+  "LangChain": {
+    icon: <img src="/langchain.svg" className="h-5 w-5" alt="LangChain" />, color: ""
+  },
+  "Cursor": {
+    icon: <img src="/cursor.svg" className="h-5 w-5" alt="Cursor" />, color: ""
+  },
+  "Figma": {
+    icon: <img src="/figma.svg" className="h-5 w-5" alt="Figma" />, color: ""
+  },
+  "LangGraph": { icon: <Layers className="h-5 w-5 text-blue-600" />, color: "text-blue-600" },
+  "CrewAI": { icon: <Brain className="h-5 w-5 text-fuchsia-500" />, color: "text-fuchsia-500" },
+  "Hugging Face": {
+    icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/huggingface/huggingface-original.svg" className="h-5 w-5" alt="Hugging Face" />, color: ""
+  },
+  "Transformers": { icon: <Sparkles className="h-5 w-5 text-yellow-400" />, color: "text-yellow-400" },
+  "TypeScript": {
+    icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" className="h-5 w-5" alt="TypeScript" />, color: ""
+  },
+  "JavaScript": {
+    icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" className="h-5 w-5" alt="JavaScript" />, color: ""
+  },
+  "Node.js": {
+    icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" className="h-5 w-5" alt="Node.js" />, color: ""
+  },
+  "SQL": { icon: <Database className="h-5 w-5 text-indigo-500" />, color: "text-indigo-500" },
+  "Excel": { icon: <FileSpreadsheet className="h-5 w-5 text-green-600" />, color: "text-green-600" },
+  "Google Sheets": { icon: <FileSpreadsheet className="h-5 w-5 text-green-400" />, color: "text-green-400" },
+  "Git": { icon: <GitBranch className="h-5 w-5 text-orange-500" />, color: "text-orange-500" },
+  "GitHub": { icon: <GitBranch className="h-5 w-5 text-gray-800 dark:text-white" />, color: "text-gray-800 dark:text-white" },
+  "VS Code": {
+    icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cursor/cursor-original.svg" className="h-5 w-5" alt="Cursor" />, color: ""
+  },
+  "Streamlit": { icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" className="h-5 w-5" alt="Streamlit" />, color: "" },
+  "Gradio": { icon: <Flame className="h-5 w-5 text-gray-400" />, color: "text-gray-400" },
+  "Linux": {
+    icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" className="h-5 w-5" alt="Figma" />, color: ""
+  },
+  "Bash": { icon: <Terminal className="h-5 w-5 text-gray-600" />, color: "text-gray-600" },
+  "Excel / Google Sheets": { icon: <FileSpreadsheet className="h-5 w-5 text-green-500" />, color: "text-green-500" },
+  "LangChain / LangGraph / CrewAI": { icon: <img src="https://docs.langchain.com/_static/logo.svg" className="h-5 w-5" alt="LangChain" />, color: "" },
+  "TensorFlow / Keras": { icon: <Flame className="h-5 w-5 text-orange-500" />, color: "text-orange-500" },
+  "Matplotlib / Seaborn": { icon: <BarChart className="h-5 w-5 text-purple-500" />, color: "text-purple-500" },
+  "Face": {
+    icon: <img src="https://huggingface.co/front/assets/huggingface_logo.svg" className="h-5 w-5" alt="Hugging Face" />, color: ""
+  },
+  "Hugging Face Transformers": {
+    icon: <img src="https://huggingface.co/front/assets/huggingface_logo.svg" className="h-5 w-5" alt="Hugging Face" />, color: ""
+  },
+};
+
+function getSkillIcon(skillName: string) {
+  // Use only the first part if skillName contains '/'
+  const mainSkill = skillName.split('/')[0].split('(')[0].trim();
+  if (skillIconMap[mainSkill]) return skillIconMap[mainSkill].icon;
+  if (skillIconMap[skillName]) return skillIconMap[skillName].icon;
+  // Try to find a partial match for Hugging Face
+  if (skillName.toLowerCase().includes('hugging face')) {
+    return <img src="https://huggingface.co/front/assets/huggingface_logo.svg" className="h-5 w-5" alt="Hugging Face" />;
+  }
+  // Try to find a partial match for LangChain (including as first part of multi-skill)
+  if (mainSkill.toLowerCase().includes('langchain') || skillName.toLowerCase().includes('langchain')) {
+    return <img src="/langchain.svg" className="h-5 w-5" alt="LangChain" />;
+  }
+  // Try to find a partial match for Cursor
+  if (mainSkill.toLowerCase().includes('cursor') || skillName.toLowerCase().includes('cursor')) {
+    return <img src="/cursor.svg" className="h-5 w-5" alt="Cursor" />;
+  }
+  // Try to find a partial match for Figma
+  if (mainSkill.toLowerCase() === 'figma' || skillName.toLowerCase().includes('figma')) {
+    return <img src="/figma.svg" className="h-5 w-5" alt="Figma" />;
+  }
+  // Default icon
+  return <Code className="h-5 w-5 text-primary" />;
+}
 
 const Skills = () => {
   const navigate = useNavigate();
@@ -139,8 +246,11 @@ const Skills = () => {
                   <CardContent className="space-y-4">
                     {category.skills.map((skill, skillIndex) => (
                       <div key={skillIndex} className="space-y-2">
-                        <div className="flex justify-between text-sm">
-                          <span className="text-foreground">{skill.name}</span>
+                        <div className="flex justify-between text-sm items-center gap-2">
+                          <span className="flex items-center gap-2 text-foreground">
+                            {getSkillIcon(skill.name)}
+                            {skill.name}
+                          </span>
                           <span className="text-muted-foreground">{skill.level}%</span>
                         </div>
                         <Progress value={skill.level} className="h-2" />

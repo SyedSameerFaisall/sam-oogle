@@ -71,7 +71,7 @@ const Projects = () => {
               <span className="text-primary">My Projects</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A showcase of impactful, real-world solutions crafted using cutting-edge tools and frameworks across web, AI, and data domains.
+            A portfolio of cutting-edge technical skills and globally recognized certifications that underpin my journey as a forward-thinking technologist.
             </p>
           </div>
 
