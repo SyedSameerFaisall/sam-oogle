@@ -20,7 +20,7 @@ const About = () => {
 
         <div className="space-y-8 animate-fade-in">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-light text-foreground mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-foreground mb-4">
               About <span className="text-primary">Sameer</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -82,9 +82,9 @@ const About = () => {
           <div className="text-center">
             <Button 
               onClick={() => navigate("/contact")}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 sm:px-8 py-3"
             >
-              <Mail className="mr-2 h-4 w-4" />
+              <Mail className="sm:mr-2 h-4 w-4" />
               Get In Touch
             </Button>
           </div>

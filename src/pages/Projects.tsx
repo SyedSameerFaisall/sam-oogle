@@ -50,13 +50,13 @@ const Projects = () => {
           onClick={() => navigate("/")}
           className="mb-6 hover:bg-card/50 transition-smooth"
         >
-          <ArrowLeft className="mr-2 h-4 w-4" />
+          <ArrowLeft className="sm:mr-2 h-4 w-4" />
           Back to Home
         </Button>
 
         <div className="space-y-8 animate-fade-in">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-light text-foreground mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-foreground mb-4">
               My <span className="text-primary">Projects</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -108,7 +108,7 @@ const Projects = () => {
                       asChild
                     >
                       <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                        <Eye className="mr-2 h-4 w-4" />
+                        <Eye className="sm:mr-2 h-4 w-4" />
                         Live Demo
                       </a>
                     </Button>
@@ -120,7 +120,7 @@ const Projects = () => {
                       asChild
                     >
                       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                        <Github className="mr-2 h-4 w-4" />
+                        <Github className="sm:mr-2 h-4 w-4" />
                         Code
                       </a>
                     </Button>

@@ -78,13 +78,13 @@ const Experience = () => {
           onClick={() => navigate("/")}
           className="mb-6 hover:bg-card/50 transition-smooth"
         >
-          <ArrowLeft className="mr-2 h-4 w-4" />
+          <ArrowLeft className="sm:mr-2 h-4 w-4" />
           Back to Home
         </Button>
 
         <div className="space-y-8 animate-fade-in">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-light text-foreground mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-foreground mb-4">
               Work <span className="text-primary">Experience</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -112,7 +112,7 @@ const Experience = () => {
                     </div>
                     <div className="flex flex-col md:items-end gap-2">
                       <Badge variant="secondary" className="w-fit">
-                        <Briefcase className="mr-1 h-3 w-3" />
+                        <Briefcase className="sm:mr-1 h-4 w-4" />
                         {experience.type}
                       </Badge>
                       <div className="flex items-center gap-4 text-sm text-muted-foreground">

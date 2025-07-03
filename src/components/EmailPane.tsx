@@ -29,7 +29,7 @@ export const EmailPane = ({ isOpen, onClose }: EmailPaneProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl h-[600px] bg-card/95 backdrop-blur-md border-border/30 p-0">
+      <DialogContent className="max-w-2xl h-[60vh] sm:h-[70vh] bg-card/95 backdrop-blur-md border-border/30 p-0">
         <DialogHeader className="p-4 border-b border-border/30 bg-secondary/50">
           <div className="flex items-center justify-between">
             <DialogTitle className="text-foreground">New Message</DialogTitle>

@@ -39,7 +39,7 @@ export const SearchBar = () => {
             id="searchbar-trigger"
           >
             <div className="flex items-center p-3">
-              <Search className="text-muted-foreground ml-3 mr-4" size={20} />
+              <Search className="text-muted-foreground sm:ml-3 sm:mr-4" size={20} />
               <Input
                 value={searchValue}
                 readOnly
@@ -51,7 +51,7 @@ export const SearchBar = () => {
                 placeholder="Search Sameer's portfolio..."
                 className="flex-1 bg-transparent border-none focus:ring-0 focus:outline-none text-foreground placeholder:text-muted-foreground"
               />
-              <div className="flex items-center gap-2 mr-2">
+              <div className="flex items-center gap-1 sm:gap-2 sm:mr-2">
                 <Button
                   type="button"
                   variant="ghost"
@@ -91,7 +91,7 @@ export const SearchBar = () => {
                     }}
                     className="cursor-pointer"
                   >
-                    <Search className="mr-2 h-4 w-4" />
+                    <Search className="sm:mr-2 h-4 w-4 sm:w-5 sm:h-5" />
                     {option.label}
                   </CommandItem>
                 ))}

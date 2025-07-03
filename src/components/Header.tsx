@@ -59,7 +59,7 @@ export const Header = () => {
   return (
     <>
       <header className="w-full pt-6 pr-12 z-50">
-      <div className="flex items-center justify-end w-full mt-6 gap-12 pl-24">
+      <div style={{ transform: 'scale(0.6)', transformOrigin: 'top right' }} className="flex items-center justify-end w-full mt-4 mr-32 gap-12 pl-24">
         <span className="text-xl font-bold text-foreground">Gmail</span>
         <Popover>
           <PopoverTrigger asChild>
@@ -67,7 +67,7 @@ export const Header = () => {
               <NineDotIcon className="w-8 h-8 text-foreground" />
             </Button>
           </PopoverTrigger>
-          <PopoverContent className="w-96 p-6 bg-card/95 backdrop-blur-md border-border/30 translate-x-[-20px] translate-y-[10px]">
+          <PopoverContent style={{ transform: 'scale(0.5) translate(-120px, 40px)', transformOrigin: 'top right' }} className="w-96 p-6 bg-card/95 backdrop-blur-md border-border/30">
             <div className="grid grid-cols-3 gap-6">
               {socialLinks.map((social, index) => (
                 <div 
@@ -93,11 +93,20 @@ export const Header = () => {
               <img src="/profile.jpg" alt="User" className="w-full h-full object-cover rounded-full" />
             </Button>
           </PopoverTrigger>
-          <PopoverContent className="w-[28rem] p-10 bg-card/95 backdrop-blur-md border-border/30 translate-x-[-20px] translate-y-[10px] flex flex-col items-center gap-6">
+          <PopoverContent style={{ transform: 'scale(0.5) translateX(-60px)', transformOrigin: 'top right' }} className="w-[28rem] p-10 bg-card/95 backdrop-blur-md border-border/30 translate-y-[10px] flex flex-col items-center gap-6">
             <img src="/profile.jpg" alt="Sameer" className="w-20 h-20 rounded-full object-cover mb-2" />
             <div className="text-center">
               <div className="text-xl font-bold text-foreground">Hi, I'm Sameer</div>
               <div className="text-muted-foreground text-sm mb-2">sameer@email.com</div>
+            </div>
+            <div className="my-4">
+              <h3 className="text-foreground font-semibold text-lg md:text-xl text-center mb-3">HOW TO USE</h3>
+              <ul className="space-y-2 text-base md:text-lg text-muted-foreground font-medium">
+                <li>🔍 Use <span className="text-primary font-semibold">Search</span> to explore my portfolio</li>
+                <li>📧 Click <span className="text-green-400 font-semibold">Gmail</span> to contact me</li>
+                <li>🟦 Use the <span className="text-primary font-semibold">Dot-Menu</span> for more links</li>
+                <li>📅 Book a call with the calendar icon</li>
+              </ul>
             </div>
             <div className="w-full border-t border-border/30 my-2"></div>
             <div className="w-full flex flex-col gap-2">

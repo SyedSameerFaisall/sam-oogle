@@ -9,11 +9,13 @@ const Index = () => {
       <FloatingElements />
       <Header />
       
-      <main className="flex flex-1 flex-col items-center justify-center px-6 relative z-10">
-        <div className="w-full max-w-4xl -mt-10 flex flex-col gap-10" style={{ transform: 'scale(1.5) translateY(-60px)' }}>
-          <Logo />
-          <SearchBar />
-          <QuickLinks />
+      <main className="flex flex-1 flex-col items-center justify-center px-4 sm:px-6 lg:px-8 relative z-10">
+        <div style={{ transform: 'scale(0.7)', transformOrigin: 'top center', width: '100%' }}>
+          <div className="w-full max-w-screen-lg mx-auto flex flex-col gap-8 sm:gap-10 mt-4 sm:mt-8">
+            <Logo />
+            <SearchBar />
+            <QuickLinks />
+          </div>
         </div>
       </main>
       
