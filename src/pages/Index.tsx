@@ -8,8 +8,8 @@ const Index = () => {
       <FloatingElements />
       <Header />
       
-      <main className="flex flex-1 flex-col items-center px-6 relative z-10">
-        <div className="w-full max-w-4xl flex flex-col items-center gap-4 py-12 mt-80 text-[9rem]">
+      <main className="flex flex-1 flex-col items-center justify-center px-6 relative z-10">
+        <div className="w-full max-w-4xl flex flex-col items-center gap-6 -mt-20 text-[9rem]">
           <Logo />
           <SearchBar />
         </div>

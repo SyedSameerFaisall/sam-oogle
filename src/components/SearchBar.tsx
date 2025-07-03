@@ -75,9 +75,9 @@ export const SearchBar = () => {
             </div>
           </PopoverTrigger>
           <PopoverContent
-            className="w-full p-6 bg-card/95 backdrop-blur-md border-border/30 rounded-2xl shadow-elegant"
-            align="start"
-            sideOffset={8}
+            className="w-[800px] p-6 bg-card/95 backdrop-blur-md border-border/30 rounded-2xl shadow-elegant transform -translate-y-2"
+            align="center"
+            sideOffset={-10}
           >
             {/* Header Row */}
             <div className="flex items-center justify-between mb-4 w-full">
