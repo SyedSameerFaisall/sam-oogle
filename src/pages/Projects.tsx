@@ -3,39 +3,50 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
-
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
+    title: "AI Financial Analyst",
+    description:
+      "A cutting-edge, multi-agent system engineered with LangGraph and LangChain, designed to autonomously perform comprehensive stock evaluations across four core dimensions: Technical Analysis, Fundamental Valuation, News Sentiment, and Analyst Consensus. The agent intelligently orchestrates these modules to deliver a clear, evidence-backed investment verdict (BUY/HOLD/SELL) with confidence scoring. All insights are delivered through a sleek, interactive Streamlit dashboard, making institutional-grade analysis accessible in real time.",
+    technologies: [
+      "Python", "LangChain", "LangGraph", "Streamlit", "YFinance", "TA-Lib", "Plotly", "Tavily", "BeautifulSoup", "Markdown2", "FPDF2"
+    ],
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=200&fit=crop",
-    liveUrl: "#",
-    githubUrl: "#"
+    liveUrl: "http://localhost:8501",
+    githubUrl: "https://github.com/SyedSameerFaisall/Financial-Investment-Agent"
   },
   {
-    title: "Task Management App",
-    description: "A collaborative project management tool with real-time updates, team chat, and progress tracking.",
-    technologies: ["React", "TypeScript", "Socket.io", "Express", "PostgreSQL"],
+    title: "Brain Tumor Classifier",
+    description:
+      "Developed a high-accuracy deep learning model using a custom-built Convolutional Neural Network (CNN) to classify brain tumors from MRI scans into four categories: Glioma, Meningioma, Pituitary Tumor, and No Tumor. The project showcases a complete end-to-end machine learning pipeline—from data acquisition and preprocessing to training, evaluation, and result visualization. Achieved over 96% test accuracy, demonstrating the effectiveness of tailored CNN architectures in real-world medical imaging tasks.",
+    technologies: [
+      "Python", "PyTorch", "Torchvision", "KaggleHub", "Matplotlib", "Seaborn", 'Pandas', 'Numpy'
+    ],
     image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=200&fit=crop",
     liveUrl: "#",
-    githubUrl: "#"
+    githubUrl: "https://github.com/SyedSameerFaisall/Brain-Tumor-CNN"
   },
   {
-    title: "Weather Dashboard",
-    description: "A beautiful weather application with forecasts, interactive maps, and location-based notifications.",
-    technologies: ["Vue.js", "Weather API", "Chart.js", "CSS3", "PWA"],
+    title: "Semantic Book Recommender",
+    description:
+      "A powerful, semantic book recommendation system powered by OpenAI LLMs and vector search. It intelligently matches user queries to books using dense embeddings and performs zero-shot classification to categorize titles as fiction or non-fiction. The system also extracts emotional tone (e.g., suspenseful, joyful, tragic) from text using sentiment analysis, enabling highly personalized filtering. All functionality is wrapped in an intuitive Gradio web app, delivering real-time, human-like recommendations that go beyond simple keyword matching.",
+    technologies: [
+      "Python", "LangChain", "Transformers", "ChromaDB", "Gradio", "Pandas", "Seaborn", "OpenCV", "ipywidgets"
+    ],
     image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=200&fit=crop",
     liveUrl: "#",
-    githubUrl: "#"
+    githubUrl: "https://github.com/SyedSameerFaisall/Semantic-Book-Recommender"
   },
   {
-    title: "AI Chat Interface",
-    description: "An intelligent chatbot interface with natural language processing and context awareness.",
-    technologies: ["React", "OpenAI API", "Python", "FastAPI", "Redis"],
+    title: "HEP Citation Network Analysis",
+    description:
+      "A rigorous statistical analysis of citation behavior within the High Energy Physics – Phenomenology (hep-ph) domain on arXiv, spanning nearly a decade of research (1993–2001). Conducted entirely in base R with fully reproducible R Markdown reporting, the project explores in- and out-citation distributions, models longitudinal trends in reference counts, and investigates seasonal patterns in paper impact. Demonstrates strong applied statistical reasoning and data storytelling in a real-world scientific context, without relying on external libraries.",
+    technologies: [
+      "R", "R Markdown", "knitr"
+    ],
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=200&fit=crop",
     liveUrl: "#",
-    githubUrl: "#"
+    githubUrl: "https://github.com/SyedSameerFaisall/HEP-Citation-Network"
   }
 ];
 
@@ -57,41 +68,39 @@ const Projects = () => {
         <div className="space-y-8 animate-fade-in">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-foreground mb-4">
-              My <span className="text-primary">Projects</span>
+              <span className="text-primary">My Projects</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              A showcase of applications and solutions I've built using modern technologies
+            A showcase of impactful, real-world solutions crafted using cutting-edge tools and frameworks across web, AI, and data domains.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <Card 
-                key={index} 
-                className="bg-card/50 backdrop-blur-md border-border/30 hover:border-primary/30 transition-smooth hover:scale-105 group"
+              <Card
+                key={index}
+                className="bg-card/50 backdrop-blur-md border-border/30 hover:border-primary/30 transition-smooth hover:scale-105 group flex flex-col h-full"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="relative overflow-hidden rounded-t-lg">
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                
                 <CardHeader>
                   <CardTitle className="group-hover:text-primary transition-colors">
                     {project.title}
                   </CardTitle>
                   <CardDescription>{project.description}</CardDescription>
                 </CardHeader>
-                
-                <CardContent className="space-y-4">
-                  <div className="flex flex-wrap gap-2">
+                <CardContent className="flex-1 flex flex-col">
+                  <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech, techIndex) => (
-                      <Badge 
-                        key={techIndex} 
+                      <Badge
+                        key={techIndex}
                         variant="secondary"
                         className="bg-secondary/50 hover:bg-secondary/70 transition-colors"
                       >
@@ -99,30 +108,17 @@ const Projects = () => {
                       </Badge>
                     ))}
                   </div>
-                  
-                  <div className="flex gap-3">
-                    <Button 
-                      variant="default" 
+                  <div className="mt-auto">
+                    <Button
+                      variant="outline"
                       size="sm"
-                      className="flex-1 bg-primary hover:bg-primary/90"
-                      asChild
+                      className="w-full flex justify-center items-center !text-center"
+                      onClick={() => window.open(project.githubUrl, '_blank', 'noopener,noreferrer')}
                     >
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                        <Eye className="sm:mr-2 h-4 w-4" />
-                        Live Demo
-                      </a>
-                    </Button>
-                    
-                    <Button 
-                      variant="outline" 
-                      size="sm"
-                      className="flex-1"
-                      asChild
-                    >
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                        <Github className="sm:mr-2 h-4 w-4" />
+                      <span className="flex items-center gap-2 justify-center w-full">
+                        <Github className="h-4 w-4" />
                         Code
-                      </a>
+                      </span>
                     </Button>
                   </div>
                 </CardContent>
