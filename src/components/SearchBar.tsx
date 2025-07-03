@@ -6,9 +6,10 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { useNavigate } from "react-router-dom";
 
 const searchOptions = [
-  { label: "rumeza's projects", path: "/about" },
-  { label: "life", path: "/projects" },
+  { label: "rumeza's projects", path: "/projects" },
+  { label: "life", path: "/about" },
   { label: "why hire a rumeza", path: "/skills" },
+  { label: "work experience", path: "/experience" },
 ];
 
 export const SearchBar = () => {
