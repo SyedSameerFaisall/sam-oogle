@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Logo } from "@/components/Logo";
 import { SearchBar } from "@/components/SearchBar";
+import { QuickLinks } from "@/components/QuickLinks";
 import { FloatingElements } from "@/components/FloatingElements";
 import { Chatbot } from "@/components/Chatbot";
 const Index = () => {
@@ -9,9 +10,10 @@ const Index = () => {
       <Header />
       
       <main className="flex flex-1 flex-col items-center justify-center px-6 relative z-10">
-        <div className="w-full max-w-4xl flex flex-col items-center gap-6 -mt-20 text-[9rem]">
+        <div className="w-full max-w-4xl -mt-10 flex flex-col gap-10" style={{ transform: 'scale(1.5) translateY(-60px)' }}>
           <Logo />
           <SearchBar />
+          <QuickLinks />
         </div>
       </main>
       
