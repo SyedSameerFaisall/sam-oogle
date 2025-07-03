@@ -75,26 +75,27 @@ export const SearchBar = () => {
             </div>
           </PopoverTrigger>
           <PopoverContent
-            className="absolute left-0 top-full mt-2 w-full p-8 bg-[#39335a] text-white rounded-2xl shadow-2xl"
+            className="w-full p-6 bg-card/95 backdrop-blur-md border-border/30 rounded-2xl shadow-elegant"
             align="start"
+            sideOffset={8}
           >
             {/* Header Row */}
-            <div className="flex items-center justify-between mb-3 w-full">
+            <div className="flex items-center justify-between mb-4 w-full">
               <div className="flex items-center gap-3">
-                <ArrowLeft className="w-6 h-6 text-[#a18aff]" />
-                <span className="text-[#a18aff] font-medium text-lg">Search (Rum)oogle</span>
+                <ArrowLeft className="w-6 h-6 text-primary" />
+                <span className="text-primary font-medium text-lg">Search (Rum)oogle</span>
               </div>
               <div className="flex items-center gap-4">
-                <Mic className="w-5 h-5 text-[#a18aff]" />
-                <Calendar className="w-5 h-5 text-[#a18aff]" />
+                <Mic className="w-5 h-5 text-primary" />
+                <Calendar className="w-5 h-5 text-primary" />
               </div>
             </div>
             {/* Divider */}
-            <div className="border-t border-[#a18aff]/30 mb-4 w-full" />
+            <div className="border-t border-primary/30 mb-4 w-full" />
             {/* Section Heading */}
-            <div className="mb-4 text-[#a18aff] font-semibold text-base w-full">Trending searches</div>
+            <div className="mb-4 text-primary font-semibold text-base w-full">Trending searches</div>
             {/* Results */}
-            <div className="flex flex-col gap-4 w-full">
+            <div className="flex flex-col gap-2 w-full">
               {searchOptions.map((option, idx) => (
                 <div
                   key={option.path}
@@ -102,10 +103,10 @@ export const SearchBar = () => {
                     navigate(option.path);
                     setOpen(false);
                   }}
-                  className="flex items-center gap-3 cursor-pointer hover:bg-[#322d4a] rounded-xl px-2 py-2 transition-colors group w-full"
+                  className="flex items-center gap-3 cursor-pointer hover:bg-secondary/50 rounded-lg px-3 py-2 transition-smooth group w-full"
                 >
-                  <TrendingUp className="w-5 h-5 text-[#a18aff]" />
-                  <span className={idx === 0 ? "font-bold text-white" : "text-white"}>{option.label}</span>
+                  <TrendingUp className="w-5 h-5 text-primary" />
+                  <span className={`${idx === 0 ? "font-bold" : ""} text-foreground`}>{option.label}</span>
                 </div>
               ))}
             </div>
