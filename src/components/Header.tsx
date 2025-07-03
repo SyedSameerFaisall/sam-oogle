@@ -32,13 +32,13 @@ const socialLinks = [
   },
   {
     icon: Facebook,
-    href: "#",
+    href: "https://www.facebook.com/sameer.faisal.524596",
     label: "Facebook",
     color: "hover:text-blue-600"
   },
   {
     icon: Calendar,
-    href: "#",
+    href: "https://calendly.com/syedsameerfaisal1",
     label: "Calendly",
     color: "hover:text-orange-400"
   }
@@ -60,7 +60,13 @@ export const Header = () => {
     <>
       <header className="w-full pt-6 pr-12 z-50">
       <div style={{ transform: 'scale(0.6)', transformOrigin: 'top right' }} className="flex items-center justify-end w-full mt-4 mr-32 gap-12 pl-24">
-        <span className="text-xl font-bold text-foreground">Gmail</span>
+        <Button
+          variant="ghost"
+          className="text-xl font-bold text-foreground px-2 py-1"
+          onClick={() => setIsEmailOpen(true)}
+        >
+          Gmail
+        </Button>
         <Popover>
           <PopoverTrigger asChild>
             <Button variant="ghost" size="sm" className="p-0 h-10 w-10 rounded-2xl transition-smooth hover:scale-110 flex items-center justify-center">
@@ -93,7 +99,7 @@ export const Header = () => {
               <img src="/profile.jpg" alt="User" className="w-full h-full object-cover rounded-full" />
             </Button>
           </PopoverTrigger>
-          <PopoverContent style={{ transform: 'scale(0.5) translateX(-60px)', transformOrigin: 'top right' }} className="w-[28rem] p-10 bg-card/95 backdrop-blur-md border-border/30 translate-y-[10px] flex flex-col items-center gap-6">
+          <PopoverContent style={{ transform: 'scale(0.6) translateX(-60px) translateY(40px)', transformOrigin: 'top right' }} className="w-[28rem] p-10 bg-card/95 backdrop-blur-md border-border/30 flex flex-col items-center gap-6">
             <img src="/profile.jpg" alt="Sameer" className="w-20 h-20 rounded-full object-cover mb-2" />
             <div className="text-center">
               <div className="text-xl font-bold text-foreground">Hi, I'm Sameer</div>
