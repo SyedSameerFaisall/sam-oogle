@@ -74,7 +74,7 @@ const Experience = () => {
               <span className="text-primary"> Work Experience</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              My professional journey through various roles in the tech industry
+            A results-driven journey across diverse roles in the tech ecosystem, contributing to real-world solutions through innovation and collaboration.
             </p>
           </div>
 

@@ -198,6 +198,23 @@ function getSkillIcon(skillName: string) {
   return <Code className="h-5 w-5 text-primary" />;
 }
 
+// Certification issuer icon mapping
+const certIssuerIconMap: Record<string, JSX.Element> = {
+  "stanford": <img src="/stanford.svg" className="h-5 w-5" alt="Stanford" />, // Place stanford.svg in public
+  "google": <img src="/google.svg" className="h-5 w-5" alt="Google" />, // Place google.svg in public
+  "freecodecamp": <img src="/freecodecamp.svg" className="h-5 w-5" alt="freeCodeCamp" />, // Place freecodecamp.svg in public
+  "datacamp": <img src="/datacamp.svg" className="h-5 w-5" alt="DataCamp" />, // Place datacamp.svg in public
+  "coursera": <img src="/coursera.svg" className="h-5 w-5" alt="Coursera" />, // Place coursera.svg in public
+};
+
+function getCertIssuerIcon(issuer: string) {
+  const lower = issuer.toLowerCase();
+  for (const key in certIssuerIconMap) {
+    if (lower.includes(key)) return certIssuerIconMap[key];
+  }
+  return null;
+}
+
 const Skills = () => {
   const navigate = useNavigate();
 
@@ -281,7 +298,10 @@ const Skills = () => {
                       {cert.title}
                     </CardTitle>
                     <CardDescription className="flex items-center justify-between">
-                      <span>{cert.issuer}</span>
+                      <span className="flex items-center gap-2">
+                        {getCertIssuerIcon(cert.issuer)}
+                        {cert.issuer}
+                      </span>
                       <Badge variant="secondary">{cert.date}</Badge>
                     </CardDescription>
                   </CardHeader>
