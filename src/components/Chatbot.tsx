@@ -73,8 +73,8 @@ export const Chatbot = () => {
       <Button
         onClick={() => setIsOpen(true)}
         variant="outline"
-        style={{ transform: 'scale(0.5)', transformOrigin: 'bottom right' }}
-        className="fixed bottom-6 right-12 group rounded-2xl p-6 z-50 flex flex-col items-center justify-center text-center transition-smooth h-auto w-auto"
+        style={{ transform: 'scale(0.5)', transformOrigin: 'bottom right', right: '2rem', position: 'fixed', bottom: '1.5rem' }}
+        className="group rounded-2xl p-6 z-50 flex flex-col items-center justify-center text-center transition-smooth h-auto w-auto"
       >
         <div className="flex flex-col items-center">
           <div className="flex flex-row items-center gap-2">
