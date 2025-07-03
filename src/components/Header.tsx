@@ -43,9 +43,8 @@ const socialLinks = [
     color: "hover:text-orange-400"
   }
 ];
-export const Header = () => {
+export const Header = ({ setIsEmailOpen }: { setIsEmailOpen: (open: boolean) => void }) => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
-  const [isEmailOpen, setIsEmailOpen] = useState(false);
 
   const handleSocialClick = (social: typeof socialLinks[0], e: React.MouseEvent) => {
     e.preventDefault();
@@ -102,16 +101,16 @@ export const Header = () => {
           <PopoverContent style={{ transform: 'scale(0.6) translate(-60px, 40px)', transformOrigin: 'top right' }} className="w-[28rem] p-8 rounded-2xl bg-card/95 backdrop-blur-md border border-border/30 shadow-lg flex flex-col items-center gap-6">
             <img src="/profile.jpg" alt="Sameer" className="w-20 h-20 rounded-full object-cover mb-2" />
             <div className="text-center">
-              <div className="text-xl font-bold text-foreground">Hi, I am Syed Sameer Faisal</div>
+              <div className="text-xl font-bold text-foreground">Hi, I am Sameer</div>
               <div className="text-muted-foreground text-sm mb-2">syedsameerfaisal1@gmail.com</div>
             </div>
             <div className="my-4">
               <h3 className="text-foreground font-semibold text-lg md:text-xl text-center mb-3">HOW TO USE</h3>
               <ul className="space-y-2 text-base md:text-lg text-muted-foreground font-medium">
                 <li>🔍 Use <span className="text-primary font-semibold">Search</span> to explore my portfolio</li>
-                <li>📧 Click <span className="text-green-400 font-semibold">Gmail</span> to contact me</li>
+                <li>📧 Click <span className="text-primary font-semibold">Gmail</span> to contact me</li>
                 <li>🟦 Use the <span className="text-primary font-semibold">Dot-Menu</span> for more links</li>
-                <li>📅 Book a call with the calendar icon</li>
+                <li>📅 Book a call with the <span className="text-primary font-bold">calendar</span> icon</li>
               </ul>
             </div>
             <div className="w-full border-t border-border/30 my-2"></div>
@@ -125,8 +124,6 @@ export const Header = () => {
         </Popover>
       </div>
     </header>
-    
-    <EmailPane isOpen={isEmailOpen} onClose={() => setIsEmailOpen(false)} />
     </>
   );
 };

@@ -4,10 +4,11 @@ import { SearchBar } from "@/components/SearchBar";
 import { QuickLinks } from "@/components/QuickLinks";
 import { FloatingElements } from "@/components/FloatingElements";
 import { Chatbot } from "@/components/Chatbot";
-const Index = () => {
+
+const Index = ({ setIsEmailOpen }: { setIsEmailOpen: (open: boolean) => void }) => {
   return <div className="h-screen relative overflow-hidden flex flex-col">
       <FloatingElements />
-      <Header />
+      <Header setIsEmailOpen={setIsEmailOpen} />
       
       <main className="flex flex-1 flex-col items-center justify-center px-4 sm:px-6 lg:px-8 relative z-10">
         <div style={{ transform: 'scale(0.7)', transformOrigin: 'top center', width: '100%' }}>

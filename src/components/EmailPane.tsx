@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { X, Minimize2, Maximize2 } from "lucide-react";
+import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { DialogHeader, DialogTitle, DialogContent } from "@/components/ui/dialog";
+import { Dialog } from "@/components/ui/dialog";
 
 interface EmailPaneProps {
   isOpen: boolean;
@@ -29,17 +30,11 @@ export const EmailPane = ({ isOpen, onClose }: EmailPaneProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl h-[60vh] sm:h-[70vh] bg-card/95 backdrop-blur-md border-border/30 p-0">
-        <DialogHeader className="p-4 border-b border-border/30 bg-secondary/50">
+      <DialogContent className="max-w-lg mx-auto h-[60vh] sm:h-[70vh] bg-card/95 text-foreground border border-border/30 rounded-2xl p-0">
+        <DialogHeader className="p-4 border-b border-border/30 bg-secondary/50 rounded-t-2xl">
           <div className="flex items-center justify-between">
-            <DialogTitle className="text-foreground">New Message</DialogTitle>
+            <DialogTitle className="text-white">New Message</DialogTitle>
             <div className="flex items-center gap-2">
-              <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
-                <Minimize2 className="h-4 w-4" />
-              </Button>
-              <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
-                <Maximize2 className="h-4 w-4" />
-              </Button>
               <Button variant="ghost" size="sm" className="h-8 w-8 p-0" onClick={onClose}>
                 <X className="h-4 w-4" />
               </Button>
@@ -56,25 +51,6 @@ export const EmailPane = ({ isOpen, onClose }: EmailPaneProps) => {
                 value={formData.from}
                 onChange={(e) => setFormData(prev => ({ ...prev, from: e.target.value }))}
                 className="flex-1 bg-background/50 border-border/30"
-              />
-              <div className="flex gap-2">
-                <Button type="button" variant="ghost" size="sm" className="text-muted-foreground">
-                  Cc
-                </Button>
-                <Button type="button" variant="ghost" size="sm" className="text-muted-foreground">
-                  Bcc
-                </Button>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <span className="text-muted-foreground text-sm w-12">To</span>
-              <Input
-                type="email"
-                value={formData.to}
-                onChange={(e) => setFormData(prev => ({ ...prev, to: e.target.value }))}
-                className="flex-1 bg-background/50 border-border/30"
-                readOnly
               />
             </div>
 
@@ -100,24 +76,13 @@ export const EmailPane = ({ isOpen, onClose }: EmailPaneProps) => {
           </div>
 
           <div className="p-4 border-t border-border/30 bg-secondary/20">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-start">
               <Button
                 type="submit"
                 className="px-8 bg-primary hover:bg-primary/90 text-primary-foreground shadow-glow"
               >
                 Send
               </Button>
-              <div className="flex items-center gap-2">
-                <Button type="button" variant="ghost" size="sm">
-                  Format
-                </Button>
-                <Button type="button" variant="ghost" size="sm">
-                  Attach
-                </Button>
-                <Button type="button" variant="ghost" size="sm">
-                  Insert
-                </Button>
-              </div>
             </div>
           </div>
         </form>
