@@ -1,19 +1,17 @@
 import { Header } from "@/components/Header";
 import { Logo } from "@/components/Logo";
 import { SearchBar } from "@/components/SearchBar";
-import { QuickLinks } from "@/components/QuickLinks";
 import { FloatingElements } from "@/components/FloatingElements";
 import { Chatbot } from "@/components/Chatbot";
 const Index = () => {
-  return <div className="min-h-screen relative overflow-hidden">
+  return <div className="h-screen relative overflow-hidden flex flex-col">
       <FloatingElements />
       <Header />
       
-      <main className="flex flex-col items-center justify-center min-h-screen px-6 relative z-10">
-        <div className="w-full max-w-4xl scale-110 -mt-10">
+      <main className="flex flex-1 flex-col items-center justify-center px-6 relative z-10">
+        <div className="w-full max-w-4xl flex flex-col items-center justify-center gap-12 py-12">
           <Logo />
           <SearchBar />
-          <QuickLinks />
         </div>
       </main>
       

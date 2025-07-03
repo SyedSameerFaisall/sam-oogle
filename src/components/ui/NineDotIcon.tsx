@@ -5,10 +5,10 @@ const NineDotIcon = ({ className = "w-full h-full" }) => (
     viewBox="0 0 315 315"
     xmlns="http://www.w3.org/2000/svg"
     className={className}
-    style={{ display: "block" }}
+    style={{ display: "block", width: "100%", height: "100%" }}
     aria-hidden="true"
     focusable="false"
-    preserveAspectRatio="xMidYMid meet"
+    preserveAspectRatio="none"
   >
     {[0, 1, 2].flatMap(i =>
       [0, 1, 2].map(j => (
