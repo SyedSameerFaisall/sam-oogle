@@ -27,7 +27,7 @@ export const SearchBar = () => {
   };
 
   return (
-    <form onSubmit={handleSearch} className="w-full max-w-2xl mx-auto">
+    <form onSubmit={handleSearch} className="w-full max-w-8xl mx-auto">
       <div className="relative w-full">
         <Popover open={open} onOpenChange={setOpen}>
           <PopoverTrigger asChild>
