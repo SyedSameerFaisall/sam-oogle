@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const quickLinks = [
   { title: "About Sameer", description: "Learn more about my background", path: "/about" },
   { title: "My Projects", description: "Explore my latest work and creations", path: "/projects" },
-  { title: "Skills & Tech", description: "Skillset & Technologies I work with", path: "/skills" },
+  { title: "Skills & Tech", description: "Tools & Technologies I work with", path: "/skills" },
   { title: "Work Experience", description: "My internship experiences", path: "/experience" },
 ];
 
