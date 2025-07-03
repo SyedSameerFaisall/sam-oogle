@@ -15,7 +15,6 @@ const searchOptions = [
 
 export const SearchBar = () => {
   const [searchValue, setSearchValue] = useState("");
-  const [isFocused, setIsFocused] = useState(false);
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -31,11 +30,12 @@ export const SearchBar = () => {
     <form onSubmit={handleSearch} className="w-full max-w-2xl mx-auto relative">
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
-          <div 
-            className={`relative bg-card/40 backdrop-blur-md rounded-full border transition-smooth shadow-elegant cursor-pointer
-              ${isFocused || open ? 'border-primary shadow-glow scale-105' : 'border-border/30 hover:border-border/50'}`}
+          <button
+            type="button"
+            tabIndex={0}
+            className={`relative w-full bg-card/40 backdrop-blur-md rounded-full border transition-smooth shadow-elegant cursor-pointer
+              ${open ? 'border-primary shadow-glow scale-105' : 'border-border/30 hover:border-border/50'}`}
             onClick={() => setOpen(true)}
-            onMouseDown={e => { e.preventDefault(); setOpen(true); }}
             id="searchbar-trigger"
           >
             <div className="flex items-center p-3">
@@ -43,11 +43,6 @@ export const SearchBar = () => {
               <Input
                 value={searchValue}
                 readOnly
-                onFocus={() => {
-                  setIsFocused(true);
-                  setOpen(true);
-                }}
-                onBlur={() => setIsFocused(false)}
                 placeholder="Search Sameer's portfolio..."
                 className="flex-1 bg-transparent border-none focus:ring-0 focus:outline-none text-foreground placeholder:text-muted-foreground"
               />
@@ -72,7 +67,7 @@ export const SearchBar = () => {
                 </Button>
               </div>
             </div>
-          </div>
+          </button>
         </PopoverTrigger>
         <PopoverContent
           className="w-full max-w-2xl p-0 bg-card/95 backdrop-blur-md border-border/30"
@@ -87,7 +82,7 @@ export const SearchBar = () => {
                     key={option.path}
                     onSelect={() => {
                       navigate(option.path);
-                      setOpen(false);
+                      // setOpen(false); // Removed to keep Popover open after selection
                     }}
                     className="cursor-pointer"
                   >

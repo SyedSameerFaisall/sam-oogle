@@ -12,7 +12,7 @@ const skillCategories = [
     skills: [
       { name: "Python (Pandas, NumPy)", level: 95 },
       { name: "Matplotlib / Seaborn", level: 85 },
-      { name: "Polars", level: 80 },
+      { name: "R", level: 90 },
       { name: "SQL", level: 95 },
       { name: "Excel / Google Sheets", level: 95 }
     ]
