@@ -16,7 +16,7 @@ export const Chatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "1",
-      text: "Hi! I'm Sameer's AI assistant. I can help you learn more about his background, projects, and experience. What would you like to know?",
+      text: `👋 Hi! Welcome to Sameer's world!\n\nI'm your friendly AI concierge here to make your journey smooth and snazzy.\n\n✨ Tap the dot icon to check out Sameer’s epic links and socials.\n\n📬 Want to drop him a message? Use the gmail icon to access the in-built feature.\n\n🧠 Curious about his projects, passions, or tech wizardry? Just ask, I will spill the (well-formatted) tea!`,
       isBot: true,
       timestamp: new Date()
     }
@@ -130,7 +130,12 @@ export const Chatbot = () => {
                     : 'bg-primary text-primary-foreground'
                 }`}
               >
-                {message.text}
+                {message.text.split('\n').map((line, i) => (
+                  <span key={i}>
+                    {line}
+                    <br />
+                  </span>
+                ))}
               </div>
               {!message.isBot && (
                 <div className="w-6 h-6 rounded-full bg-muted flex items-center justify-center flex-shrink-0">
