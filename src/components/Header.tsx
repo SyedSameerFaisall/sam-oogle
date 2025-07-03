@@ -73,7 +73,7 @@ export const Header = () => {
               <NineDotIcon className="w-8 h-8 text-foreground" />
             </Button>
           </PopoverTrigger>
-          <PopoverContent style={{ transform: 'scale(0.5) translate(-120px, 40px)', transformOrigin: 'top right' }} className="w-96 p-6 bg-card/95 backdrop-blur-md border-border/30">
+          <PopoverContent style={{ transform: 'scale(0.6) translate(-60px, 40px)', transformOrigin: 'top right' }} className="w-96 p-8 rounded-2xl bg-card/95 backdrop-blur-md border border-border/30 shadow-lg">
             <div className="grid grid-cols-3 gap-6">
               {socialLinks.map((social, index) => (
                 <div 
@@ -99,11 +99,11 @@ export const Header = () => {
               <img src="/profile.jpg" alt="User" className="w-full h-full object-cover rounded-full" />
             </Button>
           </PopoverTrigger>
-          <PopoverContent style={{ transform: 'scale(0.6) translateX(-60px) translateY(40px)', transformOrigin: 'top right' }} className="w-[28rem] p-10 bg-card/95 backdrop-blur-md border-border/30 flex flex-col items-center gap-6">
+          <PopoverContent style={{ transform: 'scale(0.6) translate(-60px, 40px)', transformOrigin: 'top right' }} className="w-[28rem] p-8 rounded-2xl bg-card/95 backdrop-blur-md border border-border/30 shadow-lg flex flex-col items-center gap-6">
             <img src="/profile.jpg" alt="Sameer" className="w-20 h-20 rounded-full object-cover mb-2" />
             <div className="text-center">
-              <div className="text-xl font-bold text-foreground">Hi, I'm Sameer</div>
-              <div className="text-muted-foreground text-sm mb-2">sameer@email.com</div>
+              <div className="text-xl font-bold text-foreground">Hi, I am Syed Sameer Faisal</div>
+              <div className="text-muted-foreground text-sm mb-2">syedsameerfaisal1@gmail.com</div>
             </div>
             <div className="my-4">
               <h3 className="text-foreground font-semibold text-lg md:text-xl text-center mb-3">HOW TO USE</h3>
@@ -116,10 +116,10 @@ export const Header = () => {
             </div>
             <div className="w-full border-t border-border/30 my-2"></div>
             <div className="w-full flex flex-col gap-2">
-              <Button variant="outline" size="sm" className="w-full justify-center">About Me</Button>
-              <Button variant="outline" size="sm" className="w-full justify-center">Projects</Button>
-              <Button variant="outline" size="sm" className="w-full justify-center">Skills</Button>
-              <Button variant="outline" size="sm" className="w-full justify-center">Experience</Button>
+              <a href="/about" className="w-full"><Button variant="outline" size="sm" className="w-full justify-center">About Me</Button></a>
+              <a href="/projects" className="w-full"><Button variant="outline" size="sm" className="w-full justify-center">Projects</Button></a>
+              <a href="/skills" className="w-full"><Button variant="outline" size="sm" className="w-full justify-center">Skills</Button></a>
+              <a href="/experience" className="w-full"><Button variant="outline" size="sm" className="w-full justify-center">Experience</Button></a>
             </div>
           </PopoverContent>
         </Popover>

@@ -17,11 +17,11 @@ export const ProfilePane = ({ isOpen, onClose }: ProfilePaneProps) => {
           <Button variant="ghost" size="icon" onClick={onClose} aria-label="Close profile pane">
             <X className="w-6 h-6" />
           </Button>
-        </div>
+            </div>
         {/* Profile Image */}
         <div className="w-full h-72 bg-gradient-secondary flex items-center justify-center overflow-hidden rounded-t-xl">
           <img src="/profile.jpg" alt="Sameer" className="w-full h-full object-cover" />
-        </div>
+            </div>
         {/* Main Content */}
         <div className="flex flex-col px-4 py-0">
           {/* Profile Info */}
