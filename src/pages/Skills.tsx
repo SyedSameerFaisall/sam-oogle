@@ -1,4 +1,4 @@
-import { ArrowLeft, Award, Code, Database, Globe, Smartphone, Wrench } from "lucide-react";
+import { ArrowLeft, Award, Code, Database, Globe, Smartphone, Wrench, BarChart, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -7,74 +7,87 @@ import { useNavigate } from "react-router-dom";
 
 const skillCategories = [
   {
-    title: "Frontend Development",
+    title: "Data Analysis",
+    icon: <BarChart className="h-6 w-6" />,
+    skills: [
+      { name: "Python (Pandas, NumPy)", level: 95 },
+      { name: "Matplotlib / Seaborn", level: 85 },
+      { name: "Polars", level: 80 },
+      { name: "SQL", level: 95 },
+      { name: "Excel / Google Sheets", level: 95 }
+    ]
+  },
+  {
+    title: "Machine Learning & AI",
+    icon: <Brain className="h-6 w-6" />,
+    skills: [
+      { name: "Scikit-learn", level: 90 },
+      { name: "PyTorch", level: 90 },
+      { name: "TensorFlow / Keras", level: 85 },
+      { name: "LangChain / LangGraph / CrewAI", level: 85 },
+      { name: "Hugging Face Transformers", level: 80 }
+    ]
+  },
+  {
+    title: "Web Development",
     icon: <Globe className="h-6 w-6" />,
     skills: [
-      { name: "React/Next.js", level: 95 },
-      { name: "TypeScript", level: 90 },
-      { name: "Vue.js", level: 85 },
-      { name: "Tailwind CSS", level: 95 },
-      { name: "JavaScript (ES6+)", level: 95 }
+      { name: "React / Next.js", level: 80 },
+      { name: "TypeScript", level: 85 },
+      { name: "Tailwind CSS", level: 80 },
+      { name: "JavaScript (ES6+)", level: 90 },
+      { name: "Node.js", level: 85 }
     ]
   },
   {
-    title: "Backend Development",
-    icon: <Database className="h-6 w-6" />,
-    skills: [
-      { name: "Node.js", level: 90 },
-      { name: "Python", level: 85 },
-      { name: "PostgreSQL", level: 80 },
-      { name: "MongoDB", level: 85 },
-      { name: "REST APIs", level: 90 }
-    ]
-  },
-  {
-    title: "Mobile Development",
-    icon: <Smartphone className="h-6 w-6" />,
-    skills: [
-      { name: "React Native", level: 80 },
-      { name: "Flutter", level: 75 },
-      { name: "iOS Development", level: 70 },
-      { name: "Android Development", level: 70 }
-    ]
-  },
-  {
-    title: "DevOps & Tools",
+    title: "Dev Tools & Platforms",
     icon: <Wrench className="h-6 w-6" />,
     skills: [
-      { name: "Docker", level: 85 },
-      { name: "AWS", level: 80 },
-      { name: "Git/GitHub", level: 95 },
-      { name: "CI/CD", level: 80 },
-      { name: "Linux", level: 85 }
+      { name: "Git / GitHub", level: 95 },
+      { name: "VS Code", level: 90 },
+      { name: "Streamlit / Gradio", level: 85 },
+      { name: "Docker", level: 75 },
+      { name: "Linux / Bash", level: 85 }
     ]
   }
 ];
 
 const certifications = [
   {
-    title: "AWS Certified Solutions Architect",
-    issuer: "Amazon Web Services",
-    date: "2023",
-    credentialId: "AWS-SAA-2023-001"
+    title: "Machine Learning Certification",
+    issuer: "Stanford University",
+    date: "Dec 2024",
+    credentialId: "US9WW4UT4MP3"
   },
   {
-    title: "Google Cloud Professional",
-    issuer: "Google Cloud",
-    date: "2023",
-    credentialId: "GCP-PRO-2023-002"
+    title: "Data Analyst Certification",
+    issuer: "DataCamp",
+    date: "Sep 2024",
+    credentialId: "DA0029836382233" 
   },
   {
-    title: "MongoDB Certified Developer",
-    issuer: "MongoDB University",
-    date: "2022",
-    credentialId: "MDB-DEV-2022-003"
+    title: "Data Analysis with R Programming",
+    issuer: "Google",
+    date: "Jul 2024",
+    credentialId: ""
   },
   {
-    title: "React Professional Certificate",
-    issuer: "Meta",
-    date: "2022",
-    credentialId: "META-REACT-2022-004"
+    title: "Google Data Analytics Professional Certification",
+    issuer: "Google",
+    date: "Jul 2024",
+    credentialId: ""
+  },
+  {
+    title: "SQL for Data Science",
+    issuer: "Coursera",
+    date: "Jan 2024",
+    credentialId: ""
+  },
+  {
+    title: "Responsive Web Design",
+    issuer: "freeCodeCamp",
+    date: "Jul 2023",
+    credentialId: ""
   }
 ];
 
@@ -96,10 +109,10 @@ const Skills = () => {
         <div className="space-y-8 animate-fade-in">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-foreground mb-4">
-              Skills & <span className="text-primary">Certifications</span>
+              <span className="text-primary">Skills & Certifications</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Technical expertise and professional certifications that drive my development journey
+              Technical expertise and professional certifications that drive my development journey in the tech field
             </p>
           </div>
 
@@ -163,9 +176,11 @@ const Skills = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-sm text-muted-foreground">
-                      Credential ID: {cert.credentialId}
-                    </p>
+                    <Button asChild variant="outline" size="sm" className="mt-2" {...(!cert.credentialId.startsWith('http') && { disabled: true })}>
+                      <a href={cert.credentialId.startsWith('http') ? cert.credentialId : '#'} target="_blank" rel="noopener noreferrer">
+                        View Credential
+                      </a>
+                    </Button>
                   </CardContent>
                 </Card>
               ))}

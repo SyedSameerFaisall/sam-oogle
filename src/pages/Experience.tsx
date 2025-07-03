@@ -3,69 +3,55 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
-
 const experiences = [
   {
-    company: "TechCorp Solutions",
-    position: "Senior Full Stack Developer",
-    duration: "2022 - Present",
-    location: "San Francisco, CA (Remote)",
-    type: "Full-time",
-    description: "Leading development of scalable web applications using React, Node.js, and cloud technologies. Mentoring junior developers and architecting microservices infrastructure.",
+    company: "HeadStart Global",
+    position: "Data Analyst Intern",
+    duration: "Nov 2024 – Dec 2024",
+    location: "London, United Kingdom (Remote)",
+    type: "Internship",
+    description:
+      "Led market research and strategic evaluation of global data providers for a SaaS platform, focusing on data-driven decision-making to guide partnership strategies.",
     achievements: [
-      "Improved application performance by 40% through code optimization",
-      "Led a team of 5 developers on multiple client projects",
-      "Implemented CI/CD pipeline reducing deployment time by 60%",
-      "Designed and developed REST APIs serving 1M+ requests daily"
+      "Performed a comprehensive analysis of over 40 data providers, evaluating datasets across consumer behavior, social media trends, and industry benchmarks to determine strategic alignment and data quality.",
+      "Developed a detailed business case and competitive comparison matrix that identified the top three high-value partners, laying the foundation for long-term strategic partnerships.",
+      "Designed and presented a polished, insights-driven pitch deck to executive stakeholders, clearly communicating partnership value propositions and demonstrating expansion potential for the platform’s market reach."
     ],
-    technologies: ["React", "Node.js", "TypeScript", "AWS", "Docker", "PostgreSQL"]
+    technologies: ["Pandas", 'Numpy', 'Matplotlib', 'Pytorch', 'SkLearn', 'SQL', 'Excel', "Notion"]
   },
   {
-    company: "Digital Innovations Inc",
-    position: "Frontend Developer",
-    duration: "2020 - 2022",
-    location: "New York, NY",
-    type: "Full-time",
-    description: "Developed responsive web applications and collaborated with UX/UI designers to create intuitive user interfaces. Focused on modern frontend frameworks and performance optimization.",
+    company: "WeMakeApp Limited",
+    position: "Software Engineering Intern",
+    duration: "Dec 2023 – Jan 2024",
+    location: "Hong Kong SAR",
+    type: "Internship",
+    description:
+      "Contributed to frontend development within an agile team, improving user interface responsiveness and ensuring development aligned closely with evolving design goals.",
     achievements: [
-      "Built 15+ responsive web applications from scratch",
-      "Reduced page load times by 50% through optimization techniques",
-      "Collaborated with design team to improve user experience",
-      "Implemented automated testing reducing bugs by 30%"
+      "Collaborated with UI/UX designers to rework key interface components, improving responsiveness by 25% and reducing time-to-iteration by 20% through efficient use of Figma prototypes and developer handoff practices.",
+      "Actively participated in peer code reviews and applied software engineering best practices, resulting in a 15% reduction in post-deployment bugs and improved overall codebase maintainability.",
+      "Wrote unit tests for major components, refactored legacy UI code, and maintained a clean, well-documented Git commit history to ensure consistent development workflows."
     ],
-    technologies: ["React", "Vue.js", "JavaScript", "CSS3", "SASS", "Jest"]
+    technologies: ["React", "JavaScript", "Tailwind", "NodeJS", "TypeScript", "Figma", "Git"]
   },
   {
-    company: "StartupXYZ",
-    position: "Junior Web Developer",
-    duration: "2019 - 2020",
-    location: "Austin, TX",
-    type: "Full-time",
-    description: "Started my professional journey in a fast-paced startup environment. Worked on various projects including e-commerce platforms, landing pages, and internal tools.",
+    company: "SudoStudy",
+    position: "Data Intern",
+    duration: "June 2023 – July 2023",
+    location: "Geneva, Switzerland (Remote)",
+    type: "Internship",
+    description:
+      "Worked on content structuring and AI-powered question generation for an EdTech platform, optimizing user engagement and backend efficiency.",
     achievements: [
-      "Developed and maintained 10+ client websites",
-      "Learned modern development frameworks and best practices",
-      "Contributed to open-source projects",
-      "Implemented responsive design patterns"
+      "Redesigned the structure of over 3,000 A-level practice questions by tagging them with subject, topic, and difficulty, resulting in a 30% reduction in search time and a measurable boost in user retention.",
+      "Engineered a custom tagging and filtering framework that increased platform discoverability and helped drive a 15% rise in daily active users within a month.",
+      "Leveraged AI tools to generate and standardize 200+ subject-specific A-level questions, expanding the content base by 35% and significantly enhancing the platform’s academic credibility and user satisfaction."
     ],
-    technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "jQuery", "PHP"]
-  },
-  {
-    company: "Freelance",
-    position: "Web Developer",
-    duration: "2018 - 2019",
-    location: "Remote",
-    type: "Freelance",
-    description: "Provided web development services to small businesses and startups. Focused on creating modern, responsive websites and learning new technologies.",
-    achievements: [
-      "Completed 20+ client projects successfully",
-      "Built portfolio of diverse web applications",
-      "Established long-term client relationships",
-      "Gained experience in project management"
-    ],
-    technologies: ["WordPress", "HTML5", "CSS3", "JavaScript", "PHP", "MySQL"]
+    technologies: ["Notion", "ChatGPT", "Python", "Excel"]
   }
 ];
+
+
 
 const Experience = () => {
   const navigate = useNavigate();
@@ -85,10 +71,10 @@ const Experience = () => {
         <div className="space-y-8 animate-fade-in">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-foreground mb-4">
-              Work <span className="text-primary">Experience</span>
+              <span className="text-primary"> Work Experience</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              My professional journey through various roles and companies in the tech industry
+              My professional journey through various roles in the tech industry
             </p>
           </div>
 
