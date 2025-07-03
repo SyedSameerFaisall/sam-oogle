@@ -31,15 +31,15 @@ export const SearchBar = () => {
       <div className="relative w-full">
         <Popover open={open} onOpenChange={setOpen}>
           <PopoverTrigger asChild>
-            <div 
+             <div 
               className={`relative bg-card/40 backdrop-blur-md rounded-full border transition-smooth shadow-elegant cursor-pointer
                 ${isFocused || open ? 'border-primary shadow-glow scale-105' : 'border-border/30 hover:border-border/50'}`}
               onClick={() => setOpen(true)}
               onMouseDown={e => { e.preventDefault(); setOpen(true); }}
               id="searchbar-trigger"
             >
-              <div className="flex items-center p-3">
-                <Search className="text-muted-foreground ml-3 mr-4" size={20} />
+              <div className="flex items-center py-3 px-4">
+                <Search className="text-muted-foreground mr-4" size={20} />
                 <Input
                   value={searchValue}
                   readOnly
@@ -51,24 +51,24 @@ export const SearchBar = () => {
                   placeholder="Search (Rum)oogle"
                   className="flex-1 bg-transparent border-none focus:ring-0 focus:outline-none text-foreground placeholder:text-muted-foreground"
                 />
-                <div className="flex items-center gap-2 mr-2">
+                <div className="flex items-center gap-2">
                   <Button
                     type="button"
                     variant="ghost"
                     size="sm"
-                    className="p-2 h-8 w-8 hover:bg-card/50 transition-smooth"
+                    className="p-2 h-8 w-8 hover:bg-muted/20 transition-smooth rounded-full"
                     aria-label="Voice search"
                   >
-                    <Mic size={16} />
+                    <Mic size={16} className="text-muted-foreground" />
                   </Button>
                   <Button
                     type="button"
                     variant="ghost"
                     size="sm"
-                    className="p-2 h-8 w-8 hover:bg-card/50 transition-smooth"
+                    className="p-2 h-8 w-8 hover:bg-muted/20 transition-smooth rounded-full"
                     aria-label="Search by image"
                   >
-                    <Calendar size={16} />
+                    <Calendar size={16} className="text-muted-foreground" />
                   </Button>
                 </div>
               </div>
