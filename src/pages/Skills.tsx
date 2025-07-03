@@ -57,37 +57,37 @@ const certifications = [
     title: "Machine Learning Certification",
     issuer: "Stanford University",
     date: "Dec 2024",
-    credentialId: "US9WW4UT4MP3"
+    credentialId: "https://www.coursera.org/account/accomplishments/specialization/US9WW4UT4MP3"
   },
   {
     title: "Data Analyst Certification",
     issuer: "DataCamp",
     date: "Sep 2024",
-    credentialId: "DA0029836382233" 
+    credentialId: "https://www.datacamp.com/certificate/DA0029836382233" 
   },
   {
     title: "Data Analysis with R Programming",
     issuer: "Google",
     date: "Jul 2024",
-    credentialId: ""
+    credentialId: "https://www.coursera.org/account/accomplishments/verify/LZB4687RJSHP"
   },
   {
     title: "Google Data Analytics Professional Certification",
     issuer: "Google",
     date: "Jul 2024",
-    credentialId: ""
+    credentialId: "https://www.coursera.org/account/accomplishments/professional-cert/JHAA3XNXDJVR"
   },
   {
     title: "SQL for Data Science",
     issuer: "Coursera",
     date: "Jan 2024",
-    credentialId: ""
+    credentialId: "https://www.coursera.org/account/accomplishments/verify/JNN3NKVWTXZ8?utm_source=mobile&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=course"
   },
   {
     title: "Responsive Web Design",
     issuer: "freeCodeCamp",
     date: "Jul 2023",
-    credentialId: ""
+    credentialId: "https://www.freecodecamp.org/certification/fccab862b8b-4aba-4f19-a453-74de60a2cb5c/responsive-web-design"
   }
 ];
 
