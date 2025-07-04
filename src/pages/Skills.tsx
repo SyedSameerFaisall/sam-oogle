@@ -218,6 +218,159 @@ function getCertIssuerIcon(issuer: string) {
 const Skills = () => {
   const navigate = useNavigate();
 
+  // Example list of UCL courses (add more as needed)
+  const courses = [
+    // UCL Courses
+    {
+      name: "Machine Learning for Domain Specialists",
+      code: "COMP0142",
+      logo: "/ucl.svg",
+      institution: "UCL",
+      link: "https://www.ucl.ac.uk/module-catalogue/modules/COMP0142"
+    },
+    {
+      name: "Advanced Linear Algebra",
+      code: "MATH0047",
+      logo: "/ucl.svg",
+      institution: "UCL",
+      link: "https://www.ucl.ac.uk/module-catalogue/modules/MATH0047"
+    },
+    {
+      name: "Probability and Inference",
+      code: "STAT0005",
+      logo: "/ucl.svg",
+      institution: "UCL",
+      link: "https://www.ucl.ac.uk/module-catalogue/modules/STAT0005"
+    },
+    {
+      name: "Regression Modelling",
+      code: "STAT0006",
+      logo: "/ucl.svg",
+      institution: "UCL",
+      link: "https://www.ucl.ac.uk/module-catalogue/modules/STAT0006"
+    },
+    {
+      name: "Introduction to Stochastic Processes",
+      code: "STAT0007",
+      logo: "/ucl.svg",
+      institution: "UCL",
+      link: "https://www.ucl.ac.uk/module-catalogue/modules/STAT0007"
+    },
+    {
+      name: "Computing for Practical Statistics",
+      code: "STAT0023",
+      logo: "/ucl.svg",
+      institution: "UCL",
+      link: "https://www.ucl.ac.uk/module-catalogue/modules/STAT0023"
+    },
+    {
+      name: "Algorithms and Data Structures",
+      code: "STAT0041",
+      logo: "/ucl.svg",
+      institution: "UCL",
+      link: "https://www.ucl.ac.uk/module-catalogue/modules/STAT0041"
+    },
+    {
+      name: "Statistical Design and Data Ethics",
+      code: "STAT0045",
+      logo: "/ucl.svg",
+      institution: "UCL",
+      link: "https://www.ucl.ac.uk/module-catalogue/modules/STAT0045"
+    },
+    {
+      name: "Programming Fundamentals",
+      code: "STAT0040",
+      logo: "/ucl.svg",
+      institution: "UCL",
+      link: "https://www.ucl.ac.uk/module-catalogue/modules/STAT0040"
+    },
+    {
+      name: "Introduction to Probability and Statistics",
+      code: "STAT0002",
+      logo: "/ucl.svg",
+      institution: "UCL",
+      link: "https://www.ucl.ac.uk/module-catalogue/modules/STAT0002"
+    },
+    {
+      name: "Calculus and Linear Algebra",
+      code: "MATH0045",
+      logo: "/ucl.svg",
+      institution: "UCL",
+      link: "https://www.ucl.ac.uk/module-catalogue/modules/MATH0045"
+    },
+    {
+      name: "Introduction to Practical Statistics",
+      code: "STAT0004",
+      logo: "/ucl.svg",
+      institution: "UCL",
+      link: "https://www.ucl.ac.uk/module-catalogue/modules/STAT0004"
+    },
+    {
+      name: "Calculus in Several Dimensions",
+      code: "MATH0011",
+      logo: "/ucl.svg",
+      institution: "UCL",
+      link: "https://www.ucl.ac.uk/module-catalogue/modules/MATH0011"
+    },
+    {
+      name: "Further Probability and Statistics",
+      code: "STAT0003",
+      logo: "/ucl.svg",
+      institution: "UCL",
+      link: "https://www.ucl.ac.uk/module-catalogue/modules/STAT0003"
+    },
+    {
+      name: "Database Systems A",
+      code: "INST0001",
+      logo: "/ucl.svg",
+      institution: "UCL",
+      link: "https://www.ucl.ac.uk/module-catalogue/modules/INST0001"
+    },
+    {
+      name: "Accounting for Business",
+      code: "MSIN0004",
+      logo: "/ucl.svg",
+      institution: "UCL",
+      link: "https://www.ucl.ac.uk/module-catalogue/modules/MSIN0004"
+    },
+    // HKUST Courses
+    {
+      name: "Linear Algebra",
+      code: "MATH 2121",
+      logo: "/hkust.svg",
+      institution: "HKUST",
+      link: "https://prog-crs.hkust.edu.hk/ugcourse/2024-25/search?keyword=MATH2121"
+    },
+    {
+      name: "Discrete Mathematics",
+      code: "COMP 2711",
+      logo: "/hkust.svg",
+      institution: "HKUST",
+      link: "https://prog-crs.hkust.edu.hk/ugcourse/2024-25/search?keyword=COMP2711"
+    },
+    {
+      name: "Calculus II",
+      code: "MATH 1014",
+      logo: "/hkust.svg",
+      institution: "HKUST",
+      link: "https://prog-crs.hkust.edu.hk/ugcourse/2024-25/search?keyword=MATH1014"
+    },
+    {
+      name: "Introduction to Computer Programming",
+      code: "COMP 1021",
+      logo: "/hkust.svg",
+      institution: "HKUST",
+      link: "https://prog-crs.hkust.edu.hk/ugcourse/2024-25/search?keyword=COMP1021"
+    },
+    {
+      name: "Object Oriented Programming in C++",
+      code: "COMP 2011",
+      logo: "/hkust.svg",
+      institution: "HKUST",
+      link: "https://prog-crs.hkust.edu.hk/ugcourse/2024-25/search?keyword=COMP2011"
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-background/80 p-6">
       <div className="max-w-6xl mx-auto">
@@ -343,6 +496,58 @@ const Skills = () => {
                       </a>
                     </Button>
                   </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Courses Section */}
+          <div className="mt-12">
+            <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+              <BookOpen className="h-6 w-6 text-primary" />
+              Courses
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {courses.map((course, idx) => (
+                <Card 
+                  key={idx}
+                  className="bg-card/50 backdrop-blur-md border-border/30 hover:border-primary/30 transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl group animate-bounce-in"
+                  style={{ animationDelay: `${(idx + 4) * 100}ms` }}
+                >
+                  <CardHeader className="pb-3">
+                    <CardTitle className="group-hover:text-primary transition-colors duration-300 text-base leading-tight flex items-center gap-2">
+                      <div className="p-1.5 rounded bg-background/50 group-hover:bg-primary/10 transition-all duration-300">
+                        <img src={course.logo} alt={course.institution} className="w-6 h-6" />
+                      </div>
+                      {course.name}
+                    </CardTitle>
+                    <CardDescription className="flex items-center justify-between gap-2">
+                      <span className="text-muted-foreground text-xs font-medium">{course.institution}</span>
+                      <Badge variant="secondary" className="group-hover:bg-primary/20 transition-colors duration-300">
+                        {course.code}
+                      </Badge>
+                    </CardDescription>
+                  </CardHeader>
+                  {course.link && (
+                    <CardContent className="pt-0">
+                      <Button 
+                        asChild 
+                        variant="outline" 
+                        size="sm" 
+                        className="w-full group-hover:border-primary/50 group-hover:text-primary group-hover:bg-primary/5 transition-all duration-300" 
+                      >
+                        <a 
+                          href={course.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center gap-2"
+                        >
+                          <BookOpen className="h-4 w-4" />
+                          View Module
+                        </a>
+                      </Button>
+                    </CardContent>
+                  )}
                 </Card>
               ))}
             </div>
