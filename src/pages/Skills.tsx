@@ -251,26 +251,41 @@ const Skills = () => {
               {skillCategories.map((category, index) => (
                 <Card 
                   key={index}
-                  className="bg-card/50 backdrop-blur-md border-border/30 hover:border-primary/30 transition-smooth"
+                  className="bg-card/50 backdrop-blur-md border-border/30 hover:border-primary/30 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl animate-slide-up group"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-2 text-primary">
-                      {category.icon}
+                  <CardHeader className="pb-4">
+                    <CardTitle className="flex items-center gap-3 text-primary group-hover:text-primary/80 transition-colors duration-300">
+                      <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-all duration-300 group-hover:scale-110">
+                        {category.icon}
+                      </div>
                       {category.title}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     {category.skills.map((skill, skillIndex) => (
-                      <div key={skillIndex} className="space-y-2">
+                      <div key={skillIndex} className="space-y-3 group/skill">
                         <div className="flex justify-between text-sm items-center gap-2">
-                          <span className="flex items-center gap-2 text-foreground">
-                            {getSkillIcon(skill.name)}
-                            {skill.name}
+                          <span className="flex items-center gap-3 text-foreground group-hover/skill:text-primary transition-colors duration-300">
+                            <div className="p-1.5 rounded bg-background/50 group-hover/skill:bg-primary/10 transition-all duration-300">
+                              {getSkillIcon(skill.name)}
+                            </div>
+                            <span className="font-medium">{skill.name}</span>
                           </span>
-                          <span className="text-muted-foreground">{skill.level}%</span>
+                          <span className="text-muted-foreground font-semibold px-2 py-1 rounded bg-background/30">
+                            {skill.level}%
+                          </span>
                         </div>
-                        <Progress value={skill.level} className="h-2" />
+                        <div className="relative">
+                          <Progress 
+                            value={skill.level} 
+                            className="h-3 bg-muted/30 group-hover/skill:bg-muted/50 transition-all duration-300" 
+                          />
+                          <div 
+                            className="absolute top-0 left-0 h-3 rounded-full bg-gradient-to-r from-primary to-primary-glow opacity-0 group-hover/skill:opacity-20 transition-opacity duration-300"
+                            style={{ width: `${skill.level}%` }}
+                          />
+                        </div>
                       </div>
                     ))}
                   </CardContent>
@@ -286,28 +301,44 @@ const Skills = () => {
               Professional Certifications
             </h2>
             
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {certifications.map((cert, index) => (
                 <Card 
                   key={index}
-                  className="bg-card/50 backdrop-blur-md border-border/30 hover:border-primary/30 transition-smooth hover:scale-105 group"
+                  className="bg-card/50 backdrop-blur-md border-border/30 hover:border-primary/30 transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl group animate-bounce-in"
                   style={{ animationDelay: `${(index + 4) * 100}ms` }}
                 >
-                  <CardHeader>
-                    <CardTitle className="group-hover:text-primary transition-colors">
+                  <CardHeader className="pb-3">
+                    <CardTitle className="group-hover:text-primary transition-colors duration-300 text-base leading-tight">
                       {cert.title}
                     </CardTitle>
-                    <CardDescription className="flex items-center justify-between">
-                      <span className="flex items-center gap-2">
-                        {getCertIssuerIcon(cert.issuer)}
+                    <CardDescription className="flex items-center justify-between gap-2">
+                      <span className="flex items-center gap-2 font-medium">
+                        <div className="p-1.5 rounded bg-background/50 group-hover:bg-primary/10 transition-all duration-300">
+                          {getCertIssuerIcon(cert.issuer)}
+                        </div>
                         {cert.issuer}
                       </span>
-                      <Badge variant="secondary">{cert.date}</Badge>
+                      <Badge variant="secondary" className="group-hover:bg-primary/20 transition-colors duration-300">
+                        {cert.date}
+                      </Badge>
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <Button asChild variant="outline" size="sm" className="mt-2" {...(!cert.credentialId.startsWith('http') && { disabled: true })}>
-                      <a href={cert.credentialId.startsWith('http') ? cert.credentialId : '#'} target="_blank" rel="noopener noreferrer">
+                  <CardContent className="pt-0">
+                    <Button 
+                      asChild 
+                      variant="outline" 
+                      size="sm" 
+                      className="w-full group-hover:border-primary/50 group-hover:text-primary group-hover:bg-primary/5 transition-all duration-300" 
+                      {...(!cert.credentialId.startsWith('http') && { disabled: true })}
+                    >
+                      <a 
+                        href={cert.credentialId.startsWith('http') ? cert.credentialId : '#'} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2"
+                      >
+                        <Award className="h-4 w-4" />
                         View Credential
                       </a>
                     </Button>

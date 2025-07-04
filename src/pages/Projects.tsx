@@ -79,47 +79,91 @@ const Projects = () => {
             {projects.map((project, index) => (
               <Card
                 key={index}
-                className="bg-card/50 backdrop-blur-md border-border/30 hover:border-primary/30 transition-smooth hover:scale-105 group flex flex-col h-full"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="bg-card/50 backdrop-blur-md border-border/30 hover:border-primary/30 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl group flex flex-col h-full animate-slide-up overflow-hidden"
+                style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className="relative overflow-hidden rounded-t-lg">
+                <div className="relative overflow-hidden rounded-t-lg group">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                    <div className="flex gap-3">
+                      <Button 
+                        size="sm" 
+                        variant="secondary"
+                        className="bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/30"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open(project.githubUrl, '_blank', 'noopener,noreferrer');
+                        }}
+                      >
+                        <Github className="h-4 w-4" />
+                      </Button>
+                      {project.liveUrl !== "#" && (
+                        <Button 
+                          size="sm" 
+                          variant="secondary"
+                          className="bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/30"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            window.open(project.liveUrl, '_blank', 'noopener,noreferrer');
+                          }}
+                        >
+                          <Eye className="h-4 w-4" />
+                        </Button>
+                      )}
+                    </div>
+                  </div>
                 </div>
-                <CardHeader>
-                  <CardTitle className="group-hover:text-primary transition-colors">
+                <CardHeader className="pb-3">
+                  <CardTitle className="group-hover:text-primary transition-colors duration-300 text-lg">
                     {project.title}
                   </CardTitle>
-                  <CardDescription>{project.description}</CardDescription>
+                  <CardDescription className="text-sm line-clamp-3 group-hover:text-muted-foreground/80 transition-colors">
+                    {project.description}
+                  </CardDescription>
                 </CardHeader>
-                <CardContent className="flex-1 flex flex-col">
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech, techIndex) => (
+                <CardContent className="flex-1 flex flex-col pt-0">
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {project.technologies.slice(0, 6).map((tech, techIndex) => (
                       <Badge
                         key={techIndex}
                         variant="secondary"
-                        className="bg-secondary/50 hover:bg-secondary/70 transition-colors"
+                        className="bg-secondary/30 hover:bg-secondary/50 transition-all duration-300 text-xs px-2 py-1 hover:scale-105"
                       >
                         {tech}
                       </Badge>
                     ))}
+                    {project.technologies.length > 6 && (
+                      <Badge variant="outline" className="text-xs px-2 py-1">
+                        +{project.technologies.length - 6} more
+                      </Badge>
+                    )}
                   </div>
-                  <div className="mt-auto">
+                  <div className="mt-auto flex gap-2">
                     <Button
                       variant="outline"
                       size="sm"
-                      className="w-full flex justify-center items-center !text-center"
+                      className="flex-1 group-hover:border-primary/50 group-hover:text-primary transition-all duration-300"
                       onClick={() => window.open(project.githubUrl, '_blank', 'noopener,noreferrer')}
                     >
-                      <span className="flex items-center gap-2 justify-center w-full">
-                        <Github className="h-4 w-4" />
-                        Code
-                      </span>
+                      <Github className="h-4 w-4 mr-2" />
+                      Code
                     </Button>
+                    {project.liveUrl !== "#" && (
+                      <Button
+                        variant="hero"
+                        size="sm"
+                        className="flex-1"
+                        onClick={() => window.open(project.liveUrl, '_blank', 'noopener,noreferrer')}
+                      >
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        Live
+                      </Button>
+                    )}
                   </div>
                 </CardContent>
               </Card>

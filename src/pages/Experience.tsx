@@ -82,32 +82,38 @@ const Experience = () => {
             {experiences.map((experience, index) => (
               <Card 
                 key={index}
-                className="bg-card/50 backdrop-blur-md border-border/30 hover:border-primary/30 transition-smooth"
+                className="bg-card/50 backdrop-blur-md border-border/30 hover:border-primary/30 transition-all duration-500 hover:scale-[1.01] hover:shadow-2xl group animate-slide-up relative overflow-hidden"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <CardHeader>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <CardHeader className="relative z-10">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                    <div>
-                      <CardTitle className="text-xl text-primary mb-1">
+                    <div className="space-y-2">
+                      <CardTitle className="text-xl text-primary mb-1 group-hover:text-primary/80 transition-colors duration-300">
                         {experience.position}
                       </CardTitle>
-                      <CardDescription className="flex items-center gap-2 text-lg">
-                        <Building className="h-4 w-4" />
+                      <CardDescription className="flex items-center gap-2 text-lg font-medium">
+                        <div className="p-1.5 rounded bg-background/50 group-hover:bg-primary/10 transition-all duration-300">
+                          <Building className="h-4 w-4" />
+                        </div>
                         {experience.company}
                       </CardDescription>
                     </div>
-                    <div className="flex flex-col md:items-end gap-2">
-                      <Badge variant="secondary" className="w-fit">
+                    <div className="flex flex-col md:items-end gap-3">
+                      <Badge 
+                        variant="secondary" 
+                        className="w-fit bg-primary/10 text-primary hover:bg-primary/20 transition-all duration-300 group-hover:scale-105"
+                      >
                         <Briefcase className="sm:mr-1 h-4 w-4" />
                         {experience.type}
                       </Badge>
-                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                        <span className="flex items-center gap-1">
-                          <Calendar className="h-4 w-4" />
+                      <div className="flex flex-col md:items-end gap-2 text-sm text-muted-foreground">
+                        <span className="flex items-center gap-2 font-medium">
+                          <Calendar className="h-4 w-4 text-primary" />
                           {experience.duration}
                         </span>
-                        <span className="flex items-center gap-1">
-                          <MapPin className="h-4 w-4" />
+                        <span className="flex items-center gap-2">
+                          <MapPin className="h-4 w-4 text-primary" />
                           {experience.location}
                         </span>
                       </div>
@@ -115,29 +121,37 @@ const Experience = () => {
                   </div>
                 </CardHeader>
                 
-                <CardContent className="space-y-4">
-                  <p className="text-muted-foreground">{experience.description}</p>
+                <CardContent className="space-y-6 relative z-10">
+                  <p className="text-muted-foreground leading-relaxed">{experience.description}</p>
                   
-                  <div>
-                    <h4 className="font-medium text-foreground mb-2">Key Achievements:</h4>
-                    <ul className="space-y-1">
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-foreground flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                      Key Achievements
+                    </h4>
+                    <ul className="space-y-3">
                       {experience.achievements.map((achievement, achIndex) => (
-                        <li key={achIndex} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <span className="text-primary mt-1">•</span>
-                          {achievement}
+                        <li key={achIndex} className="flex items-start gap-3 text-sm text-muted-foreground group/achievement">
+                          <span className="text-primary mt-1 text-lg group-hover/achievement:scale-125 transition-transform duration-300">•</span>
+                          <span className="leading-relaxed group-hover/achievement:text-foreground transition-colors duration-300">
+                            {achievement}
+                          </span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   
-                  <div>
-                    <h4 className="font-medium text-foreground mb-2">Technologies Used:</h4>
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-foreground flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                      Technologies Used
+                    </h4>
                     <div className="flex flex-wrap gap-2">
                       {experience.technologies.map((tech, techIndex) => (
                         <Badge 
                           key={techIndex} 
                           variant="outline"
-                          className="bg-background/50 hover:bg-primary/10 border-primary/20"
+                          className="bg-background/50 hover:bg-primary/10 border-primary/20 hover:border-primary/40 hover:scale-105 transition-all duration-300 cursor-default"
                         >
                           {tech}
                         </Badge>
