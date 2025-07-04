@@ -74,58 +74,6 @@ const About = () => {
             </CardContent>
           </Card>
 
-          {/* Quick Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="text-center p-6 bg-card/30 backdrop-blur-sm rounded-lg border border-border/30">
-              <div className="text-2xl font-bold text-primary mb-1">5+</div>
-              <div className="text-sm text-muted-foreground">Years Experience</div>
-            </div>
-            <div className="text-center p-6 bg-card/30 backdrop-blur-sm rounded-lg border border-border/30">
-              <div className="text-2xl font-bold text-primary mb-1">50+</div>
-              <div className="text-sm text-muted-foreground">Projects Completed</div>
-            </div>
-            <div className="text-center p-6 bg-card/30 backdrop-blur-sm rounded-lg border border-border/30">
-              <div className="text-2xl font-bold text-primary mb-1">10+</div>
-              <div className="text-sm text-muted-foreground">Technologies</div>
-            </div>
-            <div className="text-center p-6 bg-card/30 backdrop-blur-sm rounded-lg border border-border/30">
-              <div className="text-2xl font-bold text-primary mb-1">100%</div>
-              <div className="text-sm text-muted-foreground">Client Satisfaction</div>
-            </div>
-          </div>
-
-          {/* About & Experience Cards */}
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="bg-card/50 backdrop-blur-md border-border/30 hover:border-primary/30 transition-smooth">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <MapPin className="h-5 w-5 text-primary" />
-                  Location & Availability
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Based in [Your City], available for remote work and collaborations worldwide.
-                  Always excited to work on innovative projects.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card/50 backdrop-blur-md border-border/30 hover:border-primary/30 transition-smooth">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Calendar className="h-5 w-5 text-primary" />
-                  Experience
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  5+ years of experience in full-stack development, specializing in React, 
-                  Node.js, and modern web technologies.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
 
           {/* Education Section */}
           <Card className="bg-card/50 backdrop-blur-md border-border/30">
@@ -140,36 +88,35 @@ const About = () => {
               <div className="border-l-2 border-primary/30 pl-6 pb-6">
                 <div className="flex items-start justify-between mb-2">
                   <div>
-                    <h3 className="font-semibold text-foreground">Master of Computer Science</h3>
-                    <p className="text-muted-foreground">University Name</p>
+                    <h3 className="font-semibold text-foreground">BSc Data Science</h3>
+                    <p className="text-muted-foreground">University College London</p>
                   </div>
-                  <Badge variant="outline">2020-2022</Badge>
+                  <Badge variant="outline">Sept 2024 - June 2027</Badge>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Specialized in Software Engineering and AI. Graduated with distinction.
+                  First Class Honors
                 </p>
               </div>
               
               <div className="border-l-2 border-primary/30 pl-6 pb-6">
                 <div className="flex items-start justify-between mb-2">
                   <div>
-                    <h3 className="font-semibold text-foreground">Bachelor of Technology</h3>
-                    <p className="text-muted-foreground">College Name</p>
+                    <h3 className="font-semibold text-foreground">Alevels (Math, Further Math, Physics, Chemistry, CompSci)</h3>
+                    <p className="text-muted-foreground">Nixor College</p>
                   </div>
-                  <Badge variant="outline">2016-2020</Badge>
+                  <Badge variant="outline">Aug 2021 - May 2023</Badge>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Computer Science and Engineering. First class honors.
+                  5A*s, Top 0.001% grades in country
                 </p>
               </div>
 
               <div className="pt-4 border-t border-border/30">
                 <h4 className="font-medium text-foreground mb-3">Certifications</h4>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary">AWS Certified</Badge>
-                  <Badge variant="secondary">React Advanced</Badge>
-                  <Badge variant="secondary">Node.js Expert</Badge>
-                  <Badge variant="secondary">MongoDB Professional</Badge>
+                  <Badge variant="secondary">Google Data Analytics Professional</Badge>
+                  <Badge variant="secondary">DataCamp Certified Data Analyst</Badge>
+                  <Badge variant="secondary">Machine Learning Specialization</Badge>
                 </div>
               </div>
             </CardContent>
@@ -182,7 +129,7 @@ const About = () => {
                 <Download className="h-5 w-5 text-primary" />
                 Resume / CV
               </CardTitle>
-              <CardDescription>Download my detailed resume for more information</CardDescription>
+              <CardDescription>View my detailed resume for more information</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
@@ -192,14 +139,20 @@ const About = () => {
                   </p>
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <span>•</span>
-                    <span>Updated December 2024</span>
+                    <span>Updated July 2025</span>
                     <span>•</span>
                     <span>PDF Format</span>
                   </div>
                 </div>
-                <Button variant="hero" className="min-w-[150px]">
-                  <Download className="mr-2 h-4 w-4" />
-                  Download CV
+                <Button asChild variant="hero" className="min-w-[150px]">
+                  <a
+                    href="/Sameer-CV.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Download className="mr-2 h-4 w-4" />
+                    View CV
+                  </a>
                 </Button>
               </div>
             </CardContent>
