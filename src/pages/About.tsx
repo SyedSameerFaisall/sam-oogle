@@ -199,78 +199,80 @@ const About = () => {
             <CardContent>
               <div className="space-y-4">
                 {/* Global Undergraduate Scholar */}
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 flex items-center justify-center w-8 h-8">
-                    <img src="/ucl.svg" alt="UCL" className="w-8 h-8" />
-                  </div>
+                <div className="flex items-start gap-3">
+                  <img src="/ucl.svg" alt="UCL" className="w-7 h-7 mt-1" />
                   <div>
                     <div className="font-semibold text-foreground">Global Undergraduate Scholar</div>
-                    <div className="text-sm text-muted-foreground">UCL &middot; Sep 2024</div>
+                    <div className="text-sm text-muted-foreground flex items-center gap-2">
+                      UCL &middot; Sep 2024
+                    </div>
                     <div className="text-sm text-muted-foreground">Scholarship amount of £112,500 across 3 years awarded to only 30 people around the world based on academic merit and financial need</div>
                   </div>
                 </div>
                 {/* 135% Undergraduate Scholarship */}
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 flex items-center justify-center w-8 h-8">
-                    <img src="/hkust.svg" alt="HKUST" className="w-8 h-8" />
-                  </div>
+                <div className="flex items-start gap-3">
+                  <img src="/hkust.svg" alt="HKUST" className="w-7 h-7 mt-1" />
                   <div>
                     <div className="font-semibold text-foreground">135% Undergraduate Scholarship</div>
-                    <div className="text-sm text-muted-foreground">Hong Kong University Of Science and Technology &middot; Aug 2023</div>
+                    <div className="text-sm text-muted-foreground flex items-center gap-2">
+                      Hong Kong University Of Science and Technology &middot; Aug 2023
+                    </div>
                     <div className="text-sm text-muted-foreground">Granted 135% scholarship accounting an amount of nearly $1,000,000HKD over 4 years based on academic excellence and brilliant extra-cirriculars.</div>
                   </div>
                 </div>
                 {/* Academic Distinction with the Highest Honor */}
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 flex items-center justify-center w-8 h-8">
-                    <img src="/nixor.svg" alt="Nixor College" className="w-8 h-8" />
-                  </div>
+                <div className="flex items-start gap-3">
+                  <img src="/nixor.svg" alt="Nixor College" className="w-7 h-7 mt-1" />
                   <div>
                     <div className="font-semibold text-foreground">Academic Distinction with the Highest Honor</div>
-                    <div className="text-sm text-muted-foreground">Nixor College &middot; Jun 2023</div>
+                    <div className="text-sm text-muted-foreground flex items-center gap-2">
+                      Nixor College &middot; Jun 2023
+                    </div>
                     <div className="text-sm text-muted-foreground">Awarded to students who have received the highest achievable term grades (A*s) in all subjects, with an extremely challenging course load of five subjects. One of the five students in Nixor to achieve this award.</div>
                   </div>
                 </div>
                 {/* Dean's List */}
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 flex items-center justify-center w-8 h-8">
-                    <img src="/nixor.svg" alt="Nixor College" className="w-8 h-8" />
-                  </div>
+                <div className="flex items-start gap-3">
+                  <img src="/nixor.svg" alt="Nixor College" className="w-7 h-7 mt-1" />
                   <div>
                     <div className="font-semibold text-foreground">Dean's List</div>
-                    <div className="text-sm text-muted-foreground">Nixor College &middot; Jun 2023</div>
+                    <div className="text-sm text-muted-foreground flex items-center gap-2">
+                      Nixor College &middot; Jun 2023
+                    </div>
                     <div className="text-sm text-muted-foreground">Name inscribed in Dean's List of Nixor College for excellence in academics.</div>
                   </div>
                 </div>
                 {/* Honor Roll */}
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 flex items-center justify-center w-8 h-8">
-                    <img src="/nixor.svg" alt="Nixor College" className="w-8 h-8" />
-                  </div>
+                <div className="flex items-start gap-3">
+                  <img src="/nixor.svg" alt="Nixor College" className="w-7 h-7 mt-1" />
                   <div>
                     <div className="font-semibold text-foreground">Honor Roll</div>
-                    <div className="text-sm text-muted-foreground">Nixor College &middot; Jun 2023</div>
+                    <div className="text-sm text-muted-foreground flex items-center gap-2">
+                      Nixor College &middot; Jun 2023
+                    </div>
                     <div className="text-sm text-muted-foreground">Name inscribed in Honor Roll by Nixor College for excellence in academics.</div>
                   </div>
                 </div>
                 {/* 7th rank nationally - International Kangaroo Math competition */}
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 flex items-center justify-center w-8 h-8">
-                    <img src="/ikmc.svg" alt="IKMC" className="w-8 h-8" />
-                  </div>
+                <div className="flex items-start gap-3">
+                  <img src="/ikmc.svg" alt="IKMC" className="w-7 h-7 mt-1" />
                   <div>
                     <div className="font-semibold text-foreground">7th rank nationally - International Kangaroo Math competition</div>
-                    <div className="text-sm text-muted-foreground">International Kangaroo Math competition &middot; Feb 2022</div>
+                    <div className="text-sm text-muted-foreground flex items-center gap-2">
+                      International Kangaroo Math competition &middot; Feb 2022
+                    </div>
+                    <div className="text-sm text-muted-foreground">Top in school for IKMC.</div>
                   </div>
                 </div>
                 {/* Fully-funded A Level Scholarship */}
-                <div className="flex items-center gap-3">
-                  <div className="flex-shrink-0 flex items-center justify-center w-8 h-8">
-                    <img src="/nixor.svg" alt="Nixor College" className="w-8 h-8" />
-                  </div>
+                <div className="flex items-start gap-3">
+                  <img src="/nixor.svg" alt="Nixor College" className="w-7 h-7 mt-1" />
                   <div>
                     <div className="font-semibold text-foreground">Fully-funded A Level Scholarship</div>
-                    <div className="text-sm text-muted-foreground">Nixor College &middot; Aug 2021</div>
+                    <div className="text-sm text-muted-foreground flex items-center gap-2">
+                      Nixor College &middot; Aug 2021
+                    </div>
+                    <div className="text-sm text-muted-foreground">Full scholarship on basis of O Level grades – 9A*s.</div>
                   </div>
                 </div>
               </div>
