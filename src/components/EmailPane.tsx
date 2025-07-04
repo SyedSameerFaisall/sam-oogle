@@ -30,7 +30,7 @@ export const EmailPane = ({ isOpen, onClose }: EmailPaneProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-lg mx-auto h-[60vh] sm:h-[70vh] bg-card/95 text-foreground border border-border/30 rounded-2xl p-0">
+      <DialogContent className="max-w-md mx-auto h-auto bg-card text-foreground border border-border/30 rounded-2xl p-0 shadow-elegant">
         <DialogHeader className="p-4 border-b border-border/30 bg-secondary/50 rounded-t-2xl">
           <div className="flex items-center justify-between">
             <DialogTitle className="text-white">New Message</DialogTitle>
@@ -43,7 +43,7 @@ export const EmailPane = ({ isOpen, onClose }: EmailPaneProps) => {
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="flex flex-col h-full">
-          <div className="flex-1 p-4 space-y-4">
+          <div className="flex-1 p-4 space-y-3">
             <div className="flex items-center gap-4">
               <span className="text-muted-foreground text-sm w-12">From</span>
               <Input
@@ -69,13 +69,13 @@ export const EmailPane = ({ isOpen, onClose }: EmailPaneProps) => {
               <Textarea
                 value={formData.message}
                 onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                className="w-full h-64 bg-background/50 border-border/30 resize-none"
+                className="w-full h-40 bg-background/70 border-border/30 resize-none"
                 placeholder="Compose your message..."
               />
             </div>
           </div>
 
-          <div className="p-4 border-t border-border/30 bg-secondary/20">
+          <div className="p-4 border-t border-border/30 bg-secondary/30">
             <div className="flex items-center justify-start">
               <Button
                 type="submit"
