@@ -121,6 +121,29 @@
     min-height: 100vh;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
+
+  /* Remove outline on click/focus */
+  *:focus {
+    outline: none;
+  }
+
+  *:focus-visible {
+    outline: none;
+  }
+
+  /* Remove outline for buttons and interactive elements */
+  button:focus,
+  button:focus-visible,
+  a:focus,
+  a:focus-visible,
+  input:focus,
+  input:focus-visible,
+  textarea:focus,
+  textarea:focus-visible,
+  select:focus,
+  select:focus-visible {
+    outline: none;
+  }
 }
 
 @layer utilities {

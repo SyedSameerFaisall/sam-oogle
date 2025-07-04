@@ -3,7 +3,7 @@ import { MessageCircle, X, Send, Bot, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { chatbotContext } from "@/chatbot-context";
+import chatbotContextText from "@/chatbot-context.txt?raw";
 
 interface Message {
   id: string;
@@ -14,6 +14,7 @@ interface Message {
 
 async function fetchOpenAIResponse(userMessage: string) {
   const OPENAI_API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
+  const context = findRelevantContextChunk(userMessage);
   const response = await fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',
     headers: {
@@ -25,11 +26,22 @@ async function fetchOpenAIResponse(userMessage: string) {
       messages: [
         {
           role: 'system',
-          content: "You are Sameer's AI assistant. You know about Sameer's projects, skills, and background. Answer as a friendly, helpful portfolio assistant."
+          content: `You are Syed Sameer Faisal's AI assistant. You represent him professionally and help visitors learn about his background, skills, and experience. 
+
+Here is comprehensive information about Sameer:
+${context}
+
+Guidelines:
+- Answer as if you're representing Sameer professionally
+- Use first person when talking about Sameer's experiences ("I have experience in...", "I worked at...", "My projects include...")
+- Be friendly, professional, and enthusiastic about his work
+- Provide specific details from the context when relevant
+- If asked about something not in the context, politely redirect to what you do know
+- Highlight his achievements, skills, and projects naturally in conversation`
         },
         { role: 'user', content: userMessage }
       ],
-      max_tokens: 300,
+      max_tokens: 400,
       temperature: 0.7,
     }),
   });
@@ -37,34 +49,43 @@ async function fetchOpenAIResponse(userMessage: string) {
   return data.choices?.[0]?.message?.content || "Sorry, I couldn't get a response.";
 }
 
-// Enhanced keyword matching with synonyms and categories
+// Enhanced keyword mapping specific to Sameer's profile
 const keywordMap = {
-  // Programming languages
-  programming: ['python', 'javascript', 'js', 'typescript', 'ts', 'react', 'c++', 'cpp', 'sql', 'r', 'code', 'coding', 'programming', 'language', 'languages'],
+  // Programming & Technical Skills
+  programming: ['python', 'javascript', 'js', 'react', 'nextjs', 'next.js', 'sql', 'r', 'html', 'css', 'code', 'coding', 'programming', 'language', 'languages', 'typescript', 'git'],
   
-  // Education
-  education: ['study', 'studies', 'student', 'university', 'college', 'ucl', 'hkust', 'degree', 'bachelor', 'bsc', 'school', 'academic', 'grades', 'gpa'],
+  // Education & Academic
+  education: ['study', 'studies', 'student', 'university', 'college', 'ucl', 'hkust', 'hong kong', 'nixor', 'credo', 'degree', 'bachelor', 'bsc', 'school', 'academic', 'grades', 'scholarship', 'a-level', 'o-level'],
   
-  // Skills
-  skills: ['skills', 'abilities', 'expertise', 'proficient', 'experience', 'knowledge', 'capable', 'competent'],
+  // Skills & Expertise
+  skills: ['skills', 'abilities', 'expertise', 'proficient', 'experience', 'knowledge', 'capable', 'competent', 'technical', 'programming', 'development'],
   
-  // Machine Learning
-  ml: ['machine learning', 'ml', 'ai', 'artificial intelligence', 'deep learning', 'neural network', 'model', 'algorithm', 'tensorflow', 'pytorch', 'scikit', 'sklearn'],
+  // Machine Learning & AI
+  ml: ['machine learning', 'ml', 'ai', 'artificial intelligence', 'deep learning', 'neural network', 'cnn', 'model', 'algorithm', 'tensorflow', 'pytorch', 'scikit', 'sklearn', 'hugging face', 'langchain', 'langgraph', 'openai', 'llm', 'nlp'],
   
-  // Data Science
-  data: ['data', 'analytics', 'analysis', 'visualization', 'dataset', 'statistics', 'statistical', 'tableau', 'pandas', 'numpy'],
+  // Data Science & Analytics
+  data: ['data', 'analytics', 'analysis', 'visualization', 'dataset', 'statistics', 'statistical', 'tableau', 'pandas', 'numpy', 'matplotlib', 'seaborn', 'plotly', 'data science', 'data scientist'],
   
-  // Projects
-  projects: ['project', 'projects', 'built', 'created', 'developed', 'work', 'portfolio', 'github'],
+  // Specific Projects
+  projects: ['project', 'projects', 'built', 'created', 'developed', 'work', 'portfolio', 'github', 'financial analyst', 'brain tumor', 'book recommender', 'citation network', 'semantic', 'facial recognition', 'credit card'],
   
-  // Work Experience
-  work: ['work', 'job', 'employment', 'intern', 'internship', 'position', 'role', 'experience', 'company'],
+  // Work Experience & Companies
+  work: ['work', 'job', 'employment', 'intern', 'internship', 'position', 'role', 'experience', 'company', 'headstart', 'wemakeapp', 'sudostudy', 'nixor', 'idp', 'stakehold'],
   
-  // Achievements
-  achievements: ['award', 'awards', 'scholarship', 'achievement', 'accomplishment', 'honor', 'recognition', 'distinction'],
+  // Achievements & Awards
+  achievements: ['award', 'awards', 'scholarship', 'achievement', 'accomplishment', 'honor', 'recognition', 'distinction', 'dean', 'honor roll', 'global scholar', 'top', 'best'],
   
-  // Leadership
-  leadership: ['lead', 'leader', 'leadership', 'manage', 'manager', 'president', 'vice president', 'team', 'mentor']
+  // Leadership & Roles
+  leadership: ['lead', 'leader', 'leadership', 'manage', 'manager', 'president', 'vice president', 'team', 'mentor', 'ambassador', 'representative', 'society'],
+  
+  // Tools & Technologies
+  tools: ['streamlit', 'gradio', 'chromadb', 'opencv', 'yfinance', 'figma', 'excel', 'tableau', 'beautiful soup', 'web scraping', 'api'],
+  
+  // Specific Domains
+  finance: ['finance', 'financial', 'stock', 'trading', 'investment', 'market', 'fintech', 'analyst', 'economic'],
+  
+  // Contact & Personal
+  contact: ['contact', 'email', 'phone', 'linkedin', 'reach', 'connect', 'location', 'london', 'karachi', 'pakistan', 'uk']
 };
 
 // Improved text preprocessing
@@ -77,73 +98,77 @@ function preprocessText(text: string): string {
 }
 
 // Enhanced similarity function with multiple scoring methods
-function calculateSimilarity(userMessage: string, contextQuestion: string): number {
+function calculateSimilarity(userMessage: string, contextChunk: string): number {
   const userTokens = preprocessText(userMessage).split(' ');
-  const questionTokens = preprocessText(contextQuestion).split(' ');
+  const chunkTokens = preprocessText(contextChunk).split(' ');
   
   // 1. Exact token overlap
-  const userSet = new Set(userTokens);
-  const questionSet = new Set(questionTokens);
-  const intersection = new Set([...userSet].filter(x => questionSet.has(x)));
-  const tokenOverlap = intersection.size / Math.max(userSet.size, questionSet.size);
+  const userSet = new Set(userTokens.filter(token => token.length > 2));
+  const chunkSet = new Set(chunkTokens.filter(token => token.length > 2));
+  const intersection = new Set([...userSet].filter(x => chunkSet.has(x)));
+  const tokenOverlap = intersection.size / Math.max(userSet.size, chunkSet.size, 1);
   
   // 2. Keyword category matching
   let categoryScore = 0;
   const userText = preprocessText(userMessage);
-  const questionText = preprocessText(contextQuestion);
+  const chunkText = preprocessText(contextChunk);
   
   for (const [category, keywords] of Object.entries(keywordMap)) {
     const userHasKeywords = keywords.some(keyword => userText.includes(keyword));
-    const questionHasKeywords = keywords.some(keyword => questionText.includes(keyword));
+    const chunkHasKeywords = keywords.some(keyword => chunkText.includes(keyword));
     
-    if (userHasKeywords && questionHasKeywords) {
-      categoryScore += 0.3; // Boost for matching categories
+    if (userHasKeywords && chunkHasKeywords) {
+      categoryScore += 0.4; // Boost for matching categories
     }
   }
   
   // 3. Substring matching for key phrases
-  const substringScore = calculateSubstringScore(userText, questionText);
+  const substringScore = calculateSubstringScore(userText, chunkText);
   
-  // 4. Question word matching (what, where, when, how, etc.)
-  const questionWordScore = calculateQuestionWordScore(userText, questionText);
+  // 4. Header/section matching (if user asks about specific sections)
+  const headerScore = calculateHeaderScore(userText, chunkText);
   
   // Combine all scores with weights
-  const totalScore = (tokenOverlap * 0.4) + (categoryScore * 0.3) + (substringScore * 0.2) + (questionWordScore * 0.1);
+  const totalScore = (tokenOverlap * 0.3) + (categoryScore * 0.4) + (substringScore * 0.2) + (headerScore * 0.1);
   
   return Math.min(totalScore, 1.0); // Cap at 1.0
 }
 
-function calculateSubstringScore(userText: string, questionText: string): number {
+function calculateSubstringScore(userText: string, chunkText: string): number {
   const userWords = userText.split(' ').filter(word => word.length > 3);
-  const questionWords = questionText.split(' ').filter(word => word.length > 3);
+  const chunkWords = chunkText.split(' ').filter(word => word.length > 3);
   
   let matches = 0;
   for (const userWord of userWords) {
-    for (const questionWord of questionWords) {
-      if (userWord.includes(questionWord) || questionWord.includes(userWord)) {
+    for (const chunkWord of chunkWords) {
+      if (userWord.includes(chunkWord) || chunkWord.includes(userWord)) {
         matches++;
         break;
       }
     }
   }
   
-  return matches / Math.max(userWords.length, questionWords.length, 1);
+  return matches / Math.max(userWords.length, chunkWords.length, 1);
 }
 
-function calculateQuestionWordScore(userText: string, questionText: string): number {
-  const questionWords = ['what', 'where', 'when', 'how', 'why', 'who', 'which', 'tell', 'describe', 'explain'];
-  const userQuestionWords = questionWords.filter(word => userText.includes(word));
-  const contextQuestionWords = questionWords.filter(word => questionText.includes(word));
+function calculateHeaderScore(userText: string, chunkText: string): number {
+  const sectionHeaders = [
+    'personal information', 'education', 'experience', 'skills', 'projects', 
+    'achievements', 'certifications', 'languages', 'technical skills',
+    'machine learning', 'data science', 'programming', 'work experience'
+  ];
   
-  if (userQuestionWords.length > 0 && contextQuestionWords.length > 0) {
-    const intersection = userQuestionWords.filter(word => contextQuestionWords.includes(word));
-    return intersection.length / Math.max(userQuestionWords.length, contextQuestionWords.length);
+  let headerMatches = 0;
+  for (const header of sectionHeaders) {
+    if (userText.includes(header) && chunkText.includes(header)) {
+      headerMatches++;
+    }
   }
   
-  return 0;
+  return headerMatches / sectionHeaders.length;
 }
 
-// Enhanced pronoun normalization
+// Enhanced pronoun normalization for Sameer
 function normalizePronouns(text: string): string {
   return text
     .replace(/\b(he|him)\b/gi, "Sameer")
@@ -153,59 +178,46 @@ function normalizePronouns(text: string): string {
     .replace(/\byou\b/gi, "Sameer");
 }
 
-// Main function to find context answer with improved matching
-function findContextAnswer(userMessage: string): string | null {
-  const normalizedMessage = normalizePronouns(userMessage);
-  let bestMatch = null;
-  let bestScore = 0;
-  let keywordMatch = null;
-
-  // Calculate similarity with each context question
-  for (const { question, answer } of chatbotContext) {
-    let score = calculateSimilarity(normalizedMessage, question);
-    if (score > bestScore) {
-      bestScore = score;
-      bestMatch = answer;
+// Split context into meaningful chunks (by sections and paragraphs)
+function getContextChunks(text: string): string[] {
+  // Split by double newlines and section headers
+  const chunks = text.split(/\n\s*\n/).filter(chunk => chunk.trim().length > 50);
+  
+  // Further split very long chunks
+  const processedChunks = [];
+  for (const chunk of chunks) {
+    if (chunk.length > 1000) {
+      // Split long chunks by sentences or bullet points
+      const subChunks = chunk.split(/(?:[.!?]\s+)|(?:\n- )|(?:\n\* )/).filter(sub => sub.trim().length > 20);
+      processedChunks.push(...subChunks);
+    } else {
+      processedChunks.push(chunk);
     }
   }
-  // Prefer keyword match if found
-  if (keywordMatch) return keywordMatch;
-  if (bestScore >= 0.3) return bestMatch;
-  // Fallback: Try direct keyword matching for common queries
-  const fallbackAnswer = findFallbackAnswer(normalizedMessage);
-  if (fallbackAnswer) {
-    return fallbackAnswer;
-  }
-  return null;
+  
+  return processedChunks;
 }
 
-// Fallback function for common queries that might not match well
-function findFallbackAnswer(userMessage: string): string | null {
-  const message = preprocessText(userMessage);
+const contextChunks = getContextChunks(chatbotContextText);
+
+// Find the most relevant context chunks for a user message
+function findRelevantContextChunk(userMessage: string): string {
+  const normalizedMessage = normalizePronouns(userMessage);
   
-  // Direct keyword matching for common queries
-  const fallbackPatterns = [
-    {
-      patterns: ['contact', 'email', 'reach', 'get in touch'],
-      answer: "You can reach Sameer through his email or LinkedIn. Check out the contact section on his portfolio for more details!"
-    },
-    {
-      patterns: ['github', 'code', 'repository', 'repo'],
-      answer: "Sameer has an active GitHub profile with various projects. You can find links to his repositories in the projects section of his portfolio."
-    },
-    {
-      patterns: ['resume', 'cv', 'download'],
-      answer: "You can find Sameer's resume and CV in the about section of his portfolio, along with his detailed experience and qualifications."
-    }
-  ];
+  // Score all chunks
+  const scoredChunks = contextChunks.map(chunk => ({
+    chunk,
+    score: calculateSimilarity(normalizedMessage, chunk)
+  })).sort((a, b) => b.score - a.score);
   
-  for (const { patterns, answer } of fallbackPatterns) {
-    if (patterns.some(pattern => message.includes(pattern))) {
-      return answer;
-    }
+  // If top score is very low, return a general overview
+  if (scoredChunks[0].score < 0.1) {
+    return contextChunks.slice(0, 3).join('\n\n'); // Return first few chunks as general context
   }
   
-  return null;
+  // Return top 2-3 most relevant chunks
+  const topChunks = scoredChunks.slice(0, 3).map(item => item.chunk);
+  return topChunks.join('\n\n');
 }
 
 export const Chatbot = () => {
@@ -213,7 +225,7 @@ export const Chatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "1",
-      text: `👋 Hi! Welcome to Sameer's world!\n\nI'm your friendly AI concierge here to make your journey smooth and snazzy.\n\n✨ Tap the dot icon to check out Sameer's epic links and socials.\n\n📬 Want to drop him a message? Use the gmail icon to access the in-built feature.\n\n🧠 Curious about his projects, passions, or tech wizardry? Just ask, I will spill the (well-formatted) tea!`,
+      text: `👋 Hi! I'm Sameer's AI assistant!\n\nI'm here to help you learn about Syed Sameer Faisal - his background, skills, projects, and experience.\n\n🎓 Currently pursuing BSc Data Science at UCL\n💼 Vice President of UCL Data Science Society\n🏆 Global Undergraduate Scholar\n\n✨ Feel free to ask me about:\n• His technical skills and projects\n• Education and achievements\n• Work experience\n• Machine learning expertise\n• Contact information\n\nWhat would you like to know about Sameer?`,
       isBot: true,
       timestamp: new Date()
     }
@@ -245,30 +257,16 @@ export const Chatbot = () => {
       timestamp: new Date()
     }]);
 
-    // Check context first with improved matching
-    const contextAnswer = findContextAnswer(userMessage.text);
-    if (contextAnswer) {
-      setMessages(prev => prev.filter(m => m.id !== loadingId));
-      setMessages(prev => [...prev, {
-        id: (Date.now() + 2).toString(),
-        text: contextAnswer,
-        isBot: true,
-        timestamp: new Date()
-      }]);
-      setLoading(false);
-      return;
-    }
-
-    // Otherwise, call OpenAI
+    // Always call OpenAI with the relevant context
     const botResponse = await fetchOpenAIResponse(userMessage.text);
     setMessages(prev => prev.filter(m => m.id !== loadingId));
-      const botMessage: Message = {
+    const botMessage: Message = {
       id: (Date.now() + 2).toString(),
-        text: botResponse,
-        isBot: true,
-        timestamp: new Date()
-      };
-      setMessages(prev => [...prev, botMessage]);
+      text: botResponse,
+      isBot: true,
+      timestamp: new Date()
+    };
+    setMessages(prev => [...prev, botMessage]);
     setLoading(false);
   };
 
@@ -300,7 +298,7 @@ export const Chatbot = () => {
             <Bot className="h-4 w-4 text-white" />
           </div>
           <div>
-            <h3 className="text-foreground font-medium text-sm">Sam's Assistant</h3>
+            <h3 className="text-foreground font-medium text-sm">Sameer's AI Assistant</h3>
             <p className="text-muted-foreground text-xs">Online</p>
           </div>
         </div>
@@ -357,13 +355,15 @@ export const Chatbot = () => {
           <Input
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            placeholder="Ask me anything..."
+            placeholder="Ask about Sameer's experience..."
             className="flex-1 bg-background/50 border-border/30"
+            disabled={loading}
           />
           <Button
             type="submit"
             size="sm"
             className="h-10 w-10 p-0 bg-primary hover:bg-primary/90"
+            disabled={loading}
           >
             <Send className="h-4 w-4" />
           </Button>

@@ -44,7 +44,7 @@ export const SearchBar = () => {
                 value={searchValue}
                 readOnly
                 placeholder="Search Sameer's portfolio..."
-                className="flex-1 bg-transparent border-none focus:ring-0 focus:outline-none text-base text-foreground placeholder:text-muted-foreground"
+                className="flex-1 bg-transparent border-none focus:ring-0 focus:outline-none focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-base text-foreground placeholder:text-muted-foreground"
               />
               <div className="flex items-center gap-1 sm:gap-1 sm:mr-1">
                 <Button
