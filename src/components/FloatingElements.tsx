@@ -1,9 +1,9 @@
 export const FloatingElements = () => {
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden">
+    <div className="fixed inset-0 overflow-hidden">
       {/* Grid pattern overlay */}
       <div 
-        className="absolute inset-0 opacity-5"
+        className="absolute inset-0 opacity-5 pointer-events-none"
         style={{
           backgroundImage: `
             linear-gradient(hsl(var(--border)) 1px, transparent 1px),

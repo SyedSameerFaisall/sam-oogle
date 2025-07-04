@@ -12,9 +12,9 @@ const Index = ({ setIsEmailOpen }: { setIsEmailOpen: (open: boolean) => void }) 
       <FloatingElements />
       <Header setIsEmailOpen={setIsEmailOpen} />
       
-      <main className="flex flex-1 flex-col items-center justify-center px-4 sm:px-6 lg:px-8 relative z-10">
+      <main className="flex flex-1 flex-col items-center justify-center px-4 sm:px-6 lg:px-8 relative z-10 mt-[-120px]">
         <div style={{ transform: 'scale(0.7)', transformOrigin: 'top center', width: '100%' }} className="animate-fade-in">
-          <div className="w-full max-w-screen-lg mx-auto flex flex-col gap-8 sm:gap-10 mt-4 sm:mt-8">
+          <div className="w-full max-w-screen-lg mx-auto flex flex-col gap-2 sm:gap-3 mt-0 sm:mt-0">
             <div className="animate-bounce-in" style={{ animationDelay: '200ms' }}>
               <Logo />
             </div>
@@ -32,9 +32,7 @@ const Index = ({ setIsEmailOpen }: { setIsEmailOpen: (open: boolean) => void }) 
               style={{ animationDelay: '800ms' }}>
     </footer>
     
-    <div className="animate-float" style={{ animationDelay: '1000ms' }}>
-      <Chatbot />
-    </div>
+    <Chatbot />
     </div>;
 };
 export default Index;

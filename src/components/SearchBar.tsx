@@ -27,7 +27,7 @@ export const SearchBar = () => {
   };
 
   return (
-    <form onSubmit={handleSearch} className="w-full max-w-2xl mx-auto relative">
+    <form onSubmit={handleSearch} className="w-full max-w-xl mx-auto relative">
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <button
@@ -38,32 +38,32 @@ export const SearchBar = () => {
             onClick={() => setOpen(true)}
             id="searchbar-trigger"
           >
-            <div className="flex items-center p-3">
-              <Search className="text-muted-foreground sm:ml-3 sm:mr-4" size={20} />
+            <div className="flex items-center p-2">
+              <Search className="text-muted-foreground sm:ml-2 sm:mr-3" size={16} />
               <Input
                 value={searchValue}
                 readOnly
                 placeholder="Search Sameer's portfolio..."
-                className="flex-1 bg-transparent border-none focus:ring-0 focus:outline-none text-foreground placeholder:text-muted-foreground"
+                className="flex-1 bg-transparent border-none focus:ring-0 focus:outline-none text-base text-foreground placeholder:text-muted-foreground"
               />
-              <div className="flex items-center gap-1 sm:gap-2 sm:mr-2">
+              <div className="flex items-center gap-1 sm:gap-1 sm:mr-1">
                 <Button
                   type="button"
                   variant="ghost"
                   size="sm"
-                  className="p-2 h-8 w-8 hover:bg-card/50 transition-smooth"
+                  className="p-1 h-6 w-6 hover:bg-card/50 transition-smooth"
                   aria-label="Voice search"
                 >
-                  <Mic size={16} />
+                  <Mic size={12} />
                 </Button>
                 <Button
                   type="button"
                   variant="ghost"
                   size="sm"
-                  className="p-2 h-8 w-8 hover:bg-card/50 transition-smooth"
+                  className="p-1 h-6 w-6 hover:bg-card/50 transition-smooth"
                   aria-label="Search by image"
                 >
-                  <Camera size={16} />
+                  <Camera size={12} />
                 </Button>
               </div>
             </div>

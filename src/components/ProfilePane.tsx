@@ -30,8 +30,6 @@ export const ProfilePane = ({ isOpen, onClose }: ProfilePaneProps) => {
             <span className="text-muted-foreground text-base">sameer@email.com</span>
             <p className="text-muted-foreground text-lg">Welcome to my personal site. 💜</p>
           </div>
-          {/* Divider */}
-          <div className="border-t border-border/30 mb-4"></div>
           {/* How to Use */}
           <div className="mb-4">
             <h3 className="text-foreground font-semibold text-lg text-center mb-2">HOW TO USE</h3>
@@ -62,8 +60,7 @@ export const ProfilePane = ({ isOpen, onClose }: ProfilePaneProps) => {
               </div>
             </div>
           </div>
-          {/* Divider */}
-          <div className="border-t border-border/30 mb-4"></div>
+
           {/* Quick Links */}
           <div>
             <h3 className="text-foreground font-medium text-center mb-2">QUICK LINKS</h3>

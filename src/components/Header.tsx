@@ -19,7 +19,6 @@ const socialLinks = [
   },
   {
     icon: <img src="/gmail.svg" className="h-10 w-10" alt="Gmail" />,
-    href: "mailto:syedsameerfaisal1@gmail.com",
     label: "Gmail"
   },
   {
@@ -70,18 +69,32 @@ export const Header = ({ setIsEmailOpen }: { setIsEmailOpen: (open: boolean) => 
           <PopoverContent style={{ transform: 'scale(0.6) translate(-60px, 40px)', transformOrigin: 'top right' }} className="w-64 p-4 sm:w-96 sm:p-8 rounded-2xl bg-card/95 backdrop-blur-md border border-border/30 shadow-lg">
             <div className="grid grid-cols-3 gap-6">
               {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center gap-2 p-2 sm:gap-3 sm:p-4 rounded-lg hover:bg-card/50 transition-smooth cursor-pointer"
-                >
-                  <div className="w-10 h-10 sm:w-16 sm:h-16 rounded-lg bg-background/80 flex items-center justify-center overflow-hidden">
-                    {React.cloneElement(social.icon, { className: 'w-full h-full', style: { objectFit: 'contain' } })}
-                  </div>
-                  <span className="text-xs sm:text-base text-muted-foreground font-medium">{social.label}</span>
-                </a>
+                social.label === "Gmail" ? (
+                  <button
+                    key={index}
+                    onClick={() => setIsEmailOpen(true)}
+                    className="flex flex-col items-center gap-2 p-2 sm:gap-3 sm:p-4 rounded-lg hover:bg-card/50 transition-smooth cursor-pointer border-none bg-transparent"
+                    type="button"
+                  >
+                    <div className="w-10 h-10 sm:w-16 sm:h-16 rounded-lg bg-background/80 flex items-center justify-center overflow-hidden">
+                      {React.cloneElement(social.icon, { className: 'w-full h-full', style: { objectFit: 'contain' } })}
+                    </div>
+                    <span className="text-xs sm:text-base text-muted-foreground font-medium">{social.label}</span>
+                  </button>
+                ) : (
+                  <a
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center gap-2 p-2 sm:gap-3 sm:p-4 rounded-lg hover:bg-card/50 transition-smooth cursor-pointer"
+                  >
+                    <div className="w-10 h-10 sm:w-16 sm:h-16 rounded-lg bg-background/80 flex items-center justify-center overflow-hidden">
+                      {React.cloneElement(social.icon, { className: 'w-full h-full', style: { objectFit: 'contain' } })}
+                    </div>
+                    <span className="text-xs sm:text-base text-muted-foreground font-medium">{social.label}</span>
+                  </a>
+                )
               ))}
             </div>
           </PopoverContent>
