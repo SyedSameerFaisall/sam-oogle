@@ -160,16 +160,9 @@ function findContextAnswer(userMessage: string): string | null {
   let bestScore = 0;
   let keywordMatch = null;
 
-  // Calculate similarity with each context question and check keywords
-  for (const { question, answer, keywords } of chatbotContext) {
+  // Calculate similarity with each context question
+  for (const { question, answer } of chatbotContext) {
     let score = calculateSimilarity(normalizedMessage, question);
-    // Boost score if any keyword matches
-    if (keywords && keywords.some(kw => normalizedMessage.toLowerCase().includes(kw.toLowerCase()))) {
-      score += 0.5; // Strong boost for keyword match
-      if (!keywordMatch || score > bestScore) {
-        keywordMatch = answer;
-      }
-    }
     if (score > bestScore) {
       bestScore = score;
       bestMatch = answer;
