@@ -100,17 +100,8 @@ export const EmailPane = ({ isOpen, onClose }: EmailPaneProps) => {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-lg mx-auto h-[60vh] sm:h-[70vh] bg-card/95 text-foreground border border-border/30 rounded-2xl p-0">
         <DialogHeader className="p-4 border-b border-border/30 bg-secondary/50 rounded-t-2xl">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-center">
             <DialogTitle className="text-white">New Message</DialogTitle>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={onClose}
-              className="text-white hover:text-white/80 hover:bg-white/10"
-              disabled={isLoading}
-            >
-              <X className="h-4 w-4" />
-            </Button>
           </div>
         </DialogHeader>
 
@@ -149,16 +140,7 @@ export const EmailPane = ({ isOpen, onClose }: EmailPaneProps) => {
           </div>
 
           <div className="p-4 border-t border-border/30 bg-secondary/20">
-            <div className="flex items-center justify-between">
-              <Button
-                type="button"
-                variant="ghost"
-                onClick={onClose}
-                className="text-muted-foreground hover:text-foreground"
-                disabled={isLoading}
-              >
-                Cancel
-              </Button>
+            <div className="flex items-center justify-end">
               <Button
                 type="submit"
                 disabled={isLoading}
