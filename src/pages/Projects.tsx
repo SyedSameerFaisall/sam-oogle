@@ -77,14 +77,14 @@ const Projects = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <Card
-                key={index}
+              <Card 
+                key={index} 
                 className="bg-card/50 backdrop-blur-md border-border/30 hover:border-primary/30 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl group flex flex-col h-full animate-slide-up overflow-hidden"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="relative overflow-hidden rounded-t-lg group">
-                  <img
-                    src={project.image}
+                  <img 
+                    src={project.image} 
                     alt={project.title}
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
                   />
@@ -129,8 +129,8 @@ const Projects = () => {
                 <CardContent className="flex-1 flex flex-col pt-0">
                   <div className="flex flex-wrap gap-1.5 mb-4">
                     {project.technologies.map((tech, techIndex) => (
-                      <Badge
-                        key={techIndex}
+                      <Badge 
+                        key={techIndex} 
                         variant="secondary"
                         className="bg-secondary/30 hover:bg-secondary/50 transition-all duration-300 text-xs px-2 py-1 hover:scale-105"
                       >
@@ -139,7 +139,7 @@ const Projects = () => {
                     ))}
                   </div>
                   <div className="mt-auto flex gap-2">
-                    <Button
+                    <Button 
                       variant="outline"
                       size="sm"
                       className="flex-1 group-hover:border-primary/50 group-hover:text-primary transition-all duration-300"
@@ -149,15 +149,15 @@ const Projects = () => {
                       Code
                     </Button>
                     {index !== 0 && project.liveUrl !== "#" && (
-                      <Button
+                    <Button 
                         variant="hero"
-                        size="sm"
-                        className="flex-1"
+                      size="sm"
+                      className="flex-1"
                         onClick={() => window.open(project.liveUrl, '_blank', 'noopener,noreferrer')}
                       >
                         <ExternalLink className="h-4 w-4 mr-2" />
                         Live
-                      </Button>
+                    </Button>
                     )}
                   </div>
                 </CardContent>

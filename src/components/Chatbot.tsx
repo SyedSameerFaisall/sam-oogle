@@ -262,13 +262,13 @@ export const Chatbot = () => {
     // Otherwise, call OpenAI
     const botResponse = await fetchOpenAIResponse(userMessage.text);
     setMessages(prev => prev.filter(m => m.id !== loadingId));
-    const botMessage: Message = {
+      const botMessage: Message = {
       id: (Date.now() + 2).toString(),
-      text: botResponse,
-      isBot: true,
-      timestamp: new Date()
-    };
-    setMessages(prev => [...prev, botMessage]);
+        text: botResponse,
+        isBot: true,
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, botMessage]);
     setLoading(false);
   };
 
