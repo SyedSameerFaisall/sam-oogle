@@ -102,7 +102,7 @@ const Projects = () => {
                       >
                         <Github className="h-4 w-4" />
                       </Button>
-                      {project.liveUrl !== "#" && (
+                      {index !== 0 && project.liveUrl !== "#" && (
                         <Button 
                           size="sm" 
                           variant="secondary"
@@ -122,13 +122,13 @@ const Projects = () => {
                   <CardTitle className="group-hover:text-primary transition-colors duration-300 text-lg">
                     {project.title}
                   </CardTitle>
-                  <CardDescription className="text-sm line-clamp-3 group-hover:text-muted-foreground/80 transition-colors">
+                  <CardDescription className="text-sm group-hover:text-muted-foreground/80 transition-colors">
                     {project.description}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="flex-1 flex flex-col pt-0">
                   <div className="flex flex-wrap gap-1.5 mb-4">
-                    {project.technologies.slice(0, 6).map((tech, techIndex) => (
+                    {project.technologies.map((tech, techIndex) => (
                       <Badge
                         key={techIndex}
                         variant="secondary"
@@ -137,11 +137,6 @@ const Projects = () => {
                         {tech}
                       </Badge>
                     ))}
-                    {project.technologies.length > 6 && (
-                      <Badge variant="outline" className="text-xs px-2 py-1">
-                        +{project.technologies.length - 6} more
-                      </Badge>
-                    )}
                   </div>
                   <div className="mt-auto flex gap-2">
                     <Button
@@ -153,7 +148,7 @@ const Projects = () => {
                       <Github className="h-4 w-4 mr-2" />
                       Code
                     </Button>
-                    {project.liveUrl !== "#" && (
+                    {index !== 0 && project.liveUrl !== "#" && (
                       <Button
                         variant="hero"
                         size="sm"
