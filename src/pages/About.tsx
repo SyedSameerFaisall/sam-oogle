@@ -144,43 +144,46 @@ const About = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="border-l-2 border-primary/30 pl-6 pb-6">
+              <div className="pb-6">
                 <div className="flex items-start justify-between mb-2">
-                  <div>
-                    <h3 className="font-semibold text-foreground">BSc Data Science</h3>
-                    <p className="text-muted-foreground">University College London</p>
+                  <div className="flex items-center gap-2">
+                    <img src="/ucl.svg" alt="UCL" className="w-7 h-7 mr-2" />
+                    <div>
+                      <h3 className="font-semibold text-foreground">BSc Data Science</h3>
+                      <p className="text-muted-foreground">University College London</p>
+                      <p className="text-sm text-muted-foreground mt-1">First Class Honors</p>
+                    </div>
                   </div>
                   <Badge variant="outline">Sept 2024 - June 2027</Badge>
                 </div>
-                <p className="text-sm text-muted-foreground">
-                  First Class Honors
-                </p>
               </div>
               {/* HKUST Entry */}
-              <div className="border-l-2 border-primary/30 pl-6 pb-6">
+              <div className="pb-6">
                 <div className="flex items-start justify-between mb-2">
-                  <div>
-                    <h3 className="font-semibold text-foreground">BEng Computer Science</h3>
-                    <p className="text-muted-foreground">Hong Kong University of Science and Technology</p>
+                  <div className="flex items-center gap-2">
+                    <img src="/hkust.svg" alt="HKUST" className="w-7 h-7 mr-2" />
+                    <div>
+                      <h3 className="font-semibold text-foreground">BEng Computer Science</h3>
+                      <p className="text-muted-foreground">Hong Kong University of Science and Technology</p>
+                      <p className="text-sm text-muted-foreground mt-1">Dropped out - Completed one year (with first-class honors) before switching to UCL.</p>
+                    </div>
                   </div>
                   <Badge variant="outline">Aug 2023 - Aug 2024</Badge>
                 </div>
-                <p className="text-sm text-muted-foreground">
-                  Dropped out - Completed one year (with first-class honors) before switching to UCL.
-                </p>
               </div>
               
-              <div className="border-l-2 border-primary/30 pl-6 pb-6">
+              <div>
                 <div className="flex items-start justify-between mb-2">
-                  <div>
-                    <h3 className="font-semibold text-foreground">Alevels (Math, Further Math, Physics, Chemistry, CompSci)</h3>
-                    <p className="text-muted-foreground">Nixor College</p>
+                  <div className="flex items-center gap-2">
+                    <img src="/nixor.svg" alt="Nixor College" className="w-7 h-7 mr-2" />
+                    <div>
+                      <h3 className="font-semibold text-foreground">Alevels (Math, Further Math, Physics, Chemistry, CompSci)</h3>
+                      <p className="text-muted-foreground">Nixor College</p>
+                      <p className="text-sm text-muted-foreground mt-1">5A*s, Top 0.001% grades in country</p>
+                    </div>
                   </div>
                   <Badge variant="outline">Aug 2021 - May 2023</Badge>
                 </div>
-                <p className="text-sm text-muted-foreground">
-                  5A*s, Top 0.001% grades in country
-                </p>
               </div>
             </CardContent>
           </Card>

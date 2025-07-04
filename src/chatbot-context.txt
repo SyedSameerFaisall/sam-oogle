@@ -14,7 +14,7 @@ LinkedIn: www.linkedin.com/in/syedsameerfaisal
 - Certified Data Analyst at DataCamp
 - Google Data Analytics Professional Certificate holder
 
-## Education History
+## Education History - Study places
 **University College London (UCL)**
 - Degree: BSc Data Science, Statistical Science
 - Duration: September 2024 - July 2027 (Current)
@@ -249,3 +249,129 @@ LinkedIn: www.linkedin.com/in/syedsameerfaisal
 - Academic Research and Publication
 - Entrepreneurship and Innovation
 - Community Building and Mentorship
+
+## Current Ongoing Projects (As of July 2025)
+
+- Building an AI-Powered Financial Analyst agent with autonomous task handling using LangGraph
+- Developing a LangGraph-based RAG agent for portfolio integration
+- Exploring explainable AI methods to improve model transparency and trust
+- Writing educational blog series for UCL Data Science Society’s Instagram and Medium
+
+## Looking to Collaborate On
+
+- Open-source ML/AI projects
+- Research papers in statistical machine learning
+- AI product development with real-world applications
+- Educational platforms and content creation
+
+## Preferred Communication Style
+
+- Tone: Professional, enthusiastic, and approachable
+- Level of Detail: Balanced — enjoys both high-level summaries and technical deep dives
+- Response Format Preferences: Bullet points, structured paragraphs, code snippets, tables for comparison
+- Key Phrases/Buzzwords: “data-driven insights,” “scalable solutions,” “optimizing performance,” “real-world impact,” “efficient pipelines,” “AI-first approach”
+
+## Goals and Aspirations
+
+### Short-term Goals (Next 1–2 Years)
+- Secure a high-impact technical internship
+- Complete a research project in LLMs or interpretability
+- Master advanced frameworks like LangGraph, CrewAI, and Hugging Face Transformers
+
+### Long-term Career Aspirations
+- Become a lead data scientist or AI product developer
+- Launch a tech startup in FinTech or EduTech
+- Contribute to open-source AI frameworks and ethical AI research
+
+### Personal Growth Goals
+- Improve public speaking skills
+- Learn an additional language (e.g., Spanish or Mandarin)
+- Mentor junior students or early-career professionals
+
+## Values and Priorities
+
+- Key Professional Values: Innovation, collaboration, integrity, making an impact, continuous learning, efficiency, problem-solving, ethical AI development
+- Personal Interests/Hobbies: Cricket, football, gym/fitness, exploring tech communities, hiking
+- What Motivates Him: Solving challenging problems, making a tangible impact, learning new things, building tools that benefit others, contributing to society
+
+## Known Strengths and Areas for Development
+
+- Strengths: Strong analytical skills, strong work ethic, quick learner, creative problem solver, collaborative team player
+- Areas for Development: Public speaking, large-scale networking, delegating tasks when leading complex projects
+
+## Personal Preferences & Fun Facts
+
+- Favorite Foods: Biryani, Chicken Tikka, South Asian cuisine, and Pizza
+- Go-to Comfort Meal: Biryani with raita or spicy grilled tikka with naan
+- Drinks Preference: Chai over coffee, but enjoys iced lattes occasionally
+- Favorite Cuisine Types: Desi (Pakistani/Indian), Italian (especially pizza), and Middle Eastern
+- Cooking: Enjoys experimenting with fusion food on weekends
+- Fun Fact: Will debate anyone who says biryani is just 'spicy rice' 😄
+
+## Problem-Solving Approach
+
+- Preferred Learning Style: Project-based and hands-on experimentation, backed by theory
+- Debugging Approach: Starts with structured analysis, follows intuition, and seeks help if needed
+- When Stuck: Prefers reading documentation first, then checks Stack Overflow, then peers
+- Decision-Making Style: Data-driven, favors quick iteration and consensus-building
+
+## Cultural Context & Communication
+
+- Cultural Background: Pakistani, currently studying in the UK
+- Communication Style: Direct but respectful; appreciates humor and clarity
+- Feedback Preference: Prefers constructive, specific, and actionable feedback
+- Collaboration Style: Active participant; enjoys brainstorming and collaborative work environments
+
+## Personal Productivity & Work Style
+
+- Peak Productivity Hours: Night owl – most productive late evening and night
+- Task Management Tools: Uses Notion for planning and prioritizing
+- Note-Taking System: Combines Notion for structured content and traditional handwritten notes for thinking
+- Research Approach: Mix of systematic literature review and hands-on experimentation
+
+## Specific Context for AI Interactions
+
+- Preferred Code Comment Style: Detailed, line-by-line with learning-focused explanations
+- Learning Goals: Focused on deeply understanding underlying principles, not just implementation
+- Common Questions: 
+  - "How does this work under the hood?"
+  - "What are the trade-offs?"
+  - "Why this approach over alternatives?"
+- Typical Projects: 
+  - End-to-end ML pipelines
+  - LLM-powered educational tools
+  - Financial forecasting dashboards
+
+## Current Challenges & Goals
+
+- Current Learning Focus: Advanced applications of LLMs, LangGraph, LangChain, and production ML systems
+- Immediate Challenges: Scaling LangGraph agents, balancing academics with side projects
+- Short-term Deadlines: Research project submission (Summer 2025), internship applications (Fall 2025)
+- Resource Constraints: Limited GPU access; manages time around academic schedule and society roles
+
+## Networking & Collaboration Preferences
+
+- Open to Collaboration: Yes — particularly in AI-for-education, applied NLP, and ML research
+- Mentorship:
+  - Currently mentoring junior students at UCL
+  - Actively seeking senior mentors in AI and data science
+- Hackathons: 
+  - Organized multiple hackathons via UCL Data Science Society
+  - Interested in participating in technical hackathons across AI/ML and product design
+- Study Groups: Prefers collaborative, discussion-heavy learning groups over passive study sessions
+
+## Quality Standards & Preferences
+
+- Code Quality: Prioritizes clean, modular, and well-commented code
+- Documentation: Strong advocate for clear and complete documentation
+- Testing Preferences: Uses unit testing for critical modules; supports integration testing in larger systems
+- Version Control:
+  - Git workflow preference: Feature-branch model with meaningful commit messages
+  - Regular commits and structured pull requests
+
+## Contextual Conversation Helpers
+
+- Common Abbreviations Used: ML (Machine Learning), DL (Deep Learning), NLP (Natural Language Processing), CV (Computer Vision), RL (Reinforcement Learning), LLM (Large Language Model)
+- Technical Depth Preference: Comfortable with undergraduate to graduate-level technical detail
+- Explanation Style: Prefers examples, diagrams, analogies, and layered explanations
+- Follow-up Questions: Enjoys exploring “what if” scenarios and deeper edge cases
