@@ -8,31 +8,31 @@ import { EmailPane } from "./EmailPane";
 import React from "react";
 const socialLinks = [
   {
-    icon: <img src="/github.svg" className="h-10 w-10" alt="GitHub" />,
+    icon: <img src="/github.svg" alt="GitHub" />,
     href: "https://github.com/SyedSameerFaisall",
     label: "Github"
   },
   {
-    icon: <img src="/linkedin.svg" className="h-10 w-10" alt="LinkedIn" />,
+    icon: <img src="/linkedin.svg" alt="LinkedIn" />,
     href: "https://www.linkedin.com/in/syedsameerfaisal/",
     label: "Linkedin"
   },
   {
-    icon: <img src="/gmail.svg" className="h-10 w-10" alt="Gmail" />,
-    label: "Gmail"
+    icon: <img src="/whatsapp.svg" alt="Whatsapp" />,
+    label: "Whatsapp"
   },
   {
-    icon: <img src="/instagram.svg" className="h-10 w-10" alt="Instagram" />,
+    icon: <img src="/instagram.svg" alt="Instagram" />,
     href: "https://www.instagram.com/sameer__faisal/",
     label: "Instagram"
   },
   {
-    icon: <img src="/facebook.svg" className="h-10 w-10" alt="Facebook" />,
+    icon: <img src="/facebook.svg" alt="Facebook" />,
     href: "https://www.facebook.com/sameer.faisal.524596",
     label: "Facebook"
   },
   {
-    icon: <img src="/calendly.svg" className="h-10 w-10" alt="Calendly" />,
+    icon: <img src="/calendly.svg" alt="Calendly" />,
     href: "https://calendly.com/syedsameerfaisal1",
     label: "Calendly"
   }
@@ -66,7 +66,7 @@ export const Header = ({ setIsEmailOpen }: { setIsEmailOpen: (open: boolean) => 
               <NineDotIcon className="w-8 h-8 text-foreground" />
             </Button>
           </PopoverTrigger>
-          <PopoverContent style={{ transform: 'scale(0.6) translate(-60px, 40px)', transformOrigin: 'top right' }} className="w-64 p-4 sm:w-96 sm:p-8 rounded-2xl bg-card/95 backdrop-blur-md border border-border/30 shadow-lg">
+          <PopoverContent style={{ transform: 'scale(0.6) translate(-60px, 40px)', transformOrigin: 'top right' }} className="w-52 p-2 sm:w-72 sm:p-4 rounded-2xl bg-card/95 backdrop-blur-md border border-border/30 shadow-lg">
             <div className="grid grid-cols-3 gap-6">
               {socialLinks.map((social, index) => (
                 social.label === "Gmail" ? (
@@ -76,8 +76,13 @@ export const Header = ({ setIsEmailOpen }: { setIsEmailOpen: (open: boolean) => 
                     className="flex flex-col items-center gap-2 p-2 sm:gap-3 sm:p-4 rounded-lg hover:bg-card/50 transition-smooth cursor-pointer border-none bg-transparent"
                     type="button"
                   >
-                    <div className="w-10 h-10 sm:w-16 sm:h-16 rounded-lg bg-background/80 flex items-center justify-center overflow-hidden">
-                      {React.cloneElement(social.icon, { className: 'w-full h-full', style: { objectFit: 'contain' } })}
+                    <div className="w-16 h-20 sm:w-20 sm:h-24 rounded-lg flex items-center justify-center overflow-hidden">
+                      {React.cloneElement(social.icon, {
+                        className: ["Github", "Gmail", "Calendly"].includes(social.label)
+                          ? "h-[90%] w-auto"
+                          : "w-full h-full",
+                        style: { objectFit: 'contain' }
+                      })}
                     </div>
                     <span className="text-xs sm:text-base text-muted-foreground font-medium">{social.label}</span>
                   </button>
@@ -89,8 +94,19 @@ export const Header = ({ setIsEmailOpen }: { setIsEmailOpen: (open: boolean) => 
                     rel="noopener noreferrer"
                     className="flex flex-col items-center gap-2 p-2 sm:gap-3 sm:p-4 rounded-lg hover:bg-card/50 transition-smooth cursor-pointer"
                   >
-                    <div className="w-10 h-10 sm:w-16 sm:h-16 rounded-lg bg-background/80 flex items-center justify-center overflow-hidden">
-                      {React.cloneElement(social.icon, { className: 'w-full h-full', style: { objectFit: 'contain' } })}
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-lg flex items-center justify-center overflow-hidden">
+                      {React.cloneElement(social.icon, {
+                        className: 'w-full h-full',
+                        style: {
+                          objectFit: 'contain',
+                          transform:
+                            social.label === "Gmail"
+                              ? "scale(1.6)"
+                              : ["Github", "Calendly"].includes(social.label)
+                              ? "scale(1.3)"
+                              : undefined
+                        }
+                      })}
                     </div>
                     <span className="text-xs sm:text-base text-muted-foreground font-medium">{social.label}</span>
                   </a>
