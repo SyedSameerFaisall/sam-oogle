@@ -199,8 +199,10 @@ const About = () => {
             <CardContent>
               <div className="space-y-4">
                 {/* Global Undergraduate Scholar */}
-                <div className="flex items-start gap-3">
-                  <img src="/ucl.svg" alt="UCL" className="w-8 h-8 mt-1" />
+                <div className="flex items-center gap-3">
+                  <div className="flex-shrink-0 flex items-center justify-center w-8 h-8">
+                    <img src="/ucl.svg" alt="UCL" className="w-8 h-8" />
+                  </div>
                   <div>
                     <div className="font-semibold text-foreground">Global Undergraduate Scholar</div>
                     <div className="text-sm text-muted-foreground">UCL &middot; Sep 2024</div>
@@ -208,8 +210,10 @@ const About = () => {
                   </div>
                 </div>
                 {/* 135% Undergraduate Scholarship */}
-                <div className="flex items-start gap-3">
-                  <img src="/hkust.svg" alt="HKUST" className="w-8 h-8 mt-1" />
+                <div className="flex items-center gap-3">
+                  <div className="flex-shrink-0 flex items-center justify-center w-8 h-8">
+                    <img src="/hkust.svg" alt="HKUST" className="w-8 h-8" />
+                  </div>
                   <div>
                     <div className="font-semibold text-foreground">135% Undergraduate Scholarship</div>
                     <div className="text-sm text-muted-foreground">Hong Kong University Of Science and Technology &middot; Aug 2023</div>
@@ -217,8 +221,10 @@ const About = () => {
                   </div>
                 </div>
                 {/* Academic Distinction with the Highest Honor */}
-                <div className="flex items-start gap-3">
-                  <img src="/nixor.svg" alt="Nixor College" className="w-8 h-8 mt-1" />
+                <div className="flex items-center gap-3">
+                  <div className="flex-shrink-0 flex items-center justify-center w-8 h-8">
+                    <img src="/nixor.svg" alt="Nixor College" className="w-8 h-8" />
+                  </div>
                   <div>
                     <div className="font-semibold text-foreground">Academic Distinction with the Highest Honor</div>
                     <div className="text-sm text-muted-foreground">Nixor College &middot; Jun 2023</div>
@@ -226,8 +232,10 @@ const About = () => {
                   </div>
                 </div>
                 {/* Dean's List */}
-                <div className="flex items-start gap-3">
-                  <img src="/nixor.svg" alt="Nixor College" className="w-8 h-8 mt-1" />
+                <div className="flex items-center gap-3">
+                  <div className="flex-shrink-0 flex items-center justify-center w-8 h-8">
+                    <img src="/nixor.svg" alt="Nixor College" className="w-8 h-8" />
+                  </div>
                   <div>
                     <div className="font-semibold text-foreground">Dean's List</div>
                     <div className="text-sm text-muted-foreground">Nixor College &middot; Jun 2023</div>
@@ -235,8 +243,10 @@ const About = () => {
                   </div>
                 </div>
                 {/* Honor Roll */}
-                <div className="flex items-start gap-3">
-                  <img src="/nixor.svg" alt="Nixor College" className="w-8 h-8 mt-1" />
+                <div className="flex items-center gap-3">
+                  <div className="flex-shrink-0 flex items-center justify-center w-8 h-8">
+                    <img src="/nixor.svg" alt="Nixor College" className="w-8 h-8" />
+                  </div>
                   <div>
                     <div className="font-semibold text-foreground">Honor Roll</div>
                     <div className="text-sm text-muted-foreground">Nixor College &middot; Jun 2023</div>
@@ -244,19 +254,141 @@ const About = () => {
                   </div>
                 </div>
                 {/* 7th rank nationally - International Kangaroo Math competition */}
-                <div className="flex items-start gap-3">
-                  <img src="/ikmc.svg" alt="IKMC" className="w-8 h-8 mt-1" />
+                <div className="flex items-center gap-3">
+                  <div className="flex-shrink-0 flex items-center justify-center w-8 h-8">
+                    <img src="/ikmc.svg" alt="IKMC" className="w-8 h-8" />
+                  </div>
                   <div>
                     <div className="font-semibold text-foreground">7th rank nationally - International Kangaroo Math competition</div>
                     <div className="text-sm text-muted-foreground">International Kangaroo Math competition &middot; Feb 2022</div>
                   </div>
                 </div>
                 {/* Fully-funded A Level Scholarship */}
-                <div className="flex items-start gap-3">
-                  <img src="/nixor.svg" alt="Nixor College" className="w-8 h-8 mt-1" />
+                <div className="flex items-center gap-3">
+                  <div className="flex-shrink-0 flex items-center justify-center w-8 h-8">
+                    <img src="/nixor.svg" alt="Nixor College" className="w-8 h-8" />
+                  </div>
                   <div>
                     <div className="font-semibold text-foreground">Fully-funded A Level Scholarship</div>
                     <div className="text-sm text-muted-foreground">Nixor College &middot; Aug 2021</div>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Hobbies & Interests Section */}
+          <Card className="bg-card/50 backdrop-blur-md border-border/30">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <User className="h-5 w-5 text-primary" />
+                Hobbies & Interests
+              </CardTitle>
+              <CardDescription>What I enjoy doing in my free time</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* Sports & Fitness */}
+                <div className="space-y-3">
+                  <h3 className="font-semibold text-foreground flex items-center gap-2">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    Sports & Fitness
+                  </h3>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
+                      Cricket - Passionate player and strategist
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
+                      Football - Team sports enthusiast
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
+                      Gym & Fitness - Regular workout routine
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
+                      Hiking - Exploring nature trails
+                    </div>
+                  </div>
+                </div>
+
+                {/* Tech & Learning */}
+                <div className="space-y-3">
+                  <h3 className="font-semibold text-foreground flex items-center gap-2">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    Tech & Learning
+                  </h3>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
+                      AI/ML Research - Exploring latest developments
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
+                      Open Source Projects - Contributing to community
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
+                      Tech Communities - Networking and mentoring
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
+                      Continuous Learning - Always exploring new skills
+                    </div>
+                  </div>
+                </div>
+
+                {/* Food & Culture */}
+                <div className="space-y-3">
+                  <h3 className="font-semibold text-foreground flex items-center gap-2">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    Food & Culture
+                  </h3>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
+                      Cooking - Experimenting with fusion cuisine
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
+                      South Asian Cuisine - Biryani enthusiast 😄
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
+                      International Cuisines - Exploring global flavors
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
+                      Cultural Exchange - Embracing diversity
+                    </div>
+                  </div>
+                </div>
+
+                {/* Personal Development */}
+                <div className="space-y-3">
+                  <h3 className="font-semibold text-foreground flex items-center gap-2">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    Personal Development
+                  </h3>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
+                      Public Speaking - Improving communication skills
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
+                      Mentoring - Helping junior students
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
+                      Language Learning - Expanding horizons
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
+                      Goal Setting - Strategic planning and execution
+                    </div>
                   </div>
                 </div>
               </div>

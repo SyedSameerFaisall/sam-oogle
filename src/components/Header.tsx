@@ -136,11 +136,10 @@ export const Header = ({ setIsEmailOpen }: { setIsEmailOpen: (open: boolean) => 
                 <li>🔍 Use <span className="text-primary font-semibold">Search</span> to explore my portfolio</li>
                 <li>📧 Click <span className="text-primary font-semibold">Gmail</span> to contact me</li>
                 <li>🟦 Use the <span className="text-primary font-semibold">Dot-Menu</span> for more links</li>
-                <li>📅 Book a call with the <span className="text-primary font-bold">calendar</span> icon</li>
+                <li>📅 Book a call with <span className="text-primary font-bold">Calendly</span></li>
                 <li>🤖 Use the <span className="text-primary font-bold">AI Chatbot</span> to learn more</li>
               </ul>
             </div>
-            <div className="w-full border-t border-border/30 my-2"></div>
             <div className="w-full flex flex-col gap-2">
               <a href="/about" className="w-full"><Button variant="outline" size="sm" className="w-full justify-center">About Me</Button></a>
               <a href="/projects" className="w-full"><Button variant="outline" size="sm" className="w-full justify-center">Projects</Button></a>
