@@ -329,7 +329,7 @@ const About = () => {
                     </div>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
-                      Open Source Projects - Contributing to community
+                      Technical Projects - Applying skills practically
                     </div>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
@@ -338,58 +338,6 @@ const About = () => {
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
                       Continuous Learning - Always exploring new skills
-                    </div>
-                  </div>
-                </div>
-
-                {/* Food & Culture */}
-                <div className="space-y-3">
-                  <h3 className="font-semibold text-foreground flex items-center gap-2">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    Food & Culture
-                  </h3>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
-                      Cooking - Experimenting with fusion cuisine
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
-                      South Asian Cuisine - Biryani enthusiast 😄
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
-                      International Cuisines - Exploring global flavors
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
-                      Cultural Exchange - Embracing diversity
-                    </div>
-                  </div>
-                </div>
-
-                {/* Personal Development */}
-                <div className="space-y-3">
-                  <h3 className="font-semibold text-foreground flex items-center gap-2">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    Personal Development
-                  </h3>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
-                      Public Speaking - Improving communication skills
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
-                      Mentoring - Helping junior students
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
-                      Language Learning - Expanding horizons
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 bg-primary/60 rounded-full"></div>
-                      Goal Setting - Strategic planning and execution
                     </div>
                   </div>
                 </div>
