@@ -51,22 +51,22 @@ export const Header = ({ setIsEmailOpen }: { setIsEmailOpen: (open: boolean) => 
 
   return (
     <>
-      <header className="w-full pt-6 pr-12 z-50">
-      <div style={{ transform: 'scale(0.6)', transformOrigin: 'top right', marginLeft: '16px', marginTop: '-8px' }} className="flex items-center justify-end w-full mt-4 gap-12 pl-40">
+      <header className="w-full pt-3 md:pt-6 pr-4 md:pr-12 z-50">
+      <div className="flex items-center justify-end w-full gap-3 md:gap-8 lg:gap-12">
         <Button
           variant="ghost"
-          className="text-xl font-bold text-foreground px-2 py-1"
+          className="text-sm md:text-lg lg:text-xl font-bold text-foreground px-1 md:px-2 py-1"
           onClick={() => setIsEmailOpen(true)}
         >
           Gmail
         </Button>
         <Popover>
           <PopoverTrigger asChild>
-            <Button variant="ghost" size="sm" className="p-0 h-10 w-10 rounded-2xl transition-smooth hover:scale-110 flex items-center justify-center">
-              <NineDotIcon className="w-8 h-8 text-foreground" />
+            <Button variant="ghost" size="sm" className="p-0 h-8 w-8 md:h-10 md:w-10 rounded-2xl transition-smooth hover:scale-110 flex items-center justify-center">
+              <NineDotIcon className="w-6 h-6 md:w-8 md:h-8 text-foreground" />
             </Button>
           </PopoverTrigger>
-          <PopoverContent style={{ transform: 'scale(0.6) translate(-60px, 40px)', transformOrigin: 'top right' }} className="w-52 p-2 sm:w-72 sm:p-4 rounded-2xl bg-card/95 backdrop-blur-md border border-border/30 shadow-lg">
+          <PopoverContent className="w-48 md:w-52 lg:w-72 p-2 md:p-4 rounded-2xl bg-card/95 backdrop-blur-md border border-border/30 shadow-lg" align="end">
             <div className="grid grid-cols-3 gap-6">
               {socialLinks.map((social, index) => (
                 social.label === "Gmail" ? (
@@ -119,12 +119,12 @@ export const Header = ({ setIsEmailOpen }: { setIsEmailOpen: (open: boolean) => 
           <PopoverTrigger asChild>
             <Button
               variant="ghost"
-              className="w-12 h-12 rounded-full bg-muted-foreground/20 border-2 border-border flex items-center justify-center overflow-hidden p-0 hover:border-primary/50 transition-smooth hover:scale-110"
+              className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full bg-muted-foreground/20 border-2 border-border flex items-center justify-center overflow-hidden p-0 hover:border-primary/50 transition-smooth hover:scale-110"
             >
               <img src="/profile.jpg" alt="User" className="w-full h-full object-cover rounded-full" />
             </Button>
           </PopoverTrigger>
-          <PopoverContent style={{ transform: 'scale(0.6) translate(-60px, 40px)', transformOrigin: 'top right' }} className="w-[16rem] p-2 sm:w-[28rem] sm:p-8 rounded-2xl bg-card/95 backdrop-blur-md border border-border/30 shadow-lg flex flex-col items-center gap-4 sm:gap-6">
+          <PopoverContent className="w-64 md:w-80 lg:w-[28rem] p-3 md:p-6 lg:p-8 rounded-2xl bg-card/95 backdrop-blur-md border border-border/30 shadow-lg flex flex-col items-center gap-3 md:gap-4 lg:gap-6" align="end">
             <img src="/profile.jpg" alt="Sameer" className="w-20 h-20 rounded-full object-cover mb-2" />
             <div className="text-center">
               <div className="text-xl font-bold text-foreground">Hi, I am Sameer</div>
