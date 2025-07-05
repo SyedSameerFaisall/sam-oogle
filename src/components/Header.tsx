@@ -51,19 +51,19 @@ export const Header = ({ setIsEmailOpen }: { setIsEmailOpen: (open: boolean) => 
 
   return (
     <>
-      <header className="w-full pt-1.5 md:pt-3 pr-2 md:pr-6 z-50">
-      <div className="flex items-center justify-end w-full gap-1.5 md:gap-4 lg:gap-6">
+      <header className="w-full pt-5 md:pt-3 pr-5 md:pr-6 z-50">
+      <div className="flex items-center justify-end w-full gap-5 md:gap-4 lg:gap-6">
         <Button
           variant="ghost"
-          className="text-xs md:text-base lg:text-lg text-foreground px-0.5 md:px-1 py-0.5"
+          className="text-sm md:text-base lg:text-lg font-light text-white px-0.5 md:px-1 py-0.5 tracking-wide"
           onClick={() => setIsEmailOpen(true)}
         >
           Gmail
         </Button>
         <Popover>
           <PopoverTrigger asChild>
-            <Button variant="ghost" size="sm" className="p-0 h-4 w-4 md:h-5 md:w-5 rounded-2xl transition-smooth hover:scale-110 flex items-center justify-center">
-              <NineDotIcon className="w-3 h-3 md:w-4 md:h-4 text-foreground" />
+            <Button variant="ghost" size="sm" className="p-0 h-5 w-5 md:h-5 md:w-5 rounded-2xl transition-smooth hover:scale-110 flex items-center justify-center">
+              <NineDotIcon className="w-5 h-5 md:w-4 md:h-4 text-foreground" />
             </Button>
           </PopoverTrigger>
           <PopoverContent className="w-60 md:w-72 lg:w-80 p-4 rounded-2xl bg-card/95 backdrop-blur-md border border-border/30 shadow-lg" align="end">
@@ -107,9 +107,9 @@ export const Header = ({ setIsEmailOpen }: { setIsEmailOpen: (open: boolean) => 
           <PopoverTrigger asChild>
             <Button
               variant="ghost"
-              className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 rounded-full bg-muted-foreground/20 border-2 border-border flex items-center justify-center overflow-hidden p-0 hover:border-primary/50 transition-smooth hover:scale-110"
+              className="w-7 h-7 md:w-7 md:h-7 lg:w-8 lg:h-8 rounded-full bg-muted-foreground/20 border-2 border-primary/60 shadow-lg flex items-center justify-center overflow-hidden p-0 hover:border-primary transition-smooth hover:scale-110"
             >
-              <img src="/profile.jpg" alt="User" className="w-full h-full object-cover rounded-full" />
+              <img src="/profile.jpg" alt="User" className="w-full h-full object-cover rounded-full border-2 border-white" />
             </Button>
           </PopoverTrigger>
           <PopoverContent className="w-72 max-w-xs md:w-96 md:max-w-md p-2 md:p-4 rounded-2xl bg-card/95 backdrop-blur-md border border-border/30 shadow-lg flex flex-col items-center gap-2 md:gap-4" align="end">

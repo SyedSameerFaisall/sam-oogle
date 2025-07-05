@@ -11,17 +11,17 @@ const quickLinks = [
 export const QuickLinks = () => {
   const navigate = useNavigate();
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-3 max-w-2xl mx-auto mt-8 animate-fade-in">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-3 w-full max-w-xs sm:max-w-2xl mx-auto mt-8 animate-fade-in">
       {quickLinks.map((link, index) => (
         <Button
           key={index}
           variant="ghost"
-          className="group p-3 h-auto bg-card/20 hover:bg-card/40 border border-border/20 hover:border-primary/30 transition-smooth hover:scale-105 text-center"
+          className="group p-2 sm:p-3 h-auto bg-card/20 hover:bg-card/40 border border-border/20 hover:border-primary/30 transition-smooth hover:scale-105 text-center"
           style={{ animationDelay: `${index * 100}ms` }}
           onClick={() => navigate(link.path)}
         >
           <div>
-            <h3 className="font-medium text-base text-foreground group-hover:text-primary transition-smooth">
+            <h3 className="font-medium text-sm sm:text-base text-foreground group-hover:text-primary transition-smooth">
               {link.title}
             </h3>
             <p className="text-xs text-muted-foreground mt-1">
