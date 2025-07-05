@@ -55,7 +55,7 @@ export const Header = ({ setIsEmailOpen }: { setIsEmailOpen: (open: boolean) => 
       <div className="flex items-center justify-end w-full gap-5 md:gap-4 lg:gap-6">
         <Button
           variant="ghost"
-          className="text-sm md:text-base lg:text-lg font-light text-white px-0.5 md:px-1 py-0.5 tracking-wide"
+          className="text-sm md:text-base lg:text-lg text-white px-0.5 md:px-1 py-0.5"
           onClick={() => setIsEmailOpen(true)}
         >
           Gmail
@@ -67,7 +67,7 @@ export const Header = ({ setIsEmailOpen }: { setIsEmailOpen: (open: boolean) => 
             </Button>
           </PopoverTrigger>
           <PopoverContent className="w-60 md:w-72 lg:w-80 p-4 rounded-2xl bg-card/95 backdrop-blur-md border border-border/30 shadow-lg" align="end">
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 gap-1">
               {socialLinks.map((social, index) => (
                 social.label === "Gmail" ? (
                   <button
