@@ -98,33 +98,33 @@ export const EmailPane = ({ isOpen, onClose }: EmailPaneProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-lg mx-auto h-[60vh] sm:h-[70vh] bg-card/95 text-foreground border border-border/30 rounded-2xl p-0">
-        <DialogHeader className="p-4 border-b border-border/30 bg-secondary/50 rounded-t-2xl">
+      <DialogContent className="w-full max-w-[95vw] sm:max-w-lg mx-auto h-[80vh] sm:h-[70vh] bg-card/95 text-foreground border border-border/30 rounded-xl sm:rounded-2xl p-0">
+        <DialogHeader className="p-3 sm:p-4 border-b border-border/30 bg-secondary/50 rounded-t-xl sm:rounded-t-2xl">
           <div className="flex items-center justify-center">
-            <DialogTitle className="text-white">New Message</DialogTitle>
+            <DialogTitle className="text-white text-base sm:text-lg">New Message</DialogTitle>
           </div>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="flex flex-col h-full">
-          <div className="flex-1 p-4 space-y-4">
-            <div className="flex items-center gap-4">
-              <span className="text-muted-foreground text-sm w-12">From</span>
+          <div className="flex-1 p-3 sm:p-4 space-y-3 sm:space-y-4">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-4">
+              <span className="text-muted-foreground text-xs sm:text-sm w-16 sm:w-12">From</span>
               <Input
                 type="email"
                 value={formData.from}
                 onChange={(e) => setFormData(prev => ({ ...prev, from: e.target.value }))}
-                className="flex-1 bg-background/50 border-border/30"
+                className="flex-1 bg-background/50 border-border/30 text-xs sm:text-sm"
                 placeholder="Enter your email"
               />
             </div>
 
-            <div className="flex items-center gap-4">
-              <span className="text-muted-foreground text-sm w-12">Subject</span>
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-4">
+              <span className="text-muted-foreground text-xs sm:text-sm w-16 sm:w-12">Subject</span>
               <Input
                 type="text"
                 value={formData.subject}
                 onChange={(e) => setFormData(prev => ({ ...prev, subject: e.target.value }))}
-                className="flex-1 bg-background/50 border-border/30"
+                className="flex-1 bg-background/50 border-border/30 text-xs sm:text-sm"
                 placeholder="Enter subject"
               />
             </div>
@@ -133,18 +133,18 @@ export const EmailPane = ({ isOpen, onClose }: EmailPaneProps) => {
               <Textarea
                 value={formData.message}
                 onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                className="w-full h-64 bg-background/50 border-border/30 resize-none"
+                className="w-full h-32 sm:h-64 bg-background/50 border-border/30 resize-none text-xs sm:text-sm"
                 placeholder="Compose your message..."
               />
             </div>
           </div>
 
-          <div className="p-4 border-t border-border/30 bg-secondary/20">
-            <div className="flex items-center justify-end">
+          <div className="p-3 sm:p-4 border-t border-border/30 bg-secondary/20">
+            <div className="flex items-center justify-end sm:justify-end">
               <Button
                 type="submit"
                 disabled={isLoading}
-                className="px-8 bg-primary hover:bg-primary/90 text-primary-foreground disabled:opacity-50"
+                className="w-full sm:w-auto px-4 sm:px-8 py-2 bg-primary hover:bg-primary/90 text-primary-foreground disabled:opacity-50 text-xs sm:text-sm"
               >
                 {isLoading ? (
                   <>
