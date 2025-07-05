@@ -5,7 +5,7 @@ import { QuickLinks } from "@/components/QuickLinks";
 import { FloatingElements } from "@/components/FloatingElements";
 import { Chatbot } from "@/components/Chatbot";
 
-const Index = ({ setIsEmailOpen }: { setIsEmailOpen: (open: boolean) => void }) => {
+const Index = ({ setIsEmailOpen, isEmailOpen }: { setIsEmailOpen: (open: boolean) => void, isEmailOpen: boolean }) => {
   return <div className="h-screen relative overflow-hidden flex flex-col bg-gradient-to-br from-background via-background/95 to-background/80">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 animate-shimmer" 
            style={{ backgroundSize: '200% 100%' }} />
@@ -32,7 +32,7 @@ const Index = ({ setIsEmailOpen }: { setIsEmailOpen: (open: boolean) => void }) 
               style={{ animationDelay: '800ms' }}>
     </footer>
     
-    <Chatbot />
+    <Chatbot isEmailOpen={isEmailOpen} />
     </div>;
 };
 export default Index;

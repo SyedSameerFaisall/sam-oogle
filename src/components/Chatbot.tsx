@@ -220,7 +220,7 @@ function findRelevantContextChunk(userMessage: string): string {
   return topChunks.join('\n\n');
 }
 
-export const Chatbot = () => {
+export const Chatbot = ({ isEmailOpen }: { isEmailOpen?: boolean }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -253,7 +253,7 @@ export const Chatbot = () => {
     setMessages(prev => [...prev, {
       id: loadingId,
       text: "Thinking...",
-      isBot: true,
+      isBot: true,  
       timestamp: new Date()
     }]);
 
@@ -270,6 +270,9 @@ export const Chatbot = () => {
     setLoading(false);
   };
 
+  if (isEmailOpen) {
+    return null;
+  }
   if (!isOpen) {
     return (
       <Button

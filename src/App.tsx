@@ -23,7 +23,7 @@ const App = () => {
         <Sonner />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Index setIsEmailOpen={setIsEmailOpen} />} />
+            <Route path="/" element={<Index setIsEmailOpen={setIsEmailOpen} isEmailOpen={isEmailOpen} />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/skills" element={<Skills />} />
