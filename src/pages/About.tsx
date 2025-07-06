@@ -86,15 +86,9 @@ const About = () => {
                 My story isn't one of privilege, but of a relentless, almost visceral ambition ignited in a 
                 middle-class home. While other children explored playgrounds, my childhood was often spent 
                 grinding, pushing limits not just in academics, but in disciplined routines, knowing that every 
-                ounce of effort was an investment in a future I desperately craved. The dream of studying at a 
-                world-renowned university felt impossibly distant, a star I could only gaze at, yet it became 
-                the unyielding fire that fueled countless sleepless nights. I remember the sheer, exhausting 
-                grind, pouring over books, pushing past every boundary, knowing I was competing against thousands
-                of brilliant minds from every corner of the globe. Then, the impossible became real: acceptances
-                poured in from universities across the world, each offering a fully funded scholarship, a profound
-                validation of years of sacrifice. Choosing to settle in the vibrant heart of London, at UCL, 
-                was more than just a move; it was stepping into a future I had fought tooth and nail to build, 
-                a testament to what unwavering dedication can achieve against all odds.
+                ounce of effort was an investment in a future I desperately craved. The relentless efforts and the 
+                countless sleepless nights paid off: acceptances poured in from universities across the world, 
+                each offering a fully funded scholarship, a profound validation of years of sacrifice. 
               </p>
               <p className="text-muted-foreground">
                 Now at UCL, I channel that same fierce drive into the exhilarating world of data
@@ -108,32 +102,6 @@ const About = () => {
               </p>
             </CardContent>
           </Card>
-          
-          {/* Personal Gallery */}
-          <Card className="bg-card/50 backdrop-blur-md border-border/30">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <User className="h-5 w-5 text-primary" />
-                Personal Gallery
-              </CardTitle>
-              <CardDescription>A glimpse into my world</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="aspect-square rounded-lg bg-muted/30 border border-border/30 overflow-hidden group hover:scale-105 transition-transform duration-300">
-                    <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                      <User className="w-8 h-8" />
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <p className="text-sm text-muted-foreground mt-4 text-center">
-                Upload your photos to showcase your personality and interests
-              </p>
-            </CardContent>
-          </Card>
-
 
           {/* Education Section */}
           <Card className="bg-card/50 backdrop-blur-md border-border/30">
