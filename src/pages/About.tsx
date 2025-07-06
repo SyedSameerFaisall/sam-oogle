@@ -97,7 +97,7 @@ const About = () => {
                 a testament to what unwavering dedication can achieve against all odds.
               </p>
               <p className="text-muted-foreground">
-                Now, firmly planted in London, I channel that same fierce drive into the exhilarating world of data
+                Now at UCL, I channel that same fierce drive into the exhilarating world of data
                 science and software engineering. I'm utterly obsessed with crafting elegant digital solutions that
                 genuinely make a difference, whether it's teaching machines to see, predicting complex patterns, 
                 or just making life a little smoother through clever code. When I'm not wrestling with algorithms or 
@@ -170,7 +170,7 @@ const About = () => {
                   <Badge variant="outline">Aug 2023 - Aug 2024</Badge>
                 </div>
               </div>
-              <div className="pb-10">
+              <div className="pb-4">
                 <div className="flex items-start justify-between mb-2">
                   <div className="flex items-center gap-2">
                     <img src="/nixor.svg" alt="Nixor College" className="w-7 h-7 mr-2" />

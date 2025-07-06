@@ -13,17 +13,22 @@ const Index = ({ setIsEmailOpen, isEmailOpen }: { setIsEmailOpen: (open: boolean
       <FloatingElements />
       <Header setIsEmailOpen={setIsEmailOpen} />
       
-      <main className="flex flex-1 flex-col items-center justify-center px-4 sm:px-6 lg:px-8 relative z-10 mt-[-120px]">
+      <main className="flex flex-1 flex-col items-center justify-center px-2 sm:px-4 lg:px-8 relative z-10 mt-[-80px]">
         <div style={{ transform: 'scale(0.7)', transformOrigin: 'top center', width: '100%' }} className="animate-fade-in">
           <div className="w-full max-w-screen-lg mx-auto flex flex-col gap-2 sm:gap-3 mt-0 sm:mt-0">
             <div className="animate-bounce-in" style={{ animationDelay: '200ms' }}>
-              <Logo />
+              <Logo className="text-4xl sm:text-6xl" />
             </div>
             <div className="animate-slide-up" style={{ animationDelay: '400ms' }}>
-              <SearchBar />
+              <SearchBar className="p-2 sm:p-4" />
             </div>
             <div className="animate-scale-in" style={{ animationDelay: '600ms' }}>
-              <QuickLinks />
+              <QuickLinks 
+                titleClassName="text-base sm:text-lg" 
+                descClassName="text-xs sm:text-sm" 
+                buttonClassName="p-2 sm:p-4" 
+                gapClassName="gap-2 sm:gap-3" 
+              />
             </div>
           </div>
         </div>
