@@ -144,7 +144,7 @@ export const EmailPane = ({ isOpen, onClose }: EmailPaneProps) => {
               <Button
                 type="submit"
                 disabled={isLoading}
-                className="w-full sm:w-auto px-4 sm:px-8 py-2 bg-zinc-900 hover:bg-zinc-800 text-primary-foreground disabled:opacity-50 text-xs sm:text-sm border-none shadow-none"
+                className="w-full sm:w-auto px-4 sm:px-8 py-2 bg-primary border border-primary/40 hover:bg-primary/80 text-primary-foreground disabled:opacity-50 text-xs sm:text-sm rounded-lg shadow-none"
               >
                 {isLoading ? (
                   <>
