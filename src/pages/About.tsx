@@ -138,13 +138,13 @@ const About = () => {
           {/* Education Section */}
           <Card className="bg-card/50 backdrop-blur-md border-border/30">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <GraduationCap className="h-5 w-5 text-primary" />
+              <CardTitle className="flex items-center gap-2 text-lg sm:text-2xl">
+                <GraduationCap className="h-5 w-5 sm:h-7 sm:w-7 text-primary" />
                 Educational Background
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="pb-6">
+            <CardContent className="space-y-10">
+              <div className="pb-10">
                 <div className="flex items-start justify-between mb-2">
                   <div className="flex items-center gap-2">
                     <img src="/ucl.svg" alt="UCL" className="w-7 h-7 mr-2" />
@@ -154,11 +154,10 @@ const About = () => {
                       <p className="text-sm text-muted-foreground mt-1">First Class Honors</p>
                     </div>
                   </div>
-                  <Badge variant="outline">Sept 2024 - June 2027</Badge>
+                  <Badge variant="outline">Sep 2024 - May 2027</Badge>
                 </div>
               </div>
-              {/* HKUST Entry */}
-              <div className="pb-6">
+              <div className="pb-10">
                 <div className="flex items-start justify-between mb-2">
                   <div className="flex items-center gap-2">
                     <img src="/hkust.svg" alt="HKUST" className="w-7 h-7 mr-2" />
@@ -171,8 +170,7 @@ const About = () => {
                   <Badge variant="outline">Aug 2023 - Aug 2024</Badge>
                 </div>
               </div>
-              
-              <div>
+              <div className="pb-10">
                 <div className="flex items-start justify-between mb-2">
                   <div className="flex items-center gap-2">
                     <img src="/nixor.svg" alt="Nixor College" className="w-7 h-7 mr-2" />

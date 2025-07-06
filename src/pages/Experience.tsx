@@ -102,9 +102,9 @@ const Experience = () => {
                     <div className="flex flex-col md:items-end gap-3">
                       <Badge 
                         variant="secondary" 
-                        className="w-fit bg-primary/10 text-primary hover:bg-primary/20 transition-all duration-300 group-hover:scale-105"
+                        className="w-fit bg-primary/10 text-primary hover:bg-primary/20 transition-all duration-300 group-hover:scale-105 px-2 py-1 text-xs sm:text-sm mb-2"
                       >
-                        <Briefcase className="sm:mr-1 h-4 w-4" />
+                        <Briefcase className="mr-2 h-4 w-4" />
                         {experience.type}
                       </Badge>
                       <div className="flex flex-col md:items-end gap-2 text-sm text-muted-foreground">
