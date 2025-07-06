@@ -68,17 +68,17 @@ export const Header = ({ setIsEmailOpen }: { setIsEmailOpen: (open: boolean) => 
               <NineDotIcon className="w-5 h-5 md:w-4 md:h-4 text-foreground" />
             </Button>
           </PopoverTrigger>
-          <PopoverContent className="w-60 md:w-72 lg:w-80 p-4 rounded-2xl bg-card/95 backdrop-blur-md border border-border/30 shadow-lg" align="end">
-            <div className="grid grid-cols-3 gap-1">
+          <PopoverContent className="w-60 md:w-72 lg:w-80 py-2 rounded-2xl bg-card/95 backdrop-blur-md border border-border/30 shadow-lg" align="end">
+            <div className="grid grid-cols-3 gap-y-2 gap-x-0">
               {socialLinks.map((social, index) => (
                 social.label === "Gmail" ? (
                   <button
                     key={index}
                     onClick={() => setIsEmailOpen(true)}
-                    className="flex flex-col items-center justify-center gap-2 p-2 rounded-lg hover:bg-card/50 transition-smooth cursor-pointer border-none bg-transparent"
+                    className="flex flex-col items-center justify-center gap-1 rounded-lg hover:bg-card/50 transition-smooth cursor-pointer border-none bg-transparent"
                     type="button"
                   >
-                    <div className="w-10 h-10 flex items-center justify-center overflow-hidden mb-1">
+                    <div className="w-7 h-7 flex items-center justify-center overflow-hidden">
                       {React.cloneElement(social.icon, {
                         className: "w-full h-full object-contain"
                       })}
@@ -91,9 +91,9 @@ export const Header = ({ setIsEmailOpen }: { setIsEmailOpen: (open: boolean) => 
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center gap-2 p-2 rounded-lg hover:bg-card/50 transition-smooth cursor-pointer"
+                    className="flex flex-col items-center justify-center gap-1 rounded-lg hover:bg-card/50 transition-smooth cursor-pointer"
                   >
-                    <div className="w-10 h-10 flex items-center justify-center overflow-hidden mb-1">
+                    <div className="w-7 h-7 flex items-center justify-center overflow-hidden">
                       {React.cloneElement(social.icon, {
                         className: "w-full h-full object-contain"
                       })}
@@ -114,7 +114,7 @@ export const Header = ({ setIsEmailOpen }: { setIsEmailOpen: (open: boolean) => 
               <img src="/profile.jpg" alt="User" className="w-full h-full object-cover rounded-full border-2 border-white" />
             </Button>
           </PopoverTrigger>
-          <PopoverContent className="w-72 max-w-xs md:w-96 md:max-w-md p-2 md:p-4 rounded-2xl bg-card/95 backdrop-blur-md border border-border/30 shadow-lg flex flex-col items-center gap-2 md:gap-4" align="end">
+          <PopoverContent className="w-72 max-w-xs md:w-96 md:max-w-md p-1 md:p-2 rounded-2xl bg-card/95 backdrop-blur-md border border-border/30 shadow-lg flex flex-col items-center gap-1 md:gap-2" align="end">
             <img src="/profile.jpg" alt="Sameer" className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover mb-1 md:mb-2" />
             <div className="text-center">
               <div className="text-base md:text-lg font-bold text-foreground">Hi, I am Sameer</div>
