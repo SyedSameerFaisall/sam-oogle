@@ -5,6 +5,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import NineDotIcon from "@/components/ui/NineDotIcon";
 import { ProfilePane } from "./ProfilePane";
 import { EmailPane } from "./EmailPane";
+import { ThemeToggle } from "./ThemeToggle";
 import React from "react";
 const socialLinks = [
   {
@@ -53,9 +54,10 @@ export const Header = ({ setIsEmailOpen }: { setIsEmailOpen: (open: boolean) => 
     <>
       <header className="w-full pt-5 md:pt-3 pr-5 md:pr-6 z-50">
       <div className="flex items-center justify-end w-full gap-5 md:gap-4 lg:gap-6">
+        <ThemeToggle />
         <Button
           variant="ghost"
-          className="text-sm md:text-base lg:text-lg text-white px-0.5 md:px-1 py-0.5"
+          className="text-sm md:text-base lg:text-lg text-foreground px-0.5 md:px-1 py-0.5"
           onClick={() => setIsEmailOpen(true)}
         >
           Gmail
