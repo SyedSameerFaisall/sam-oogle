@@ -11,7 +11,7 @@ const projects = [
     technologies: [
       "Python", "LangChain", "LangGraph", "Streamlit", "YFinance", "TA-Lib", "Plotly", "Tavily", "BeautifulSoup", "Markdown2", "FPDF2"
     ],
-    image: "/AI Financial Analyst.jpg",
+    image: "/ai-financial-analyst.jpg",
     liveUrl: "http://localhost:8501",
     githubUrl: "https://github.com/SyedSameerFaisall/Financial-Investment-Agent"
   },
@@ -22,7 +22,7 @@ const projects = [
     technologies: [
       "Python", "PyTorch", "Torchvision", "KaggleHub", "Matplotlib", "Seaborn", 'Pandas', 'Numpy'
     ],
-    image: "/Brain Tumor Classifier.png",
+    image: "/brain-tumor-classifier.png",
     liveUrl: "#",
     githubUrl: "https://github.com/SyedSameerFaisall/Brain-Tumor-CNN"
   },
@@ -33,7 +33,7 @@ const projects = [
     technologies: [
       "Python", "LangChain", "Transformers", "ChromaDB", "Gradio", "Pandas", "Seaborn", "OpenCV", "ipywidgets"
     ],
-    image: "/Book Recommender System.png",
+    image: "/book-recommender-system.png",
     liveUrl: "#",
     githubUrl: "https://github.com/SyedSameerFaisall/Semantic-Book-Recommender"
   },
@@ -44,7 +44,7 @@ const projects = [
     technologies: [
       "R", "R Markdown", "knitr"
     ],
-    image: "/HEP Citation Network Analysis.jpg",
+    image: "/hep-citation-network.jpg",
     liveUrl: "#",
     githubUrl: "https://github.com/SyedSameerFaisall/HEP-Citation-Network"
   }

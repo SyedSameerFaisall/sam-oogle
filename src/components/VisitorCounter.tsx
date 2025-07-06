@@ -32,7 +32,7 @@ export const VisitorCounter = () => {
   if (count === null) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 text-xs text-muted-foreground z-10 animate-fade-in bg-card/20 backdrop-blur-md px-2 py-1 rounded-lg border border-border/20">
+    <div className="fixed bottom-8 left-6 text-xs text-muted-foreground z-10 animate-fade-in bg-card/20 backdrop-blur-md px-2 py-1 rounded-lg border border-border/20">
       <div className="flex items-center gap-1">
         <span>👀</span>
         <span className={`transition-all duration-300 ${isAnimating ? 'scale-125 text-primary' : ''}`}>

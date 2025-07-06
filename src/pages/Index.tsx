@@ -5,7 +5,6 @@ import { QuickLinks } from "@/components/QuickLinks";
 import { FloatingElements } from "@/components/FloatingElements";
 import { Chatbot } from "@/components/Chatbot";
 import { VisitorCounter } from "@/components/VisitorCounter";
-import { HireMeButton } from "@/components/HireMeButton";
 
 const Index = ({ setIsEmailOpen, isEmailOpen }: { setIsEmailOpen: (open: boolean) => void, isEmailOpen: boolean }) => {
   return <div className="h-screen relative overflow-hidden flex flex-col bg-gradient-to-br from-background via-background/95 to-background/80">
@@ -25,9 +24,6 @@ const Index = ({ setIsEmailOpen, isEmailOpen }: { setIsEmailOpen: (open: boolean
             </div>
             <div className="animate-scale-in" style={{ animationDelay: '600ms' }}>
               <QuickLinks />
-            </div>
-            <div className="animate-fade-in mt-6" style={{ animationDelay: '800ms' }}>
-              <HireMeButton />
             </div>
           </div>
         </div>

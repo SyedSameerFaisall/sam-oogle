@@ -21,16 +21,6 @@ LinkedIn: www.linkedin.com/in/syedsameerfaisal
 - Status: Global Undergraduate Scholar
 - Performance: Top academic performer
 
-**Current UCL Modules:**
-- COMP0142: Machine Learning for Domain Specialists (Level 6, Term 2, 15 credits, Elective)
-- MATH0047: Advanced Linear Algebra (Level 5, Term 1, 15 credits, Compulsory)
-- STAT0005: Probability and Inference (Level 5, Term 1, 15 credits, Non-Condonable)
-- STAT0006: Regression Modelling (Level 5, Term 1, 15 credits, Compulsory)
-- STAT0007: Introduction to Stochastic Processes (Level 5, Term 2, 15 credits, Optional)
-- STAT0023: Computing for Practical Statistics (Level 5, Term 2, 15 credits, Compulsory)
-- STAT0041: Algorithms and Data Structures (Level 5, Term 1, 15 credits, Compulsory)
-- STAT0045: Statistical Design and Data Ethics (Level 5, Term 1, 15 credits, Compulsory)
-
 **The Hong Kong University of Science and Technology (HKUST)**
 - Degree: Computer Engineering, Engineering
 - Duration: August 2023 - August 2024
