@@ -9,18 +9,27 @@ LinkedIn: www.linkedin.com/in/syedsameerfaisal
 
 ## Current Status
 - BSc Data Science student at University College London (UCL)
+- **Ranked #1 across entire degree program with 90% First Year achievement**
 - Vice President of UCL Data Science Society
 - UCL Global Undergraduate Scholar
 - Certified Data Analyst at DataCamp
 - Google Data Analytics Professional Certificate holder
-- Ranked #1 on degree with 90%
 
-## Education History - Study places
+## Academic Excellence & Achievements
+- **First Year Performance: 90% overall score with A+ grades in all courses**
+- **Degree Ranking: #1 position across entire BSc Data Science program**
+- UCL Global Undergraduate Scholar (prestigious scholarship recipient)
+- HKUST 135% Undergraduate Scholarship recipient
+- A-levels: 5 A* grades (top 0.0001% in country)
+
+## Education History - Study Places
 **University College London (UCL)**
 - Degree: BSc Data Science, Statistical Science
 - Duration: September 2024 - July 2027 (Current)
+- **Academic Performance: 90% achieved in First Year (A+ in all courses)**
+- **Ranking: #1 across entire degree program**
 - Status: Global Undergraduate Scholar
-- Performance: 90% achieved in First Year (A+ in all courses); Ranked #1 in degree
+- Recognition: Outstanding academic excellence in Statistical Science and Data Science
 
 **The Hong Kong University of Science and Technology (HKUST)**
 - Degree: Computer Engineering, Engineering
@@ -31,7 +40,7 @@ LinkedIn: www.linkedin.com/in/syedsameerfaisal
 **Nixor College**
 - Qualification: A-levels
 - Duration: July 2021 - June 2023
-- Achievement: 5 A* grades (top 0.0001% in country)
+- **Achievement: 5 A* grades (top 0.0001% in country)**
 - Subjects: Physics, Chemistry, Computer Science, Mathematics, Further Mathematics
 
 **Credo School**
@@ -150,7 +159,6 @@ LinkedIn: www.linkedin.com/in/syedsameerfaisal
 - Utilized persuasive techniques for customer acquisition
 - Maintained client relations with excellent customer service
 - Updated customer records for future communications
-
 ## Key Projects
 
 ### AI Financial Analyst
