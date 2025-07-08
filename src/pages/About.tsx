@@ -53,7 +53,7 @@ const About = () => {
               <div className="flex gap-4 mt-2">
                 <Button asChild variant="hero" className="min-w-[150px]">
                   <a
-                    href="/Sameer-CV.pdf"
+                    href="/CV - Syed Sameer.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
