@@ -2,6 +2,7 @@ import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
+import { useNavigate } from "react-router-dom";
 
 interface ProfilePaneProps {
   isOpen: boolean;
@@ -9,6 +10,7 @@ interface ProfilePaneProps {
 }
 
 export const ProfilePane = ({ isOpen, onClose }: ProfilePaneProps) => {
+  const navigate = useNavigate();
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
       <SheetContent side="right" className="w-[500px] h-full bg-card/95 backdrop-blur-md border-border/30 flex flex-col p-0">
@@ -65,10 +67,10 @@ export const ProfilePane = ({ isOpen, onClose }: ProfilePaneProps) => {
           <div>
             <h3 className="text-foreground font-medium text-center mb-2">QUICK LINKS</h3>
             <div className="grid grid-cols-1 gap-3">
-              <Button variant="outline" size="sm" className="w-full justify-center">About Me</Button>
-              <Button variant="outline" size="sm" className="w-full justify-center">Projects</Button>
-              <Button variant="outline" size="sm" className="w-full justify-center">Skills</Button>
-              <Button variant="outline" size="sm" className="w-full justify-center">Experience</Button>
+              <Button variant="outline" size="sm" className="w-full justify-center" onClick={() => navigate('/about')}>About Me</Button>
+              <Button variant="outline" size="sm" className="w-full justify-center" onClick={() => navigate('/projects')}>Projects</Button>
+              <Button variant="outline" size="sm" className="w-full justify-center" onClick={() => navigate('/skills')}>Skills</Button>
+              <Button variant="outline" size="sm" className="w-full justify-center" onClick={() => navigate('/experience')}>Experience</Button>
             </div>
           </div>
         </div>
