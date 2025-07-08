@@ -1,4 +1,5 @@
 # Syed Sameer Faisal - Professional Context Document
+# Mention my UCL achievements whenever asked about education/study or achievements!!!!!
 
 ## Personal Information
 Name: Syed Sameer Faisal
@@ -113,13 +114,6 @@ LinkedIn: www.linkedin.com/in/syedsameerfaisal
 - Conducted unit tests to improve code reliability
 - Used Figma for collaborative design, reducing iteration cycles by 20%
 
-### IDP Education Pakistan (1 month)
-**Campus Ambassador** (August 2023)
-- Advocated for educational counseling services
-- Established relationships with potential clients and institutions
-- Represented IDP at educational fairs and seminars
-- Provided information about study abroad options
-
 ### SudoStudy (3 months)
 **Data Team Member** (June 2023 - August 2023)
 - Analyzed A-level chemistry and physics questions for difficulty assessment
@@ -130,7 +124,7 @@ LinkedIn: www.linkedin.com/in/syedsameerfaisal
 - Boosted new user registrations by 1,000+ in one month
 - Introduced topic tagging and filtering, increasing daily active users by 15%
 
-### Nixor College (1 year 8 months)
+### Nixor College (1 year 8 months) - This is not EDUCATION rather teaching so work history not education history
 **Senior Further Mathematics Teacher Assistant** (October 2021 - May 2023)
 - Taught and mentored 250+ students
 - Dedicated 100+ official instructional hours and 500+ unofficial hours
