@@ -13,31 +13,18 @@ interface Message {
 }
 
 async function fetchOpenAIResponse(userMessage: string) {
-  const OPENAI_API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
   const context = findRelevantContextChunk(userMessage);
-  const response = await fetch('https://api.openai.com/v1/chat/completions', {
+  const response = await fetch('/api/chat', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${OPENAI_API_KEY}`,
     },
     body: JSON.stringify({
       model: 'gpt-4o-mini',
       messages: [
         {
           role: 'system',
-          content: `You are Syed Sameer Faisal's AI assistant. You represent him professionally and help visitors learn about his background, skills, and experience. 
-
-Here is comprehensive information about Sameer:
-${context}
-
-Guidelines:
-- Answer as if you're representing Sameer professionally
-- Use first person when talking about Sameer's experiences ("I have experience in...", "I worked at...", "My projects include...")
-- Be friendly, professional, and enthusiastic about his work
-- Provide specific details from the context when relevant
-- If asked about something not in the context, politely redirect to what you do know
-- Highlight his achievements, skills, and projects naturally in conversation`
+          content: `You are Syed Sameer Faisal's AI assistant. You represent him professionally and help visitors learn about his background, skills, and experience. \n\nHere is comprehensive information about Sameer:\n${context}\n\nGuidelines:\n- Answer as if you're representing Sameer professionally\n- Use first person when talking about Sameer's experiences ("I have experience in...", "I worked at...", "My projects include...")\n- Be friendly, professional, and enthusiastic about his work\n- Provide specific details from the context when relevant\n- If asked about something not in the context, politely redirect to what you do know\n- Highlight his achievements, skills, and projects naturally in conversation`
         },
         { role: 'user', content: userMessage }
       ],
