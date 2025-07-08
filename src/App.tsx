@@ -11,6 +11,7 @@ import Skills from "./pages/Skills";
 import Experience from "./pages/Experience";
 import NotFound from "./pages/NotFound";
 import { useState } from "react";
+import { Analytics } from "@vercel/analytics/next";
 import { EmailPane } from "@/components/EmailPane";
 
 const queryClient = new QueryClient();
