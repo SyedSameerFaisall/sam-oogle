@@ -7,10 +7,6 @@ Phone: +44 7570 903007
 Email: syedsameerfaisal1@gmail.com
 LinkedIn: www.linkedin.com/in/syedsameerfaisal
 
-# Education History - COMPREHENSIVE EDUCATIONAL BACKGROUND
-INSTRUCTION: When asked about education, studies, academic background, where Sameer studied, educational qualifications, 
-or any related questions, provide this complete educational journey with ALL achievements highlighted from UCL to Credo School:
-
 ## Current Status
 - BSc Data Science student at University College London (UCL)
 - **Ranked #1 across entire degree program with 90% First Year achievement**
@@ -27,30 +23,45 @@ or any related questions, provide this complete educational journey with ALL ach
 - HKUST 135% Undergraduate Scholarship recipient
 - A-levels: 5 A* grades (top 0.0001% in country)
 
-## Education History - IMPORTANT: ONLY MENTION THESE PLACES WHEN ASKED ABOUT EDUCATION / STUDY
-**University College London (UCL)**
-- Degree: BSc Data Science, Statistical Science
-- Duration: September 2024 - July 2027 (Current)
-- **Academic Performance: 90% achieved in First Year (A+ in all courses)**
-- **Ranking: #1 across entire degree program**
-- Status: Global Undergraduate Scholar
-- Recognition: Outstanding academic excellence in Statistical Science and Data Science
+ACADEMIC BACKGROUND
+🚨 CHATBOT INSTRUCTION:
+WHEN ASKED ABOUT: education, studies, academic background, where Sameer studied, educational qualifications, school, university, degree, academic history, learning, or ANY education-related questions → ALWAYS PROVIDE THIS COMPLETE LIST FROM UCL TO CREDO WITH ALL ACHIEVEMENTS EMPHASIZED
 
-**The Hong Kong University of Science and Technology (HKUST)**
-- Degree: Computer Engineering, Engineering
-- Duration: August 2023 - August 2024
-- Status: 135% Undergraduate Scholarship recipient
-- Note: Transferred to UCL for specialized Data Science program
+🏛️ CURRENT UNIVERSITY - University College London (UCL)
+🎯 DEGREE: BSc Data Science, Statistical Science
+📅 DURATION: September 2024 - July 2027 (Current Student)
+🏆 EXCEPTIONAL ACADEMIC PERFORMANCE:
 
-**Nixor College**
-- Qualification: A-levels
-- Duration: July 2021 - June 2023
-- **Achievement: 5 A* grades (top 0.0001% in country)**
-- Subjects: Physics, Chemistry, Computer Science, Mathematics, Further Mathematics
+📊 90% ACHIEVED IN FIRST YEAR (A+ grades in ALL courses)
+🥇 RANKED #1 ACROSS ENTIRE DEGREE PROGRAM
+💰 UCL Global Undergraduate Scholar
+🌟 Outstanding academic excellence in Statistical Science and Data Science
 
-**Credo School**
-- Qualification: O-levels
-- Duration: June 2018 - June 2021
+
+🇭🇰 PREVIOUS UNIVERSITY - The Hong Kong University of Science and Technology (HKUST)
+🎯 DEGREE: Computer Engineering, Engineering
+📅 DURATION: August 2023 - August 2024
+🏆 ACHIEVEMENT: 135% Undergraduate Scholarship recipient
+📝 NOTE: Transferred to UCL for specialized Data Science program
+
+🏫 A-LEVEL COLLEGE - Nixor College
+🎯 QUALIFICATION: A-levels
+📅 DURATION: July 2021 - June 2023
+🏆 EXCEPTIONAL ACHIEVEMENT:
+
+⭐ 5 A GRADES (TOP 0.0001% IN COUNTRY)*
+📚 SUBJECTS: Physics, Chemistry, Computer Science, Mathematics, Further Mathematics
+
+
+🏫 O-LEVEL SCHOOL - Credo School
+🎯 QUALIFICATION: O-levels
+📅 DURATION: June 2018 - June 2021
+
+📈 EDUCATIONAL EXCELLENCE SUMMARY:
+✅ CURRENT STATUS: #1 ranked student in UCL Data Science with 90% first-year performance
+✅ SCHOLARSHIP RECIPIENT: Multiple prestigious scholarships (UCL Global Scholar, HKUST 135% Scholarship)
+✅ NATIONAL ACHIEVEMENT: Top 0.0001% performance in A-levels with 5 A* grades
+✅ ACADEMIC PROGRESSION: Consistent excellence across all educational institutions from O-levels to university level<
 
 ## Technical Skills and Expertise
 
