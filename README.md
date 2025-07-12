@@ -1,5 +1,5 @@
 Personal Portfolio website!
-
+Made with React and Tailwind css
 ## Project info
 
 **URL**: https://lovable.dev/projects/70cfd5ac-e2c7-404e-9a9f-6b4e5a55c4a7
