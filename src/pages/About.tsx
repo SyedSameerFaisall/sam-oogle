@@ -91,14 +91,16 @@ const About = () => {
                 each offering a fully funded scholarship, a profound validation of years of sacrifice. 
               </p>
               <p className="text-muted-foreground">
-                Now at UCL, I channel that same fierce drive into the exhilarating world of data
-                science and software engineering. I'm utterly obsessed with crafting elegant digital solutions that
-                genuinely make a difference, whether it's teaching machines to see, predicting complex patterns, 
-                or just making life a little smoother through clever code. When I'm not wrestling with algorithms or 
-                optimizing datasets until they practically sing, you'll find me channeling that focus on the cricket 
-                pitch or pushing my limits at the gym. It’s where I recharge, strategize, and remember that every 
-                challenge, big or small, can be overcome with a disciplined approach and a healthy dose of determination. 
-                Let's build something truly remarkable together!
+                  Now at UCL, I bring that same intensity to data science and software engineering. Ranked #1 in the 
+                  Statistical Science department with a 90% first-year average and the Undergraduate Sessional Prize, 
+                  I’m driven to build elegant, impactful solutions—whether that’s training machines to see, decoding 
+                  patterns, or simplifying life through code. I'm utterly obsessed with crafting elegant digital 
+                  solutions that genuinely make a difference, whether it's teaching machines to see, predicting complex 
+                  patterns, or just making life a little smoother through clever code. When I'm not wrestling with 
+                  algorithms or optimizing datasets until they practically sing, you'll find me channeling that focus 
+                  on the cricket pitch or pushing my limits at the gym. It’s where I recharge, strategize, and remember
+                  that every challenge, big or small, can be overcome with a disciplined approach and a healthy dose of 
+                  determination. Let's build something truly remarkable together!
               </p>
             </CardContent>
           </Card>
@@ -119,7 +121,7 @@ const About = () => {
                     <div>
                       <h3 className="font-semibold text-foreground">BSc Data Science</h3>
                       <p className="text-muted-foreground">University College London</p>
-                      <p className="text-sm text-muted-foreground mt-1">First Class Honors</p>
+                      <p className="text-sm text-muted-foreground mt-1">First Class Honors (90%) - Rank # 1 in Statistical Science Department</p>
                     </div>
                   </div>
                   <Badge variant="outline">Sep 2024 - May 2027</Badge>
@@ -164,6 +166,19 @@ const About = () => {
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
+                {/* UG Sessional Prize */}
+                <div className="flex items-start gap-3">
+                  <img src="/ucl.svg" alt="UCL" className="w-7 h-7 mt-1" />
+                  <div>
+                    <div className="font-semibold text-foreground">UG Sessional Prize – Statistical Science</div>
+                    <div className="text-sm text-muted-foreground flex items-center gap-2">
+                      UCL &middot; June 2025
+                    </div>
+                    <div className="text-sm text-muted-foreground">
+                      Awarded to the top two highest-scoring students in the entire Statistical Science department for exceptional academic performance.
+                    </div>
+                  </div>
+                </div>
                 {/* Global Undergraduate Scholar */}
                 <div className="flex items-start gap-3">
                   <img src="/ucl.svg" alt="UCL" className="w-7 h-7 mt-1" />

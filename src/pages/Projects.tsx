@@ -47,6 +47,50 @@ const projects = [
     image: "/hep-citation-network.jpg",
     liveUrl: "#",
     githubUrl: "https://github.com/SyedSameerFaisall/HEP-Citation-Network"
+  },
+  {
+  title: "Support Data Insight Analysis",
+  description:
+    "An autonomous, multi-agent data insight pipeline built with CrewAI to process and analyze customer support ticket data. The system features specialized agents for suggestion generation, tabular reporting, and chart creation, orchestrated in a cohesive Crew to simulate, train, and execute structured automated LLM workflows. YAML-based configuration makes it modular and reusable, while the integration of FileReadTool enables real-time CSV analysis. Designed to demonstrate advanced task orchestration and smooth tool-assisted LLM workflows in a business intelligence context.",
+  technologies: [
+    "Python", "CrewAI", "YAML", "Pandas", "Matplotlib", "Numpy", "FastAPI"
+  ],
+  image: "/data-analysis.jpg",
+  liveUrl: "#",
+  githubUrl: "https://github.com/SyedSameerFaisall/Data-Analyzer"
+  },
+  {
+  title: "FareShare Database System",
+  description:
+    "A comprehensive relational database system designed for FareShare, a UK-based charity tackling food waste and hunger. This project models the end-to-end redistribution of surplus food from suppliers to charities, with robust normalization (1NF–3NF), regional impact tracking, and integration of real-world sustainability metrics. Aligned with key UN Sustainable Development Goals (SDG 2, 12, 13), the system quantifies reductions in food insecurity, waste, and greenhouse gas emissions. Delivered with realistic synthetic datasets and accompanied by detailed design reports.",
+  technologies: [
+    "SQL", "ER Diagrams", "PostgreSQL"
+  ],
+  image: "/food.png",
+  liveUrl: "#",
+  githubUrl: "https://github.com/SyedSameerFaisall/FareShare-Database"
+  },
+  {
+  title: "Neural Network & Autograd Engine",
+  description:
+    "A minimalist deep learning library built from scratch in Python to understand the core mechanics of backpropagation and gradient descent. Implements a scalar-valued autograd engine that constructs and traverses a computational graph, enabling automatic differentiation via the `.backward()` method. Also includes a lightweight neural network library featuring neurons, layers, and multi-layer perceptrons (MLPs). Graphviz integration provides visualization of the forward and backward passes through the network.",
+  technologies: [
+    "Python", "Numpy", "Graphviz"
+  ],
+  image: "/neural-network.jpg",
+  liveUrl: "#",
+  githubUrl: "https://github.com/SyedSameerFaisall/NN-From-Scratch"
+  },
+  {
+  title: "Credit Card Approval Predictor",
+  description:
+    "A machine learning project that automates credit card approval decisions by analyzing applicant data. Designed to replicate industry-grade decision systems, this model handles real-world imperfections like missing values, imbalanced features, and mixed data types. It incorporates advanced feature engineering (age buckets, DTI ratios), multiple classification models, and exhaustive hyperparameter tuning to optimize prediction accuracy. Logistic Regression and Random Forest were top performers with cross-validation scores above 86%.",
+  technologies: [
+    "Python", "Pandas", "Numpy", "Scikit-learn", "Matplotlib", "Seaborn"
+  ],
+  image: "/credit-card-approval.png",
+  liveUrl: "#",
+  githubUrl: "https://github.com/SyedSameerFaisall/Credit-Card-Approval-System"
   }
 ];
 
