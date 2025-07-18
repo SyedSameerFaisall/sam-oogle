@@ -98,7 +98,7 @@ export const EmailPane = ({ isOpen, onClose }: EmailPaneProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className="max-w-xs sm:max-w-md">
         <DialogHeader>
           <DialogTitle>New Message</DialogTitle>
         </DialogHeader>
