@@ -27,7 +27,7 @@ export const SearchBar = () => {
   };
 
   return (
-    <form onSubmit={handleSearch} className="w-full max-w-sm sm:max-w-lg mx-auto relative">
+    <form onSubmit={handleSearch} className="w-full max-w-xs sm:max-w-xl mx-auto relative">
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <button
@@ -38,32 +38,32 @@ export const SearchBar = () => {
             onClick={() => setOpen(true)}
             id="searchbar-trigger"
           >
-            <div className="flex items-center p-1 sm:p-1.5">
-              <Search className="text-muted-foreground ml-1.5 sm:ml-2 mr-2 sm:mr-3" size={11} />
+            <div className="flex items-center p-1 sm:p-2">
+              <Search className="text-muted-foreground sm:ml-2 sm:mr-3" size={14} />
               <Input
                 value={searchValue}
                 readOnly
                 placeholder="Search Sameer's portfolio..."
-                className="flex-1 bg-transparent border-none focus:ring-0 focus:outline-none focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-xs sm:text-sm text-foreground placeholder:text-muted-foreground"
+                className="flex-1 bg-transparent border-none focus:ring-0 focus:outline-none focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0 text-sm sm:text-base text-foreground placeholder:text-muted-foreground"
               />
-              <div className="flex items-center gap-1 mr-1">
+              <div className="flex items-center gap-1 sm:gap-1 sm:mr-1">
                 <Button
                   type="button"
                   variant="ghost"
                   size="sm"
-                  className="p-0 h-4 w-4 sm:p-0.5 sm:h-5 sm:w-5 hover:bg-card/50 transition-smooth"
+                  className="p-0 h-5 w-5 sm:p-1 sm:h-6 sm:w-6 hover:bg-card/50 transition-smooth"
                   aria-label="Voice search"
                 >
-                  <Mic size={9} />
+                  <Mic size={11} />
                 </Button>
                 <Button
                   type="button"
                   variant="ghost"
                   size="sm"
-                  className="p-0 h-4 w-4 sm:p-0.5 sm:h-5 sm:w-5 hover:bg-card/50 transition-smooth"
+                  className="p-0 h-5 w-5 sm:p-1 sm:h-6 sm:w-6 hover:bg-card/50 transition-smooth"
                   aria-label="Search by image"
                 >
-                  <Camera size={9} />
+                  <Camera size={11} />
                 </Button>
               </div>
             </div>

@@ -11,21 +11,21 @@ const quickLinks = [
 export const QuickLinks = () => {
   const navigate = useNavigate();
   return (
-    <div className="w-full max-w-xs sm:max-w-md mx-auto mt-3 animate-fade-in">
+    <div className="w-full max-w-sm sm:max-w-md mx-auto mt-2 animate-fade-in">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-1 sm:gap-1.5 transition-all duration-300">
         {quickLinks.map((link, index) => (
         <Button
           key={index}
           variant="ghost"
-          className="group p-1.5 sm:p-2 h-auto min-h-[60px] sm:min-h-[65px] bg-card/20 hover:bg-card/40 border border-border/20 hover:border-primary/30 transition-smooth hover:scale-105 text-center"
+          className="group p-1.5 sm:p-2 h-auto min-h-[55px] sm:min-h-[60px] bg-card/20 hover:bg-card/40 border border-border/20 hover:border-primary/30 transition-smooth hover:scale-105 text-center"
           style={{ animationDelay: `${index * 100}ms` }}
           onClick={() => navigate(link.path)}
         >
           <div className="flex flex-col items-center justify-center h-full">
-            <h3 className="font-medium text-[10px] sm:text-xs md:text-sm text-foreground group-hover:text-primary transition-smooth leading-tight mb-0.5">
+            <h3 className="font-medium text-[10px] sm:text-xs md:text-sm text-foreground group-hover:text-primary transition-smooth leading-tight mb-1">
               {link.title}
             </h3>
-            <p className="text-[9px] sm:text-[10px] text-muted-foreground leading-tight text-center">
+            <p className="text-[8px] sm:text-[9px] text-muted-foreground leading-tight text-center">
               {link.description}
             </p>
           </div>

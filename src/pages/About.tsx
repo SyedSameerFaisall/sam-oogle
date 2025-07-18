@@ -30,7 +30,7 @@ const About = () => {
           <div className="flex flex-col md:flex-row items-center justify-center gap-12 mb-10">
             {/* Profile Image Left */}
             <div className="flex-shrink-0">
-              <div className="w-56 h-56 rounded-full overflow-hidden shadow-2xl border-4 border-[#3a1550] bg-background flex items-center justify-center">
+              <div className="w-56 h-56 rounded-full overflow-hidden shadow-2xl border-4 border-primary bg-background flex items-center justify-center">
                 <Avatar className="w-52 h-52 rounded-full">
                   <AvatarImage src="/profile.jpg" alt="Sameer" className="object-cover w-full h-full" />
                   <AvatarFallback className="text-5xl bg-primary/10 rounded-full">
@@ -42,7 +42,7 @@ const About = () => {
             {/* Name, Desc, Buttons Right */}
             <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left gap-4 justify-center">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground">
-                <span className="text-[#3a1550]">Syed Sameer Faisal</span>
+                <span className="text-primary">Syed Sameer Faisal</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl">
               Future-Forward Engineer: Passionate about AI, Data, and Building Scalable Solutions

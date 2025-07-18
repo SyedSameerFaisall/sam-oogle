@@ -1,6 +1,6 @@
 export const Logo = () => {
-  return <div className="text-center mb-4 animate-fade-in">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground tracking-tight">
+  return <div className="text-center mb-8 animate-fade-in">
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight">
         <span className="inline-block">Sam</span>
         <span className="">-</span>
         <span className="inline-block">oogle</span>
