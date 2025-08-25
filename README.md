@@ -6,13 +6,6 @@ Made with React and Tailwind css
 
 ## How can I edit this code?
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/70cfd5ac-e2c7-404e-9a9f-6b4e5a55c4a7) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
