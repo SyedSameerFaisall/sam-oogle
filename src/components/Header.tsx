@@ -20,6 +20,7 @@ const socialLinks = [
   },
   {
     icon: <img src="/whatsapp.svg" alt="Whatsapp" />,
+    href: "https://wa.me/447570903007",
     label: "Whatsapp"
   },
   {
