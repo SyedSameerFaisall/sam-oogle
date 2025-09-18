@@ -22,7 +22,7 @@ export default defineConfig(({ mode }) => {
     },
     define: {
       // Make the API key available to the client for direct OpenAI calls
-      'import.meta.env.VITE_OPENAI_API_KEY': JSON.stringify(env.OPENAI_API_KEY),
+      'iimport.meta.env.VITE_OPENAI_API_KEY': JSON.stringify(env.VITE_OPENAI_API_KEY),
     },
   };
 });

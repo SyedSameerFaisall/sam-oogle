@@ -57,7 +57,7 @@ const projects = [
   ],
   image: "/data-analysis.jpg",
   liveUrl: "#",
-  githubUrl: ""
+  githubUrl: "https://github.com/SyedSameerFaisall/Data-Analyzer"
   },
   {
   title: "FareShare Database System",
