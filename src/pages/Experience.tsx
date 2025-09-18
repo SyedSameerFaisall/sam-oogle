@@ -30,7 +30,7 @@ const experiences = [
       "Oversee strategic growth, partnerships, and event execution for one of UCL’s largest student-led tech societies, driving member engagement and career readiness initiatives at scale.",
     achievements: [
       "Spearheaded strategic initiatives that grew society membership by 40% within a single term, significantly strengthening the society’s presence across campus.",
-      "Secured partnerships with industry leaders including OpenAI, JetBrains, Bloomberg, and Lovable, enabling delivery of high-impact technical workshops, networking events, and career panels.",
+      "Secured partnerships with industry leaders including OpenAI, JetBrains, Bloomberg, enabling delivery of high-impact technical workshops, networking events, and career panels.",
       "Led cross-functional teams to design and execute hackathons, speaker series, and mentorship programs, engaging over 3,000 students across in-person events and social media campaigns."
     ],
     technologies: ["Python", "SQL", "Tableau", "Excel", "Notion", "Slack", "Event Management Tools"]
