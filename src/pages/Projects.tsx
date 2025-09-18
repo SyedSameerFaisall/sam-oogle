@@ -24,7 +24,7 @@ const projects = [
     ],
     image: "/brain-tumor-classifier.png",
     liveUrl: "#",
-    githubUrl: "https://github.com/SyedSameerFaisall/Brain-Tumor-CNN"
+    githubUrl: "https://github.com/SyedSameerFaisall/Brain-MRI-Classifier"
   },
   {
     title: "Semantic Book Recommender",
@@ -35,7 +35,7 @@ const projects = [
     ],
     image: "/book-recommender-system.png",
     liveUrl: "#",
-    githubUrl: "https://github.com/SyedSameerFaisall/Semantic-Book-Recommender"
+    githubUrl: "https://github.com/SyedSameerFaisall/Book-Recommender-System"
   },
   {
     title: "HEP Citation Network Analysis",
@@ -46,7 +46,7 @@ const projects = [
     ],
     image: "/hep-citation-network.jpg",
     liveUrl: "#",
-    githubUrl: "https://github.com/SyedSameerFaisall/HEP-Citation-Network"
+    githubUrl: "https://github.com/SyedSameerFaisall/HEP-citation-analysis"
   },
   {
   title: "Support Data Insight Analysis",
@@ -57,7 +57,7 @@ const projects = [
   ],
   image: "/data-analysis.jpg",
   liveUrl: "#",
-  githubUrl: "https://github.com/SyedSameerFaisall/Data-Analyzer"
+  githubUrl: ""
   },
   {
   title: "FareShare Database System",
