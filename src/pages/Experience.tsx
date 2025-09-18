@@ -5,6 +5,37 @@ import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
 const experiences = [
   {
+    company: "UCL Information Services Division (ISD)",
+    position: "OneDesk IT Assistant",
+    duration: "Aug 2025 – Present",
+    location: "London, United Kingdom",
+    type: "Part-time",
+    description:
+      "Provide first-line IT support for UCL students and staff through the OneDesk service, resolving technical queries, troubleshooting hardware/software issues, and ensuring smooth digital experiences across academic systems.",
+    achievements: [
+      "Supported over 50,000+ students and staff with technical queries on platforms including Moodle, Microsoft 365, and UCL’s internal systems, ensuring minimal downtime and uninterrupted learning experiences.",
+      "Resolved an average of 40–50 IT tickets per week, achieving a first-contact resolution rate of 85% and reducing escalation load on senior technicians.",
+      "Delivered step-by-step troubleshooting for hardware/software issues, VPN and network connectivity, and account security, improving service efficiency and user satisfaction scores.",
+      "Contributed to knowledge base updates and documentation, streamlining future support processes and reducing recurring queries by 15%."
+    ],
+    technologies: ["Windows", "macOS", "Linux", "Microsoft 365", "ServiceNow", "VPN Tools", "UCL Moodle"]
+  },
+  {
+    company: "UCL Data Science Society",
+    position: "Vice President",
+    duration: "May 2025 – Present",
+    location: "London, United Kingdom",
+    type: "Leadership",
+    description:
+      "Oversee strategic growth, partnerships, and event execution for one of UCL’s largest student-led tech societies, driving member engagement and career readiness initiatives at scale.",
+    achievements: [
+      "Spearheaded strategic initiatives that grew society membership by 40% within a single term, significantly strengthening the society’s presence across campus.",
+      "Secured partnerships with industry leaders including OpenAI, JetBrains, Bloomberg, and Lovable, enabling delivery of high-impact technical workshops, networking events, and career panels.",
+      "Led cross-functional teams to design and execute hackathons, speaker series, and mentorship programs, engaging over 3,000 students across in-person events and social media campaigns."
+    ],
+    technologies: ["Python", "SQL", "Tableau", "Excel", "Notion", "Slack", "Event Management Tools"]
+  },
+  {
     company: "HeadStart Global",
     position: "Data Analyst Intern",
     duration: "Nov 2024 – Dec 2024",
