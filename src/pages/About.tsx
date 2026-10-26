@@ -91,11 +91,8 @@ const About = () => {
                 each offering a fully funded scholarship, a profound validation of years of sacrifice. 
               </p>
               <p className="text-muted-foreground">
-                  Now at UCL, I bring that same intensity to data science and software engineering. Ranked #1 in the 
-                  Statistical Science department with a 90% first-year average and the Undergraduate Sessional Prize, 
-                  I’m driven to build elegant, impactful solutions—whether that’s training machines to see, decoding 
-                  patterns, or simplifying life through code. I'm utterly obsessed with crafting elegant digital 
-                  solutions that genuinely make a difference, whether it's teaching machines to see, predicting complex 
+                  Now at UCL, I bring that same intensity to data science and software engineering. With the first year sessional prize in Statistical Science, 
+                  I am driven to building solutions that genuinely make a difference, whether it's teaching machines to see, predicting complex 
                   patterns, or just making life a little smoother through clever code. When I'm not wrestling with 
                   algorithms or optimizing datasets until they practically sing, you'll find me channeling that focus 
                   on the cricket pitch or pushing my limits at the gym. It’s where I recharge, strategize, and remember
